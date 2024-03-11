@@ -1,0 +1,602 @@
+$text_color:#68cbdb;
+$text_menu:#192857;
+$color_textf:#d2d2d2;
+$bgr_while:#ffffff;
+$bgr_btn:#0ea4a2;
+$bgr_footer1:#1c1c1d;
+$bgr_footer2:#151516;
+$bgr_black:#000;
+$font-text:"Roboto";
+$font-size1:14px;
+$font-sizeft: 18px;
+.padding-8-30{
+	padding: 8px 30px;
+}
+body{
+	font-family:"Roboto";
+}
+ol, ul {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+.menu-headnavi-container{
+	ul.menu{
+		li{
+			padding:17px 0;
+			position: relative;
+			a{
+				color:$text_menu;
+				cursor: pointer;
+				&:hover{
+					color:#06a3de;
+				}
+			}
+			ul.sub-menu{
+				padding-top: 0;
+				box-shadow: 0px 1px 2px #192857;
+				top:100%;
+				li{
+					a{
+						color:$text_menu;
+						&:hover{
+							color:#06a3de;
+						}
+					}
+				}
+				li.lang-item{
+					padding: 0 20px;
+				}
+
+			}
+		}
+	}
+}
+input[type="submit"]{
+	background: $bgr_btn;
+}
+div.wpcf7-validation-errors, div.wpcf7-acceptance-missing{
+	border:0!important;
+}
+.wpcf7-response-output.wpcf7-display-none.wpcf7-validation-errors{
+	position: absolute;
+    bottom: -20px;
+    left: 15px;
+    color: red;
+}
+// Giới thiệu
+.introduce_banner{
+	position: relative;
+	z-index: 1;
+	&:after{
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		content:"";
+		top: 0;
+		left: 0;
+		background-color: rgba(0,0,0,0.98);
+		opacity: 0.5;
+		transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+		z-index: -1;
+	}
+}
+.content_gioithieu{
+	.vc_column-inner{
+		background-size: cover;
+		background-position: center center;
+		max-width: 370px;
+		min-height: 500px;
+		margin: 0 auto;
+		position: relative;
+		.wpb_wrapper{
+			position: absolute;
+			top: 10px;
+			right: 10px;
+			bottom: 10px;
+			left: 10px;
+			display: flex;
+			align-content: center;
+			justify-content: center;
+			flex-direction: column;
+			text-align: center;
+			border: 10px solid rgba(255,255,255,0);
+			.border-top{
+				height: 140px;
+				border: 10px solid #ccc;
+				border-bottom: none;
+			}
+			h5{
+				font-style: italic;
+				width: 800px;
+				margin-left: -235px;
+				text-align: center;
+				padding-bottom: 12px;
+				padding-top: 7px;
+			}
+			h1{
+				margin: 0;
+				width: 800px;
+				margin-left: -235px;
+				text-align: center;
+				padding-bottom: 11px;
+			}
+			.border-bottom{
+				border: 10px solid #ccc;
+				border-top: none;
+				height: 140px;
+			}
+		}
+	}
+}
+.list_infor_gioithieu{
+	.vc_col-sm-4:not(:last-child){
+		border-right: 1px solid #f1f1f1;
+	}
+}
+.vc_grid-item{
+	.vc_gitem-animated-block {
+		.vc_gitem-zone{
+			max-height: 250px;
+		}
+	}
+}
+.line_thungo{
+	position: relative;
+	&:after{
+		position: absolute;
+		width:50px;
+		height: 2px;
+		left: calc(50% - 25px);
+		bottom: 0;
+		background: red;
+		content: "";
+	}
+}
+
+//New
+.list_new{
+	.vc_grid-container{
+		.vc_grid-item-mini{
+				.vc_custom_heading{
+					h4{
+						a{
+							&:hover{
+								color:#f7be68;
+							}
+						}
+					}
+			}
+			.vc_gitem-col{
+				.vc_btn3-container{
+					a.vc_general{
+						background-color: $bgr_btn!important;
+						border-radius: 20px;
+						padding: 10px 30px;
+						&:hover{
+							border:1px solid $bgr_btn;
+							background-color: transparent!important;
+							color:$bgr_btn;
+						}
+					}
+				}
+			
+			}
+		}	
+	}
+}
+.vc_grid-pagination{
+	ul.vc_grid-pagination-list{
+		li{
+			margin-left: 10px;
+			margin-right: 10px;
+			a{
+				border-radius: 50%!important;
+				width: 50px;
+				height: 50px;
+				line-height: 40px;
+				border:1px solid #b9a271;
+				font-size: 18px!important;
+
+			}
+		}
+}
+}
+.bgr_bottom_tur{
+	background-color: $bgr_btn!important;
+	border-radius: 20px;
+}
+#nd_options_comments,#nd_options_comments_form{
+	display: none;
+}
+.tp-caption{
+	background: #000;
+    text-decoration: none;
+    background-color: transparent;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 1px 1px 1px 1px;
+    border-radius: 0px 0px 0px 0px;
+    text-transform: uppercase;
+    padding: 10px 40px !important;
+    text-shadow: #000;
+}
+// Dự án
+.wpb-js-composer .vc_tta-tabs:not([class*=vc_tta-gap]):not(.vc_tta-o-no-fill).vc_tta-tabs-position-top .vc_tta-tab.vc_active>a::after,
+.wpb-js-composer .vc_tta-tabs:not([class*=vc_tta-gap]):not(.vc_tta-o-no-fill).vc_tta-tabs-position-top .vc_tta-tab.vc_active>a::before{
+	display: none!important;
+}
+.slide_list_duan {
+	.tp-revslider-slidesli{
+		.tp-caption {
+			font-size: 36px!important;
+    		line-height: 42px!important;
+    		text-shadow: 2px 1px 5px #000;
+		}
+	}
+	.tp-thumbs{
+		display: none;
+	}
+	.erinyen.tparrows:hover .tp-title-wrap{
+		display: none;
+	}
+}
+.list_duan{
+	.wpb_tabs_nav{
+		text-align: center;
+		li.ui-state-default{
+			margin:0 10px;
+			float: none;
+			display: inline-block;
+			background-color: transparent;
+			a{
+				display: block;
+				text-transform: uppercase;
+				font-size: 20px;
+			}
+		}
+		li.ui-tabs-active{
+			a{
+				border-top:1px solid #b9a271;
+				border-bottom: 1px solid #b9a271;
+				color: #b9a271;
+
+			}
+		
+		}
+	}
+	.vc_grid-item-mini{
+		position: relative;
+		.vc_gitem-zone.vc_gitem-zone-c{
+			position: absolute;
+			bottom: 0;
+			background-color: transparent!important;
+			left: 50%;
+			transform: translateX(-50%);
+			.vc_custom_heading{
+				margin-bottom: 0;
+				h4{
+					color: #fff;
+					font-weight: 500;
+				}
+			}
+			.vc_gitem-post-data-source-post_excerpt{
+				display: none;
+			}
+			.vc_btn3-container{
+				display: none;
+			}
+			
+		}	
+	}
+	.vc_is-hover{
+		.vc_gitem-animated-block{
+			overflow: hidden;
+			.vc_gitem-zone{
+				-webkit-transition: all 3000ms;
+				-o-transition: all 500ms;
+				transition: all 3000ms;
+				transform: scale(1.1);
+			}
+		}
+		h4{
+			margin-bottom: 10px;
+			-webkit-transition: all 800ms;
+			-o-transition: all 500ms;
+			transition: all 800ms;
+		}
+	}
+	
+	
+}
+.vc_is-hover{
+	.vc_gitem-animated-block{
+		overflow: hidden;
+		.vc_gitem-zone{
+			-webkit-transition: all 3000ms;
+			-o-transition: all 500ms;
+			transition: all 3000ms;
+			transform: scale(1.1);
+		}
+	}
+	
+}
+.wp-show-posts-image{
+	margin: 0;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: 0;
+    overflow: hidden;
+	img{
+		max-width: 100%;
+    	height: auto;
+	}
+}
+// Tuyển dụng
+.list_tuyendung{
+	.vc_col-sm-12{
+		padding-left: 0!important;
+		padding-right: 0!important;
+		.vc_gitem-zone-mini{
+			.vc_gitem_row{
+				.vc_col-sm-12{
+					background: #f1f1f1;
+					padding-left: 15px!important;
+					padding-right: 15px!important;
+					.vc_gitem-post-data-source-post_title{
+						h4{
+							text-align: center;
+							height: 40px;
+							line-height: 20px;
+							font-weight: 600;
+							overflow: hidden;
+							cursor: pointer;
+							:hover{
+									color:$bgr_btn;
+							}
+						}
+					}
+					.vc_btn3-container{
+						text-align: center;
+						a{
+							background-color: $bgr_btn;
+							padding: 7px 20px;
+							border-radius: 15px;
+							:hover{
+								background-color:$bgr_while!important;
+								border-color:$bgr_btn!important;
+							}
+						}
+					}
+				}
+			}
+		}
+		
+	}
+}
+//liên hệ
+.lien_he{
+	.vc_icon_element-outer{
+		float: left;
+		margin-bottom: 0;
+		.vc_icon_element-inner{
+			height: 20px!important;
+			.vc_icon_element-icon{
+				font-size: 20px!important;
+				color: #b9a271!important;
+			}
+		}
+	}
+	.p_custom{
+		padding-left: 60px;
+	}
+}
+// Quan hệ cổ đông
+.quanhecodong{
+	.class_divider{
+		position: relative;
+		&:after{
+			position:absolute;
+			width: 150px;
+			height: 2px;
+			background: red;
+			left: 0;
+			bottom: 0;
+			content: "";
+		}
+	}
+	.list_link_qhcd{
+		.vc_column-inner{
+			.wpb_wrapper{
+				a{
+					padding: 10px 0;
+					padding-left: 20px;
+					display: block;
+					position: relative;
+					border-bottom: 1px solid #eee;
+					float: none;
+					line-height: 20px!important;
+					&:before{
+						position: absolute;
+					    width: 12px;
+					    height: 15px;
+					    content: "";
+					    top: 9px;
+					    left: 0;
+					    background: url(img/ir-pdf-icon.png);
+					}
+	    			&:hover{
+	    				color: #f7be68;
+	    			}
+				}
+				
+			}
+		}
+	}
+}
+
+//footer
+
+.footer-page{
+	.footer_one{
+		background: $bgr_footer1;
+		text-align: center;
+		padding: 35px 0;
+		.widget_media_image{
+			img{
+				max-width: 180px!important;
+    			width: 100%;
+			}
+		}
+		h3.widget-title{
+			font-size: $font-sizeft;
+			color: $color_textf;
+			font-weight: 500;
+		}
+	}
+	.list-footer{
+		background: $bgr_footer2;
+		display: flow-root;
+		.footer_two{
+			ul{
+				margin-bottom: 0;
+				padding-left: 0;
+				li{
+					display: inline-block;
+					padding:21px 7px;
+					a{
+						color:#fff;
+					}
+				}
+			}
+		}
+		.gallery-item{
+			width: 15%!important;
+			margin: 0 10px 10px 10px;
+			float: right!important;
+			.gallery-icon{
+				    margin: 0px 0px 0px 0px;
+				    padding: 0;
+				    border: none;
+				    border-radius: 0;
+				    background: none;
+					img{
+						border: none!important;
+						max-width: 100%;
+	    				height: auto;
+	    				vertical-align: middle;
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 767px) and (min-width: 320px){
+	.vc_column_container {
+    	width: 100%!important;
+	}
+	.header-logo{
+		width: 50%;
+		img{
+			max-width: 150px;
+			margin-top: 0px!important;
+			}
+	}
+	.menu-mobile{
+		width: 50%;
+		text-align: right;
+		height: 60px;
+		.nicdark_display_block_all_iphone{
+			height: 25px;
+		}
+	}
+	.nd_options_height_110{
+		height: 60px;
+	}
+	.nd_options_font_size_40_all_iphone{
+		font-size: 30px;
+		line-height: 35px;
+	}
+
+	.font-size-h6{
+		font-size: 36px!important;
+		line-height: 40px!important;
+	}
+	.tuyen__dung{
+		table{
+			max-width: 635px!important;
+			width: 100%!important;
+		}
+	}
+	.text-title-responsive{
+		font-size: 30px!important;
+		line-height: 36px!important;
+	}
+	.text-gt-resposive{
+		font-size: 30px!important;
+		line-height: 35px!important;
+	}
+	.content_gioithieu .vc_column-inner .wpb_wrapper h5,
+	.content_gioithieu .vc_column-inner .wpb_wrapper h1{
+		width: unset;
+    	margin-left: 0;
+    	
+	}
+	.content_gioithieu .vc_column-inner .wpb_wrapper h5{
+		font-size: 25px!important;
+	}
+	.content_gioithieu .vc_column-inner .wpb_wrapper h1{
+		font-size: 30px!important;
+	}
+	.introduce_banner{
+		padding-left: 0px!important;
+		padding-right: 0px!important;
+	}
+	.list-server{
+		.nd_options_section{
+			img{
+				max-width: 50px;
+			}
+		}
+	}
+	.fix_responsive{
+		padding: 0!important;
+	}
+}
+@media only screen and (max-width: 767px) and (min-width: 480px){
+	.nd_options_container{
+		width: 100%;
+	}
+	.list_duan_resposive{
+		.vc_pageable-slide-wrapper{
+			.vc_col-sm-3{
+				float: left!important;
+				width: 50%!important;
+			}
+		}
+	}
+	.list-tuyendung-responesive{
+		.vc_pageable-slide-wrapper{
+			.vc_col-sm-3{
+				float: left!important;
+				width: 50%!important;
+			}
+		}
+	}
+}
+@media only screen and (max-width: 480px) and (min-width: 320px){
+	.list_duan_resposive{
+		.vc_pageable-slide-wrapper{
+			.vc_col-sm-3{
+				width: 100%!important;
+			}
+		}
+	}
+	.list-tuyendung-responesive{
+		.vc_pageable-slide-wrapper{
+			.vc_col-sm-3{
+				width: 100%!important;
+			}
+		}
+	}
+}
