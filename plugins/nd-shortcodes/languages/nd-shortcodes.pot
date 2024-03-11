@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ndshortcodes\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/twentyfifteen\n"
-"POT-Creation-Date: 2018-11-07 15:18+0100\n"
+"POT-Creation-Date: 2019-08-28 13:50+0200\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -18,11 +18,11 @@ msgstr ""
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: addons/breadcrumb/index.php:61
+#: addons/breadcrumb/index.php:63
 msgid "Home"
 msgstr ""
 
-#: addons/breadcrumb/index.php:222
+#: addons/breadcrumb/index.php:224
 #: addons/templates/archive/layout/layout-1.php:199
 #: addons/templates/archive/layout/layout-2.php:239
 #: addons/templates/archive/layout/layout-3.php:241
@@ -30,6 +30,7 @@ msgstr ""
 #: addons/templates/archive/layout/layout-5.php:217
 #: addons/templates/archive/layout/layout-6.php:222
 #: addons/templates/archive/layout/layout-7.php:226
+#: addons/templates/archive/layout/layout-8.php:219
 #: addons/templates/search/layout/layout-1.php:199
 #: addons/templates/search/layout/layout-2.php:239
 #: addons/templates/search/layout/layout-3.php:246
@@ -37,6 +38,7 @@ msgstr ""
 #: addons/templates/search/layout/layout-5.php:216
 #: addons/templates/search/layout/layout-6.php:216
 #: addons/templates/search/layout/layout-7.php:229
+#: addons/templates/search/layout/layout-8.php:220
 msgid "Page"
 msgstr ""
 
@@ -49,26 +51,26 @@ msgstr ""
 msgid "Archive Layout"
 msgstr ""
 
-#: addons/customizer/archives/archives/index.php:57
-#: addons/customizer/archives/search/index.php:54
+#: addons/customizer/archives/archives/index.php:58
+#: addons/customizer/archives/search/index.php:55
 #: addons/eventscalendar/customizer/header-img/index.php:27
 #: addons/woocommerce/customizer/archive-products/index.php:27
 msgid "Disable Header Section"
 msgstr ""
 
-#: addons/customizer/archives/archives/index.php:78
-#: addons/customizer/archives/search/index.php:75
-#: addons/metabox/page/index.php:118 addons/metabox/post/index.php:173
-#: addons/woocommerce/metabox/index.php:94
+#: addons/customizer/archives/archives/index.php:79
+#: addons/customizer/archives/search/index.php:76
+#: addons/metabox/page/index.php:136 addons/metabox/post/index.php:193
+#: addons/woocommerce/metabox/index.php:95
 msgid "Header Image"
 msgstr ""
 
-#: addons/customizer/archives/archives/index.php:98
-#: addons/customizer/archives/search/index.php:95
+#: addons/customizer/archives/archives/index.php:99
+#: addons/customizer/archives/search/index.php:96
 #: addons/eventscalendar/customizer/header-img/index.php:68
-#: addons/metabox/page/index.php:126 addons/metabox/post/index.php:181
+#: addons/metabox/page/index.php:144 addons/metabox/post/index.php:201
 #: addons/woocommerce/customizer/archive-products/index.php:68
-#: addons/woocommerce/metabox/index.php:102
+#: addons/woocommerce/metabox/index.php:103
 msgid "Image Position"
 msgstr ""
 
@@ -83,6 +85,8 @@ msgstr ""
 #: addons/customizer/archives/search/index.php:11
 #: addons/customizer/header/search/content.php:65
 #: addons/customizer/header/search/index.php:11
+#: addons/templates/archive/layout/layout-8.php:98
+#: addons/templates/search/layout/layout-8.php:97
 #: shortcodes/custom/post-search/layout/layout-1.php:9
 msgid "Search"
 msgstr ""
@@ -155,8 +159,8 @@ msgstr ""
 msgid "Fonts Settings"
 msgstr ""
 
-#: addons/customizer/fonts/index.php:24 shortcodes/custom/menu/index.php:225
-#: shortcodes/custom/text/index.php:116
+#: addons/customizer/fonts/index.php:24 shortcodes/custom/menu/index.php:229
+#: shortcodes/custom/text/index.php:121
 msgid "Font Family"
 msgstr ""
 
@@ -172,11 +176,11 @@ msgid ""
 "fonts."
 msgstr ""
 
-#: addons/customizer/fonts/index.php:71
+#: addons/customizer/fonts/index.php:78
 msgid "Paragraph Font"
 msgstr ""
 
-#: addons/customizer/fonts/index.php:73
+#: addons/customizer/fonts/index.php:80
 msgid ""
 "Select font family for your Paragraph, you can also use this font by using "
 "the class <strong>.nd_options_second_font</strong> in your code. <a target="
@@ -184,11 +188,11 @@ msgid ""
 "fonts."
 msgstr ""
 
-#: addons/customizer/fonts/index.php:102
+#: addons/customizer/fonts/index.php:116
 msgid "Third Font"
 msgstr ""
 
-#: addons/customizer/fonts/index.php:104
+#: addons/customizer/fonts/index.php:118
 msgid ""
 "Select font family for your third font, you can also use this font by using "
 "the class <strong>.nd_options_third_font</strong> in your code. <a target="
@@ -196,23 +200,23 @@ msgid ""
 "fonts."
 msgstr ""
 
-#: addons/customizer/fonts/index.php:133
+#: addons/customizer/fonts/index.php:154
 msgid "Font Color"
 msgstr ""
 
-#: addons/customizer/fonts/index.php:153
+#: addons/customizer/fonts/index.php:174
 msgid "Headings Color"
 msgstr ""
 
-#: addons/customizer/fonts/index.php:154
+#: addons/customizer/fonts/index.php:175
 msgid "Select font color for your Headings"
 msgstr ""
 
-#: addons/customizer/fonts/index.php:175
+#: addons/customizer/fonts/index.php:196
 msgid "Paragraph Color"
 msgstr ""
 
-#: addons/customizer/fonts/index.php:176
+#: addons/customizer/fonts/index.php:197
 msgid "Select font color for your Paragraph"
 msgstr ""
 
@@ -247,7 +251,7 @@ msgstr ""
 #: addons/customizer/forms/submit/index.php:78
 #: shortcodes/custom/button/index.php:174
 #: shortcodes/custom/focus-number/index.php:129
-#: shortcodes/custom/menu/index.php:212 shortcodes/custom/text/index.php:96
+#: shortcodes/custom/menu/index.php:216 shortcodes/custom/text/index.php:101
 #: shortcodes/custom/typewriter/index.php:164 shortcodes/focus/index.php:159
 msgid "Text Color"
 msgstr ""
@@ -773,15 +777,15 @@ msgid ""
 "<strong>nd_options_best_label</strong> in your menu item in css field"
 msgstr ""
 
-#: addons/customizer/header/labels/index.php:109
+#: addons/customizer/header/labels/index.php:110
 msgid "HOT"
 msgstr ""
 
-#: addons/customizer/header/labels/index.php:110
+#: addons/customizer/header/labels/index.php:112
 msgid "BEST"
 msgstr ""
 
-#: addons/customizer/header/labels/index.php:111
+#: addons/customizer/header/labels/index.php:114
 msgid "NEW"
 msgstr ""
 
@@ -837,8 +841,9 @@ msgstr ""
 #: addons/eventscalendar/customizer/index.php:13
 #: addons/locations/settings/index.php:66
 #: addons/woocommerce/customizer/index.php:13
-#: inc/settings/import-export/index.php:38 inc/settings/index.php:90
-#: inc/settings/index.php:110
+#: inc/settings/import-demo/index.php:44
+#: inc/settings/import-export/index.php:42 inc/settings/index.php:90
+#: inc/settings/index.php:119
 msgid "Plugin Settings"
 msgstr ""
 
@@ -851,12 +856,12 @@ msgstr ""
 msgid "ND Options Events Calendar"
 msgstr ""
 
-#: addons/eventscalendar/metabox/index.php:32 addons/locations/vc/index.php:251
+#: addons/eventscalendar/metabox/index.php:32 addons/locations/vc/index.php:250
 #: addons/metabox/page/index.php:34 addons/metabox/post/index.php:34
 #: addons/woocommerce/metabox/index.php:32
-#: shortcodes/custom/price/index.php:187 shortcodes/custom/toogle/index.php:122
+#: shortcodes/custom/price/index.php:189 shortcodes/custom/toogle/index.php:122
 #: shortcodes/focus/index.php:151 shortcodes/price/index.php:155
-#: shortcodes/service/index.php:106 shortcodes/team/index.php:145
+#: shortcodes/service/index.php:106 shortcodes/team/index.php:184
 #: shortcodes/testimonial/index.php:107
 msgid "Color"
 msgstr ""
@@ -872,7 +877,7 @@ msgstr ""
 msgid "Our Events"
 msgstr ""
 
-#: addons/eventscalendar/vc/index.php:98 inc/settings/index.php:176
+#: addons/eventscalendar/vc/index.php:98 inc/settings/index.php:185
 msgid "Events Calendar"
 msgstr ""
 
@@ -885,8 +890,8 @@ msgstr ""
 #: addons/woocommerce/vc/index.php:104 shortcodes/custom/divider/index.php:79
 #: shortcodes/custom/focus-number/index.php:86
 #: shortcodes/custom/list/index.php:87
-#: shortcodes/custom/magic-popup/index.php:114
-#: shortcodes/custom/post-search/index.php:120
+#: shortcodes/custom/magic-popup/index.php:132
+#: shortcodes/custom/post-search/index.php:121
 #: shortcodes/custom/service-pro/index.php:159
 #: shortcodes/custom/toogle/index.php:101
 msgid "NDS - Violet Coll."
@@ -895,62 +900,63 @@ msgstr ""
 #: addons/eventscalendar/vc/index.php:113 addons/locations/vc/index.php:210
 #: addons/woocommerce/vc/index.php:113 shortcodes/custom/button/index.php:141
 #: shortcodes/custom/cf7/index.php:106
-#: shortcodes/custom/countdown/index.php:135
-#: shortcodes/custom/counter/index.php:130
+#: shortcodes/custom/countdown/index.php:138
+#: shortcodes/custom/counter/index.php:127
 #: shortcodes/custom/divider/index.php:87
 #: shortcodes/custom/focus-number/index.php:94
-#: shortcodes/custom/magic-popup/index.php:122
+#: shortcodes/custom/magic-popup/index.php:140
 #: shortcodes/custom/post-grid/index.php:123
-#: shortcodes/custom/post-search/index.php:128
-#: shortcodes/custom/price/index.php:120
+#: shortcodes/custom/post-search/index.php:129
+#: shortcodes/custom/price/index.php:122
 #: shortcodes/custom/service-pro/index.php:168
 #: shortcodes/custom/service/index.php:121 shortcodes/focus/index.php:110
-#: shortcodes/team/index.php:105 shortcodes/testimonial/index.php:95
+#: shortcodes/progress/index.php:92 shortcodes/team/index.php:142
+#: shortcodes/testimonial/index.php:95
 msgid "Choose the layout"
 msgstr ""
 
 #: addons/eventscalendar/vc/index.php:117 addons/woocommerce/vc/index.php:117
-#: shortcodes/custom/countdown/index.php:146
+#: shortcodes/custom/countdown/index.php:149
 #: shortcodes/custom/divider/index.php:92 shortcodes/custom/image/index.php:61
-#: shortcodes/custom/open-sidebar/index.php:192
+#: shortcodes/custom/open-sidebar/index.php:198
 #: shortcodes/custom/post-grid/index.php:127
 msgid "Width"
 msgstr ""
 
 #: addons/eventscalendar/vc/index.php:119 addons/woocommerce/vc/index.php:119
-#: shortcodes/custom/countdown/index.php:148
+#: shortcodes/custom/countdown/index.php:151
 #: shortcodes/custom/post-grid/index.php:129
 #: shortcodes/custom/post-grid/index.php:137
 msgid "Select Width"
 msgstr ""
 
 #: addons/eventscalendar/vc/index.php:119 addons/woocommerce/vc/index.php:119
-#: shortcodes/custom/countdown/index.php:148
+#: shortcodes/custom/countdown/index.php:151
 #: shortcodes/custom/post-grid/index.php:129
 msgid "20 %"
 msgstr ""
 
 #: addons/eventscalendar/vc/index.php:119 addons/woocommerce/vc/index.php:119
-#: shortcodes/custom/countdown/index.php:148
+#: shortcodes/custom/countdown/index.php:151
 #: shortcodes/custom/post-grid/index.php:129
 msgid "25 %"
 msgstr ""
 
 #: addons/eventscalendar/vc/index.php:119 addons/woocommerce/vc/index.php:119
-#: shortcodes/custom/countdown/index.php:148
+#: shortcodes/custom/countdown/index.php:151
 #: shortcodes/custom/post-grid/index.php:129
 msgid "33 %"
 msgstr ""
 
 #: addons/eventscalendar/vc/index.php:119 addons/woocommerce/vc/index.php:119
-#: shortcodes/custom/countdown/index.php:148
+#: shortcodes/custom/countdown/index.php:151
 #: shortcodes/custom/post-grid/index.php:129
 #: shortcodes/custom/post-grid/index.php:137
 msgid "50 %"
 msgstr ""
 
 #: addons/eventscalendar/vc/index.php:119 addons/woocommerce/vc/index.php:119
-#: shortcodes/custom/countdown/index.php:148
+#: shortcodes/custom/countdown/index.php:151
 #: shortcodes/custom/post-grid/index.php:129
 msgid "100 %"
 msgstr ""
@@ -1009,48 +1015,50 @@ msgstr ""
 #: addons/eventscalendar/vc/index.php:153 addons/woocommerce/vc/index.php:153
 #: shortcodes/custom/badge/index.php:149 shortcodes/custom/button/index.php:256
 #: shortcodes/custom/cf7/index.php:152
-#: shortcodes/custom/countdown/index.php:297
-#: shortcodes/custom/counter/index.php:181
+#: shortcodes/custom/countdown/index.php:300
+#: shortcodes/custom/counter/index.php:178
 #: shortcodes/custom/divider/index.php:121
 #: shortcodes/custom/focus-number/index.php:137
 #: shortcodes/custom/image/index.php:75 shortcodes/custom/list/index.php:135
-#: shortcodes/custom/magic-popup/index.php:231
-#: shortcodes/custom/menu/index.php:262
-#: shortcodes/custom/open-sidebar/index.php:245
+#: shortcodes/custom/magic-popup/index.php:326
+#: shortcodes/custom/menu/index.php:266
+#: shortcodes/custom/open-sidebar/index.php:251
 #: shortcodes/custom/post-grid/index.php:187
-#: shortcodes/custom/post-search/index.php:140
-#: shortcodes/custom/price/index.php:211
+#: shortcodes/custom/post-search/index.php:141
+#: shortcodes/custom/price/index.php:220
 #: shortcodes/custom/service-pro/index.php:406
 #: shortcodes/custom/service/index.php:217
-#: shortcodes/custom/spacer/index.php:66 shortcodes/custom/text/index.php:175
+#: shortcodes/custom/spacer/index.php:66 shortcodes/custom/text/index.php:180
 #: shortcodes/custom/toogle/index.php:129
 #: shortcodes/custom/typewriter/index.php:187 shortcodes/focus/index.php:175
-#: shortcodes/price/index.php:163 shortcodes/service/index.php:114
-#: shortcodes/team/index.php:163 shortcodes/testimonial/index.php:136
+#: shortcodes/price/index.php:163 shortcodes/progress/index.php:127
+#: shortcodes/service/index.php:114 shortcodes/team/index.php:261
+#: shortcodes/testimonial/index.php:136
 msgid "Custom class"
 msgstr ""
 
 #: addons/eventscalendar/vc/index.php:155 addons/woocommerce/vc/index.php:155
 #: shortcodes/custom/badge/index.php:151 shortcodes/custom/button/index.php:258
 #: shortcodes/custom/cf7/index.php:154
-#: shortcodes/custom/countdown/index.php:299
-#: shortcodes/custom/counter/index.php:183
+#: shortcodes/custom/countdown/index.php:302
+#: shortcodes/custom/counter/index.php:180
 #: shortcodes/custom/divider/index.php:123
 #: shortcodes/custom/focus-number/index.php:139
 #: shortcodes/custom/image/index.php:77 shortcodes/custom/list/index.php:137
-#: shortcodes/custom/magic-popup/index.php:233
-#: shortcodes/custom/menu/index.php:264
-#: shortcodes/custom/open-sidebar/index.php:247
+#: shortcodes/custom/magic-popup/index.php:328
+#: shortcodes/custom/menu/index.php:268
+#: shortcodes/custom/open-sidebar/index.php:253
 #: shortcodes/custom/post-grid/index.php:189
-#: shortcodes/custom/post-search/index.php:142
-#: shortcodes/custom/price/index.php:213
+#: shortcodes/custom/post-search/index.php:143
+#: shortcodes/custom/price/index.php:222
 #: shortcodes/custom/service-pro/index.php:408
 #: shortcodes/custom/service/index.php:219
-#: shortcodes/custom/spacer/index.php:68 shortcodes/custom/text/index.php:177
+#: shortcodes/custom/spacer/index.php:68 shortcodes/custom/text/index.php:182
 #: shortcodes/custom/toogle/index.php:131
 #: shortcodes/custom/typewriter/index.php:189 shortcodes/focus/index.php:177
-#: shortcodes/price/index.php:165 shortcodes/service/index.php:116
-#: shortcodes/team/index.php:165 shortcodes/testimonial/index.php:138
+#: shortcodes/price/index.php:165 shortcodes/progress/index.php:129
+#: shortcodes/service/index.php:116 shortcodes/team/index.php:263
+#: shortcodes/testimonial/index.php:138
 msgid "Insert custom class"
 msgstr ""
 
@@ -1062,6 +1070,7 @@ msgstr ""
 #: addons/templates/archive/layout/layout-5.php:189
 #: addons/templates/archive/layout/layout-6.php:194
 #: addons/templates/archive/layout/layout-7.php:200
+#: addons/templates/archive/layout/layout-8.php:191
 #: addons/templates/search/layout/layout-1.php:175
 #: addons/templates/search/layout/layout-2.php:215
 #: addons/templates/search/layout/layout-3.php:217
@@ -1069,6 +1078,7 @@ msgstr ""
 #: addons/templates/search/layout/layout-5.php:188
 #: addons/templates/search/layout/layout-6.php:188
 #: addons/templates/search/layout/layout-7.php:202
+#: addons/templates/search/layout/layout-8.php:191
 #: addons/woocommerce/vc/layout/layout-1.php:83
 #: shortcodes/custom/post-grid/layout/layout-1.php:60
 #: shortcodes/custom/post-grid/layout/layout-10.php:221
@@ -1078,10 +1088,12 @@ msgstr ""
 #: shortcodes/custom/post-grid/layout/layout-12.php:66
 #: shortcodes/custom/post-grid/layout/layout-13.php:95
 #: shortcodes/custom/post-grid/layout/layout-13.php:147
+#: shortcodes/custom/post-grid/layout/layout-14.php:221
+#: shortcodes/custom/post-grid/layout/layout-14.php:277
 #: shortcodes/custom/post-grid/layout/layout-2.php:79
 #: shortcodes/custom/post-grid/layout/layout-3.php:216
 #: shortcodes/custom/post-grid/layout/layout-3.php:293
-#: shortcodes/custom/post-grid/layout/layout-4.php:74
+#: shortcodes/custom/post-grid/layout/layout-4.php:75
 #: shortcodes/custom/post-grid/layout/layout-5.php:109
 #: shortcodes/custom/post-grid/layout/layout-6.php:216
 #: shortcodes/custom/post-grid/layout/layout-6.php:293
@@ -1096,11 +1108,13 @@ msgstr ""
 #: addons/locations/cpt/index.php:8 addons/locations/cpt/index.php:9
 #: addons/locations/settings/index.php:12
 #: addons/locations/settings/index.php:30
-#: addons/locations/settings/index.php:69 inc/settings/index.php:196
+#: addons/locations/settings/index.php:75 inc/settings/import-demo/index.php:53
+#: inc/settings/import-export/index.php:51 inc/settings/index.php:99
+#: inc/settings/index.php:205
 msgid "Locations"
 msgstr ""
 
-#: addons/locations/metabox/index.php:7 addons/locations/settings/index.php:84
+#: addons/locations/metabox/index.php:7 addons/locations/settings/index.php:95
 msgid "Location Settings"
 msgstr ""
 
@@ -1115,14 +1129,14 @@ msgid ""
 "%3DDesktop&hl=en\">View Documentation</a> "
 msgstr ""
 
-#: addons/locations/metabox/index.php:33 addons/metabox/page/index.php:51
-#: addons/metabox/page/index.php:139 addons/metabox/post/index.php:51
-#: addons/metabox/post/index.php:194 addons/woocommerce/metabox/index.php:115
+#: addons/locations/metabox/index.php:33 addons/metabox/page/index.php:50
+#: addons/metabox/page/index.php:157 addons/metabox/post/index.php:50
+#: addons/metabox/post/index.php:214 addons/woocommerce/metabox/index.php:116
 #: shortcodes/custom/cf7/index.php:128
 #: shortcodes/custom/focus-number/index.php:106
 #: shortcodes/custom/list/index.php:99
-#: shortcodes/custom/magic-popup/index.php:148
-#: shortcodes/custom/price/index.php:132
+#: shortcodes/custom/magic-popup/index.php:184
+#: shortcodes/custom/price/index.php:134
 #: shortcodes/custom/service-pro/index.php:187
 #: shortcodes/custom/service/index.php:149
 #: shortcodes/custom/toogle/index.php:108 shortcodes/focus/index.php:128
@@ -1133,8 +1147,8 @@ msgstr ""
 #: addons/locations/metabox/index.php:35 shortcodes/custom/cf7/index.php:131
 #: shortcodes/custom/focus-number/index.php:109
 #: shortcodes/custom/list/index.php:102
-#: shortcodes/custom/magic-popup/index.php:151
-#: shortcodes/custom/price/index.php:135
+#: shortcodes/custom/magic-popup/index.php:187
+#: shortcodes/custom/price/index.php:137
 #: shortcodes/custom/service-pro/index.php:190
 #: shortcodes/custom/service/index.php:152
 #: shortcodes/custom/toogle/index.php:110 shortcodes/focus/index.php:131
@@ -1142,72 +1156,81 @@ msgstr ""
 msgid "Insert the title"
 msgstr ""
 
-#: addons/locations/metabox/index.php:38 shortcodes/custom/price/index.php:140
+#: addons/locations/metabox/index.php:38 shortcodes/custom/price/index.php:142
 msgid "Sub Title"
 msgstr ""
 
-#: addons/locations/metabox/index.php:40 shortcodes/custom/price/index.php:142
+#: addons/locations/metabox/index.php:40 shortcodes/custom/price/index.php:144
 msgid "Insert the sub title"
 msgstr ""
 
 #: addons/locations/metabox/index.php:43
 #: shortcodes/custom/focus-number/index.php:114
-#: shortcodes/custom/list/index.php:114 shortcodes/custom/price/index.php:164
-#: shortcodes/custom/price/index.php:172
+#: shortcodes/custom/list/index.php:114
+#: shortcodes/custom/magic-popup/index.php:226
+#: shortcodes/custom/price/index.php:166 shortcodes/custom/price/index.php:174
 #: shortcodes/custom/service-pro/index.php:195
 #: shortcodes/custom/service/index.php:166
 #: shortcodes/custom/toogle/index.php:115 shortcodes/price/index.php:142
-#: shortcodes/service/index.php:93 shortcodes/team/index.php:126
+#: shortcodes/service/index.php:93 shortcodes/team/index.php:164
 msgid "Description"
 msgstr ""
 
 #: addons/locations/metabox/index.php:45
 #: shortcodes/custom/focus-number/index.php:116
-#: shortcodes/custom/list/index.php:116 shortcodes/custom/price/index.php:174
+#: shortcodes/custom/list/index.php:116
+#: shortcodes/custom/magic-popup/index.php:228
+#: shortcodes/custom/price/index.php:176
 #: shortcodes/custom/service-pro/index.php:197
 #: shortcodes/custom/service/index.php:168
 #: shortcodes/custom/toogle/index.php:117 shortcodes/price/index.php:144
-#: shortcodes/service/index.php:95 shortcodes/team/index.php:128
+#: shortcodes/service/index.php:95 shortcodes/team/index.php:166
 msgid "Insert the description"
 msgstr ""
 
-#: addons/locations/settings/index.php:55
-#: inc/settings/import-export/index.php:27 inc/settings/index.php:79
+#: addons/locations/settings/index.php:55 inc/settings/import-demo/index.php:32
+#: inc/settings/import-export/index.php:31 inc/settings/index.php:79
 #: shortcodes/focus/index.php:102 shortcodes/price/index.php:113
-#: shortcodes/service/index.php:72 shortcodes/team/index.php:96
-#: shortcodes/testimonial/index.php:86
+#: shortcodes/progress/index.php:83 shortcodes/service/index.php:72
+#: shortcodes/team/index.php:133 shortcodes/testimonial/index.php:86
 msgid "ND Shortcodes"
 msgstr ""
 
-#: addons/locations/settings/index.php:67
-#: inc/settings/import-export/index.php:39 inc/settings/index.php:91
+#: addons/locations/settings/index.php:67 inc/settings/import-demo/index.php:45
+#: inc/settings/import-export/index.php:43 inc/settings/index.php:91
 msgid "Theme Options"
 msgstr ""
 
-#: addons/locations/settings/index.php:68
+#: addons/locations/settings/index.php:68 inc/settings/import-demo/index.php:46
 #: inc/settings/import-export/index.php:7
-#: inc/settings/import-export/index.php:40 inc/settings/index.php:92
+#: inc/settings/import-export/index.php:44 inc/settings/index.php:92
 msgid "Import Export"
 msgstr ""
 
-#: addons/locations/settings/index.php:70
-#: inc/settings/import-export/index.php:42 inc/settings/index.php:96
+#: addons/locations/settings/index.php:69 inc/settings/import-demo/index.php:7
+#: inc/settings/import-demo/index.php:47 inc/settings/import-demo/index.php:73
+#: inc/settings/import-export/index.php:45 inc/settings/index.php:93
+msgid "Import Demo"
+msgstr ""
+
+#: addons/locations/settings/index.php:81 inc/settings/import-demo/index.php:59
+#: inc/settings/import-export/index.php:57 inc/settings/index.php:105
 msgid "Documentation"
 msgstr ""
 
-#: addons/locations/settings/index.php:85
+#: addons/locations/settings/index.php:96
 msgid "Below some important location settings."
 msgstr ""
 
-#: addons/locations/settings/index.php:95
+#: addons/locations/settings/index.php:106
 msgid "Api Key"
 msgstr ""
 
-#: addons/locations/settings/index.php:96
+#: addons/locations/settings/index.php:107
 msgid "Insert Google Maps Api Key"
 msgstr ""
 
-#: addons/locations/settings/index.php:101
+#: addons/locations/settings/index.php:112
 msgid ""
 "Insert Google Maps Api Key - <a target=\"_blank\" href=\"https://developers."
 "google.com/maps/documentation/javascript/get-api-key\">View Documentation</a>"
@@ -1225,46 +1248,46 @@ msgstr ""
 msgid "Height"
 msgstr ""
 
-#: addons/locations/vc/index.php:219
+#: addons/locations/vc/index.php:218
 msgid "Insert the map height"
 msgstr ""
 
-#: addons/locations/vc/index.php:224
+#: addons/locations/vc/index.php:223
 msgid "Zoom Map"
 msgstr ""
 
-#: addons/locations/vc/index.php:226
+#: addons/locations/vc/index.php:225
 msgid "Insert a different zoom of the map ( Ex: from 0 to 14 )"
 msgstr ""
 
-#: addons/locations/vc/index.php:231
+#: addons/locations/vc/index.php:230
 msgid "Center Map"
 msgstr ""
 
-#: addons/locations/vc/index.php:233
+#: addons/locations/vc/index.php:232
 msgid ""
 "Insert a different center position coordinates of the map ( Ex: 34.263079, "
 "16.993682 )"
 msgstr ""
 
-#: addons/locations/vc/index.php:237
+#: addons/locations/vc/index.php:236
 msgid "Pointer"
 msgstr ""
 
-#: addons/locations/vc/index.php:239
+#: addons/locations/vc/index.php:238
 msgid "Select image from media library for pointer locations (pin)."
 msgstr ""
 
-#: addons/locations/vc/index.php:244
+#: addons/locations/vc/index.php:243
 msgid "Pointer Size"
 msgstr ""
 
-#: addons/locations/vc/index.php:246
+#: addons/locations/vc/index.php:245
 msgid "Insert pointer size ( Ex: 45,45 )"
 msgstr ""
 
-#: addons/locations/vc/index.php:253 shortcodes/custom/toogle/index.php:124
-#: shortcodes/team/index.php:148
+#: addons/locations/vc/index.php:252 shortcodes/custom/toogle/index.php:124
+#: shortcodes/team/index.php:187
 msgid "Choose color"
 msgstr ""
 
@@ -1272,32 +1295,60 @@ msgstr ""
 msgid "ND Options Page"
 msgstr ""
 
-#: addons/metabox/page/index.php:53 addons/metabox/post/index.php:53
+#: addons/metabox/page/index.php:54 addons/metabox/post/index.php:54
+msgid "Hide Title"
+msgstr ""
+
+#: addons/metabox/page/index.php:55 addons/metabox/post/index.php:55
+msgid "Show Title"
+msgstr ""
+
+#: addons/metabox/page/index.php:59 addons/metabox/post/index.php:59
 msgid "Check if you want to hide the title page."
 msgstr ""
 
-#: addons/metabox/page/index.php:58 addons/metabox/post/index.php:58
+#: addons/metabox/page/index.php:63 addons/metabox/post/index.php:63
 msgid "Margin Top / Bottom"
 msgstr ""
 
-#: addons/metabox/page/index.php:60 addons/metabox/post/index.php:60
+#: addons/metabox/page/index.php:67 addons/metabox/post/index.php:67
+msgid "Remove Spaces"
+msgstr ""
+
+#: addons/metabox/page/index.php:68 addons/metabox/post/index.php:68
+msgid "Add Spaces"
+msgstr ""
+
+#: addons/metabox/page/index.php:72 addons/metabox/post/index.php:72
 msgid ""
 "Check if you want to remove the automatic page margin on top and bottom of "
 "the page."
 msgstr ""
 
-#: addons/metabox/page/index.php:100 addons/metabox/post/index.php:153
-#: addons/woocommerce/metabox/index.php:76
+#: addons/metabox/page/index.php:118 addons/metabox/post/index.php:173
+#: addons/woocommerce/metabox/index.php:77
 msgid "ND Options Header Image"
 msgstr ""
 
-#: addons/metabox/page/index.php:121 addons/metabox/post/index.php:176
-#: addons/woocommerce/metabox/index.php:97
+#: addons/metabox/page/index.php:139 addons/metabox/post/index.php:196
+#: addons/woocommerce/metabox/index.php:98
 msgid "Upload"
 msgstr ""
 
-#: addons/metabox/page/index.php:141 addons/metabox/post/index.php:196
-#: addons/woocommerce/metabox/index.php:117
+#: addons/metabox/page/index.php:148 addons/woocommerce/metabox/index.php:107
+msgid "Position Top"
+msgstr ""
+
+#: addons/metabox/page/index.php:149 addons/woocommerce/metabox/index.php:108
+msgid "Position Bottom"
+msgstr ""
+
+#: addons/metabox/page/index.php:150 addons/woocommerce/metabox/index.php:109
+msgid "Position Center"
+msgstr ""
+
+#: addons/metabox/page/index.php:159 addons/metabox/post/index.php:216
+#: addons/woocommerce/metabox/index.php:118
 msgid "Insert the title/slogan over the image"
 msgstr ""
 
@@ -1305,63 +1356,75 @@ msgstr ""
 msgid "ND Options Post"
 msgstr ""
 
-#: addons/metabox/post/index.php:100
+#: addons/metabox/post/index.php:117
 msgid "ND Options Sidebar"
 msgstr ""
 
-#: addons/metabox/post/index.php:116
+#: addons/metabox/post/index.php:133
 msgid "Sidebar Position"
 msgstr ""
 
-#: addons/metabox/post/index.php:286
+#: addons/metabox/post/index.php:137
+msgid "Page Full Width"
+msgstr ""
+
+#: addons/metabox/post/index.php:138
+msgid "Left Sidebar"
+msgstr ""
+
+#: addons/metabox/post/index.php:139
+msgid "Right Sidebar"
+msgstr ""
+
+#: addons/metabox/post/index.php:313
 msgid "Post Format QUOTE"
 msgstr ""
 
-#: addons/metabox/post/index.php:303
+#: addons/metabox/post/index.php:330
 msgid "Quote Text"
 msgstr ""
 
-#: addons/metabox/post/index.php:305
+#: addons/metabox/post/index.php:332
 msgid "Insert the text quote, you can see it in the preview of your post."
 msgstr ""
 
-#: addons/metabox/post/index.php:307
+#: addons/metabox/post/index.php:334
 msgid "Quote Author"
 msgstr ""
 
-#: addons/metabox/post/index.php:309
+#: addons/metabox/post/index.php:336
 msgid "Insert the quote author."
 msgstr ""
 
-#: addons/metabox/post/index.php:341
+#: addons/metabox/post/index.php:373
 msgid "Post Format LINK"
 msgstr ""
 
-#: addons/metabox/post/index.php:358
+#: addons/metabox/post/index.php:390
 msgid "Title Link"
 msgstr ""
 
-#: addons/metabox/post/index.php:360
+#: addons/metabox/post/index.php:392
 msgid "Insert the title link, you can see it in the preview of your post."
 msgstr ""
 
-#: addons/metabox/post/index.php:362
+#: addons/metabox/post/index.php:394
 msgid "Link Url"
 msgstr ""
 
-#: addons/metabox/post/index.php:364
+#: addons/metabox/post/index.php:396
 msgid "Insert the link url ( http://www.nicdark.com )."
 msgstr ""
 
-#: addons/metabox/post/index.php:397
+#: addons/metabox/post/index.php:434
 msgid "Post Format VIDEO, GALLERY, AUDIO"
 msgstr ""
 
-#: addons/metabox/post/index.php:413
+#: addons/metabox/post/index.php:450
 msgid "Iframe / Shortcode"
 msgstr ""
 
-#: addons/metabox/post/index.php:415
+#: addons/metabox/post/index.php:452
 msgid ""
 "Insert the iframe/shortcode , you can see it in the preview of your post."
 msgstr ""
@@ -1371,12 +1434,14 @@ msgstr ""
 #: addons/templates/archive/layout/layout-3.php:80
 #: addons/templates/archive/layout/layout-4.php:80
 #: addons/templates/archive/layout/layout-5.php:85
+#: addons/templates/archive/layout/layout-8.php:86
 #: addons/templates/search/layout/layout-1.php:80
 #: addons/templates/search/layout/layout-2.php:82
 #: addons/templates/search/layout/layout-3.php:80
 #: addons/templates/search/layout/layout-4.php:80
 #: addons/templates/search/layout/layout-5.php:84
 #: addons/templates/search/layout/layout-6.php:84
+#: addons/templates/search/layout/layout-8.php:85
 msgid "Category"
 msgstr ""
 
@@ -1385,13 +1450,15 @@ msgstr ""
 #: addons/templates/archive/layout/layout-3.php:90
 #: addons/templates/archive/layout/layout-4.php:90
 #: addons/templates/archive/layout/layout-5.php:87
+#: addons/templates/archive/layout/layout-8.php:89
 #: addons/templates/search/layout/layout-1.php:82
 #: addons/templates/search/layout/layout-2.php:92
 #: addons/templates/search/layout/layout-3.php:90
 #: addons/templates/search/layout/layout-4.php:90
 #: addons/templates/search/layout/layout-5.php:86
 #: addons/templates/search/layout/layout-6.php:86
-#: shortcodes/custom/text/index.php:102
+#: addons/templates/search/layout/layout-8.php:88
+#: shortcodes/custom/text/index.php:107
 msgid "Tag"
 msgstr ""
 
@@ -1414,12 +1481,14 @@ msgstr ""
 #: addons/templates/archive/layout/layout-3.php:110
 #: addons/templates/archive/layout/layout-4.php:110
 #: addons/templates/archive/layout/layout-5.php:91
+#: addons/templates/archive/layout/layout-8.php:95
 #: addons/templates/search/layout/layout-1.php:86
 #: addons/templates/search/layout/layout-2.php:112
 #: addons/templates/search/layout/layout-3.php:110
 #: addons/templates/search/layout/layout-4.php:110
 #: addons/templates/search/layout/layout-5.php:90
 #: addons/templates/search/layout/layout-6.php:90
+#: addons/templates/search/layout/layout-8.php:94
 msgid "Author"
 msgstr ""
 
@@ -1441,12 +1510,16 @@ msgstr ""
 #: addons/templates/archive/layout/layout-3.php:130
 #: addons/templates/archive/layout/layout-4.php:130
 #: addons/templates/archive/layout/layout-5.php:95
+#: addons/templates/archive/layout/layout-8.php:92
+#: addons/templates/archive/layout/layout-8.php:100
 #: addons/templates/search/layout/layout-1.php:90
 #: addons/templates/search/layout/layout-2.php:132
 #: addons/templates/search/layout/layout-3.php:130
 #: addons/templates/search/layout/layout-4.php:130
 #: addons/templates/search/layout/layout-5.php:94
 #: addons/templates/search/layout/layout-6.php:95
+#: addons/templates/search/layout/layout-8.php:91
+#: addons/templates/search/layout/layout-8.php:99
 msgid "Archive"
 msgstr ""
 
@@ -1457,6 +1530,7 @@ msgstr ""
 #: addons/templates/archive/layout/layout-5.php:215
 #: addons/templates/archive/layout/layout-6.php:220
 #: addons/templates/archive/layout/layout-7.php:224
+#: addons/templates/archive/layout/layout-8.php:217
 #: addons/templates/search/layout/layout-1.php:197
 #: addons/templates/search/layout/layout-2.php:237
 #: addons/templates/search/layout/layout-3.php:244
@@ -1464,6 +1538,7 @@ msgstr ""
 #: addons/templates/search/layout/layout-5.php:214
 #: addons/templates/search/layout/layout-6.php:214
 #: addons/templates/search/layout/layout-7.php:227
+#: addons/templates/search/layout/layout-8.php:218
 msgid "Prev"
 msgstr ""
 
@@ -1474,6 +1549,7 @@ msgstr ""
 #: addons/templates/archive/layout/layout-5.php:216
 #: addons/templates/archive/layout/layout-6.php:221
 #: addons/templates/archive/layout/layout-7.php:225
+#: addons/templates/archive/layout/layout-8.php:218
 #: addons/templates/search/layout/layout-1.php:198
 #: addons/templates/search/layout/layout-2.php:238
 #: addons/templates/search/layout/layout-3.php:245
@@ -1481,6 +1557,7 @@ msgstr ""
 #: addons/templates/search/layout/layout-5.php:215
 #: addons/templates/search/layout/layout-6.php:215
 #: addons/templates/search/layout/layout-7.php:228
+#: addons/templates/search/layout/layout-8.php:219
 msgid "Next"
 msgstr ""
 
@@ -1561,6 +1638,7 @@ msgstr ""
 #: addons/templates/comment/layout/layout-5.php:82
 #: addons/templates/comment/layout/layout-6.php:82
 #: addons/templates/comment/layout/layout-7.php:75
+#: addons/templates/comment/layout/layout-8.php:82
 msgid "No Comments"
 msgstr ""
 
@@ -1571,6 +1649,7 @@ msgstr ""
 #: addons/templates/comment/layout/layout-5.php:82
 #: addons/templates/comment/layout/layout-6.php:82
 #: addons/templates/comment/layout/layout-7.php:75
+#: addons/templates/comment/layout/layout-8.php:82
 msgid "One Comment"
 msgstr ""
 
@@ -1581,10 +1660,11 @@ msgstr ""
 #: addons/templates/comment/layout/layout-5.php:82
 #: addons/templates/comment/layout/layout-6.php:82
 #: addons/templates/comment/layout/layout-7.php:75
+#: addons/templates/comment/layout/layout-8.php:82
 msgid "% Comments"
 msgstr ""
 
-#: addons/templates/page/customizer.php:10 inc/settings/index.php:150
+#: addons/templates/page/customizer.php:10 inc/settings/index.php:159
 msgid "Page Template"
 msgstr ""
 
@@ -1592,7 +1672,7 @@ msgstr ""
 msgid "Page Template Settings"
 msgstr ""
 
-#: addons/templates/post/customizer.php:10 inc/settings/index.php:152
+#: addons/templates/post/customizer.php:10 inc/settings/index.php:161
 msgid "Post Template"
 msgstr ""
 
@@ -1605,8 +1685,9 @@ msgstr ""
 #: addons/templates/post/layout/layout-3.php:218
 #: addons/templates/post/layout/layout-4.php:169
 #: addons/templates/post/layout/layout-5.php:212
-#: addons/templates/post/layout/layout-6.php:215
+#: addons/templates/post/layout/layout-6.php:217
 #: addons/templates/post/layout/layout-7.php:170
+#: addons/templates/post/layout/layout-8.php:212
 msgid "Next page"
 msgstr ""
 
@@ -1615,8 +1696,9 @@ msgstr ""
 #: addons/templates/post/layout/layout-3.php:219
 #: addons/templates/post/layout/layout-4.php:170
 #: addons/templates/post/layout/layout-5.php:213
-#: addons/templates/post/layout/layout-6.php:216
+#: addons/templates/post/layout/layout-6.php:218
 #: addons/templates/post/layout/layout-7.php:171
+#: addons/templates/post/layout/layout-8.php:213
 msgid "Previous page"
 msgstr ""
 
@@ -1633,36 +1715,12 @@ msgstr ""
 msgid "Themes"
 msgstr ""
 
-#: addons/themes/index.php:52 addons/themes/index.php:73
-#: addons/themes/index.php:94 addons/themes/index.php:116
-#: addons/themes/index.php:137 addons/themes/index.php:157
-#: addons/themes/index.php:178 addons/themes/index.php:199
-#: addons/themes/index.php:220
-msgid "Theme Details"
-msgstr ""
-
-#: addons/themes/index.php:57 addons/themes/index.php:78
-#: addons/themes/index.php:99 addons/themes/index.php:121
-#: addons/themes/index.php:142 addons/themes/index.php:162
-#: addons/themes/index.php:183 addons/themes/index.php:204
-#: addons/themes/index.php:225
-msgid "Demo"
-msgstr ""
-
-#: addons/themes/index.php:58 addons/themes/index.php:79
-#: addons/themes/index.php:100 addons/themes/index.php:122
-#: addons/themes/index.php:143 addons/themes/index.php:163
-#: addons/themes/index.php:184 addons/themes/index.php:205
-#: addons/themes/index.php:226
-msgid "Purchase"
-msgstr ""
-
 #: addons/woocommerce/customizer/archive-products/index.php:90
 #: addons/woocommerce/customizer/single-product/index.php:28
 msgid "Header Image Layout"
 msgstr ""
 
-#: addons/woocommerce/customizer/archive-products/index.php:115
+#: addons/woocommerce/customizer/archive-products/index.php:117
 msgid "Sidebar"
 msgstr ""
 
@@ -1718,139 +1776,186 @@ msgstr ""
 msgid "ND Options WooCommerce"
 msgstr ""
 
-#: addons/woocommerce/vc/index.php:98 inc/settings/index.php:174
+#: addons/woocommerce/vc/index.php:98 inc/settings/index.php:183
 msgid "WooCommerce"
 msgstr ""
 
 #: addons/woocommerce/vc/layout/layout-2.php:71
+#: addons/woocommerce/vc/layout/layout-3.php:71
 msgid "SALE"
 msgstr ""
 
-#: inc/settings/import-export/index.php:56
+#: inc/settings/import-demo/index.php:74
+msgid "Select the demo you want to import options from."
+msgstr ""
+
+#: inc/settings/import-demo/index.php:108
+msgid "Demo"
+msgstr ""
+
+#: inc/settings/import-demo/index.php:132
+msgid ""
+"IMPORTANT : If you import the demo options by clicking the button your "
+"existing options will be overwritten."
+msgstr ""
+
+#: inc/settings/import-demo/index.php:148
+#: inc/settings/import-demo/index.php:256
+msgid ""
+"The xml file was not found, update the theme to be able to select the "
+"options of the demo you want to import."
+msgstr ""
+
+#: inc/settings/import-demo/index.php:241
+msgid "The demo options have been imported correctly, please "
+msgstr ""
+
+#: inc/settings/import-demo/index.php:241
+msgid "click here"
+msgstr ""
+
+#: inc/settings/import-demo/index.php:241
+msgid "for import also the dummy content."
+msgstr ""
+
+#: inc/settings/import-demo/index.php:270
+msgid ""
+"You do not have permission to import options, contact the site administrator."
+msgstr ""
+
+#: inc/settings/import-export/index.php:71
 msgid "Import/Export"
 msgstr ""
 
-#: inc/settings/import-export/index.php:57
+#: inc/settings/import-export/index.php:72
 msgid "Export or Import your theme options."
 msgstr ""
 
-#: inc/settings/import-export/index.php:89
+#: inc/settings/import-export/index.php:105
 msgid "Export Settings"
 msgstr ""
 
-#: inc/settings/import-export/index.php:90
+#: inc/settings/import-export/index.php:106
 msgid "Export Nd Shortcodes and customizer options."
 msgstr ""
 
-#: inc/settings/import-export/index.php:96
+#: inc/settings/import-export/index.php:112
 msgid "Export"
 msgstr ""
 
-#: inc/settings/import-export/index.php:112
+#: inc/settings/import-export/index.php:128
 msgid "Import Settings"
 msgstr ""
 
-#: inc/settings/import-export/index.php:113
+#: inc/settings/import-export/index.php:129
 msgid "Paste in the textarea the text of your export file"
 msgstr ""
 
-#: inc/settings/import-export/index.php:121
+#: inc/settings/import-export/index.php:137
 msgid "Import"
 msgstr ""
 
-#: inc/settings/import-export/index.php:179
-#: inc/settings/import-export/index.php:188
+#: inc/settings/import-export/index.php:208
+#: inc/settings/import-export/index.php:215
 msgid "Updated option"
 msgstr ""
 
-#: inc/settings/import-export/index.php:179
+#: inc/settings/import-export/index.php:208
 msgid "with"
 msgstr ""
 
-#: inc/settings/import-export/index.php:188
+#: inc/settings/import-export/index.php:215
 msgid "with the same value"
 msgstr ""
 
-#: inc/settings/import-export/index.php:200
+#: inc/settings/import-export/index.php:225
+msgid "You do not have permission to change this option"
+msgstr ""
+
+#: inc/settings/import-export/index.php:240
 msgid "No value founded for"
 msgstr ""
 
-#: inc/settings/import-export/index.php:200
+#: inc/settings/import-export/index.php:240
 msgid "option."
 msgstr ""
 
-#: inc/settings/import-export/index.php:214
+#: inc/settings/import-export/index.php:254
 msgid "Empty textarea, please paste your export options."
 msgstr ""
 
-#: inc/settings/index.php:111
+#: inc/settings/import-export/index.php:268
+msgid "You do not have the privileges to do this."
+msgstr ""
+
+#: inc/settings/index.php:120
 msgid "Below some important plugin settings."
 msgstr ""
 
-#: inc/settings/index.php:121
+#: inc/settings/index.php:130
 msgid "Breadcrumbs"
 msgstr ""
 
-#: inc/settings/index.php:122
+#: inc/settings/index.php:131
 msgid "Check for Enable Breadcrumbs on all site."
 msgstr ""
 
-#: inc/settings/index.php:126 inc/settings/index.php:215
+#: inc/settings/index.php:135 inc/settings/index.php:224
 msgid "Enable"
 msgstr ""
 
-#: inc/settings/index.php:141
+#: inc/settings/index.php:150
 msgid "Template Plugin"
 msgstr ""
 
-#: inc/settings/index.php:142
+#: inc/settings/index.php:151
 msgid "Override default theme template with plugin template"
 msgstr ""
 
-#: inc/settings/index.php:146
+#: inc/settings/index.php:155
 msgid "Archive Template"
 msgstr ""
 
-#: inc/settings/index.php:148
+#: inc/settings/index.php:157
 msgid "Comment Template"
 msgstr ""
 
-#: inc/settings/index.php:154
+#: inc/settings/index.php:163
 msgid "Search Template"
 msgstr ""
 
-#: inc/settings/index.php:169
+#: inc/settings/index.php:178
 msgid "Plugin Compatibility"
 msgstr ""
 
-#: inc/settings/index.php:170
+#: inc/settings/index.php:179
 msgid "Override default plugin style with nd shortcodes custom style"
 msgstr ""
 
-#: inc/settings/index.php:191
+#: inc/settings/index.php:200
 msgid "Custom Post Types"
 msgstr ""
 
-#: inc/settings/index.php:192
+#: inc/settings/index.php:201
 msgid "Add some custom post types on your theme"
 msgstr ""
 
-#: inc/settings/index.php:210
+#: inc/settings/index.php:219
 msgid "Customizer"
 msgstr ""
 
-#: inc/settings/index.php:211
+#: inc/settings/index.php:220
 msgid "Check for Enable Customizer with all plugin settings"
 msgstr ""
 
 #: nd-shortcodes.php:42
 msgid ""
-"ND Shortcodes: For the proper functioning of the plugin is required the "
-"activation of "
+"Components For WP Bakery Page Builder: To take full advantage of all the "
+"features of the plugin we recommend the activation of "
 msgstr ""
 
 #: nd-shortcodes.php:42
-msgid "Visual Composer"
+msgid "WP Bakery Page Builder"
 msgstr ""
 
 #: nd-shortcodes.php:42
@@ -1866,14 +1971,14 @@ msgid "Add Badge"
 msgstr ""
 
 #: shortcodes/custom/badge/index.php:74 shortcodes/custom/button/index.php:133
-#: shortcodes/custom/cf7/index.php:98 shortcodes/custom/countdown/index.php:127
-#: shortcodes/custom/counter/index.php:121 shortcodes/custom/image/index.php:49
-#: shortcodes/custom/menu/index.php:199
-#: shortcodes/custom/open-sidebar/index.php:180
+#: shortcodes/custom/cf7/index.php:98 shortcodes/custom/countdown/index.php:130
+#: shortcodes/custom/counter/index.php:118 shortcodes/custom/image/index.php:49
+#: shortcodes/custom/menu/index.php:203
+#: shortcodes/custom/open-sidebar/index.php:186
 #: shortcodes/custom/post-grid/index.php:114
-#: shortcodes/custom/price/index.php:111
+#: shortcodes/custom/price/index.php:113
 #: shortcodes/custom/service/index.php:112
-#: shortcodes/custom/spacer/index.php:44 shortcodes/custom/text/index.php:82
+#: shortcodes/custom/spacer/index.php:44 shortcodes/custom/text/index.php:87
 #: shortcodes/custom/typewriter/index.php:129
 msgid "NDS - Orange Coll."
 msgstr ""
@@ -1915,7 +2020,7 @@ msgid "Enable Advanced Settings"
 msgstr ""
 
 #: shortcodes/custom/badge/index.php:111 shortcodes/custom/image/index.php:69
-#: shortcodes/custom/open-sidebar/index.php:200
+#: shortcodes/custom/open-sidebar/index.php:206
 msgid "Select"
 msgstr ""
 
@@ -1924,11 +2029,11 @@ msgid "No"
 msgstr ""
 
 #: shortcodes/custom/badge/index.php:111 shortcodes/custom/cf7/index.php:146
-#: shortcodes/custom/countdown/index.php:165
-#: shortcodes/custom/countdown/index.php:193
-#: shortcodes/custom/countdown/index.php:220
-#: shortcodes/custom/countdown/index.php:247
-#: shortcodes/custom/countdown/index.php:273
+#: shortcodes/custom/countdown/index.php:168
+#: shortcodes/custom/countdown/index.php:196
+#: shortcodes/custom/countdown/index.php:223
+#: shortcodes/custom/countdown/index.php:250
+#: shortcodes/custom/countdown/index.php:276
 msgid "Yes"
 msgstr ""
 
@@ -1978,30 +2083,30 @@ msgstr ""
 
 #: shortcodes/custom/button/index.php:145 shortcodes/custom/image/index.php:43
 #: shortcodes/custom/image/index.php:54 shortcodes/custom/list/index.php:92
-#: shortcodes/custom/magic-popup/index.php:133
-#: shortcodes/custom/open-sidebar/index.php:185
-#: shortcodes/custom/price/index.php:124
+#: shortcodes/custom/magic-popup/index.php:152
+#: shortcodes/custom/open-sidebar/index.php:191
+#: shortcodes/custom/price/index.php:126
 #: shortcodes/custom/service-pro/index.php:180
 #: shortcodes/custom/service/index.php:125 shortcodes/focus/index.php:114
 #: shortcodes/price/index.php:119 shortcodes/service/index.php:78
-#: shortcodes/team/index.php:132 shortcodes/testimonial/index.php:114
+#: shortcodes/team/index.php:170 shortcodes/testimonial/index.php:114
 msgid "Image"
 msgstr ""
 
 #: shortcodes/custom/button/index.php:147 shortcodes/custom/image/index.php:56
 #: shortcodes/custom/list/index.php:94
-#: shortcodes/custom/magic-popup/index.php:135
-#: shortcodes/custom/open-sidebar/index.php:187
-#: shortcodes/custom/price/index.php:126
+#: shortcodes/custom/magic-popup/index.php:154
+#: shortcodes/custom/open-sidebar/index.php:193
+#: shortcodes/custom/price/index.php:128
 #: shortcodes/custom/service-pro/index.php:182
 #: shortcodes/custom/service/index.php:127 shortcodes/focus/index.php:116
 #: shortcodes/price/index.php:121 shortcodes/service/index.php:80
-#: shortcodes/team/index.php:134 shortcodes/testimonial/index.php:116
+#: shortcodes/team/index.php:172 shortcodes/testimonial/index.php:116
 msgid "Select image from media library."
 msgstr ""
 
 #: shortcodes/custom/button/index.php:153
-#: shortcodes/custom/magic-popup/index.php:140
+#: shortcodes/custom/magic-popup/index.php:176
 #: shortcodes/custom/post-grid/index.php:135
 #: shortcodes/custom/service-pro/index.php:216
 msgid "Image Width"
@@ -2011,18 +2116,19 @@ msgstr ""
 msgid "Insert the image width in px ( only numbers )"
 msgstr ""
 
-#: shortcodes/custom/button/index.php:162 shortcodes/custom/price/index.php:181
+#: shortcodes/custom/button/index.php:162 shortcodes/custom/price/index.php:183
 #: shortcodes/price/index.php:150 shortcodes/service/index.php:101
-#: shortcodes/team/index.php:140
+#: shortcodes/team/index.php:178
 msgid "Insert button link"
 msgstr ""
 
 #: shortcodes/custom/button/index.php:169
+#: shortcodes/custom/magic-popup/index.php:320
 msgid "Choose background color"
 msgstr ""
 
 #: shortcodes/custom/button/index.php:176
-#: shortcodes/custom/magic-popup/index.php:225
+#: shortcodes/custom/magic-popup/index.php:311
 #: shortcodes/custom/service-pro/index.php:365
 #: shortcodes/custom/typewriter/index.php:167
 msgid "Choose text color"
@@ -2046,8 +2152,8 @@ msgstr ""
 msgid "Select align for button"
 msgstr ""
 
-#: shortcodes/custom/button/index.php:195 shortcodes/custom/menu/index.php:218
-#: shortcodes/custom/text/index.php:109
+#: shortcodes/custom/button/index.php:195 shortcodes/custom/menu/index.php:222
+#: shortcodes/custom/text/index.php:114
 msgid "Font Weight"
 msgstr ""
 
@@ -2072,19 +2178,19 @@ msgstr ""
 msgid "Select Font for button"
 msgstr ""
 
-#: shortcodes/custom/button/index.php:219 shortcodes/custom/menu/index.php:233
-#: shortcodes/custom/text/index.php:124
+#: shortcodes/custom/button/index.php:219 shortcodes/custom/menu/index.php:237
+#: shortcodes/custom/text/index.php:129
 msgid "Font Size"
 msgstr ""
 
 #: shortcodes/custom/button/index.php:221
-#: shortcodes/custom/counter/index.php:169
+#: shortcodes/custom/counter/index.php:166
 #: shortcodes/custom/typewriter/index.php:174
 msgid "Insert the font size in px ( only numbers )"
 msgstr ""
 
-#: shortcodes/custom/button/index.php:227 shortcodes/custom/menu/index.php:240
-#: shortcodes/custom/text/index.php:138
+#: shortcodes/custom/button/index.php:227 shortcodes/custom/menu/index.php:244
+#: shortcodes/custom/text/index.php:143
 msgid "Letter Spacing"
 msgstr ""
 
@@ -2106,7 +2212,7 @@ msgid "Insert the border width in px ( only numbers )"
 msgstr ""
 
 #: shortcodes/custom/cf7/index.php:60
-#: shortcodes/custom/open-sidebar/index.php:166
+#: shortcodes/custom/open-sidebar/index.php:172
 msgid "No contact forms found"
 msgstr ""
 
@@ -2131,6 +2237,7 @@ msgid "Label Text"
 msgstr ""
 
 #: shortcodes/custom/cf7/index.php:122
+#: shortcodes/custom/magic-popup/index.php:211
 msgid "Insert the label text"
 msgstr ""
 
@@ -2170,209 +2277,209 @@ msgstr ""
 msgid "SECONDS"
 msgstr ""
 
-#: shortcodes/custom/countdown/index.php:121
+#: shortcodes/custom/countdown/index.php:124
 msgid "Countdown"
 msgstr ""
 
-#: shortcodes/custom/countdown/index.php:123
+#: shortcodes/custom/countdown/index.php:126
 msgid "Add Countdown"
 msgstr ""
 
-#: shortcodes/custom/countdown/index.php:140
+#: shortcodes/custom/countdown/index.php:143
 msgid "Date"
 msgstr ""
 
-#: shortcodes/custom/countdown/index.php:142
+#: shortcodes/custom/countdown/index.php:145
 msgid "Insert date in this format: June 06, 2017"
 msgstr ""
 
-#: shortcodes/custom/countdown/index.php:149
+#: shortcodes/custom/countdown/index.php:152
 msgid "Select the width for counter grid"
 msgstr ""
 
-#: shortcodes/custom/countdown/index.php:154
-#: shortcodes/custom/counter/index.php:142
+#: shortcodes/custom/countdown/index.php:157
+#: shortcodes/custom/counter/index.php:139
 #: shortcodes/custom/service/index.php:141
 msgid "Number Color"
 msgstr ""
 
-#: shortcodes/custom/countdown/index.php:156
+#: shortcodes/custom/countdown/index.php:159
 msgid "Choose number text color"
 msgstr ""
 
-#: shortcodes/custom/countdown/index.php:163
+#: shortcodes/custom/countdown/index.php:166
 msgid "Display Years"
 msgstr ""
 
-#: shortcodes/custom/countdown/index.php:166
+#: shortcodes/custom/countdown/index.php:169
 msgid "Check if you want to display years"
 msgstr ""
 
-#: shortcodes/custom/countdown/index.php:171
+#: shortcodes/custom/countdown/index.php:174
 msgid "Years Text Color"
 msgstr ""
 
-#: shortcodes/custom/countdown/index.php:173
+#: shortcodes/custom/countdown/index.php:176
 msgid "Choose text color for years"
 msgstr ""
 
-#: shortcodes/custom/countdown/index.php:179
+#: shortcodes/custom/countdown/index.php:182
 msgid "Years Bg Color"
 msgstr ""
 
-#: shortcodes/custom/countdown/index.php:181
+#: shortcodes/custom/countdown/index.php:184
 msgid "Choose bg color for years"
 msgstr ""
 
-#: shortcodes/custom/countdown/index.php:191
+#: shortcodes/custom/countdown/index.php:194
 msgid "Display Days"
 msgstr ""
 
-#: shortcodes/custom/countdown/index.php:194
+#: shortcodes/custom/countdown/index.php:197
 msgid "Check if you want to display days"
 msgstr ""
 
-#: shortcodes/custom/countdown/index.php:199
+#: shortcodes/custom/countdown/index.php:202
 msgid "Days Text Color"
 msgstr ""
 
-#: shortcodes/custom/countdown/index.php:201
+#: shortcodes/custom/countdown/index.php:204
 msgid "Choose text color for days"
 msgstr ""
 
-#: shortcodes/custom/countdown/index.php:207
+#: shortcodes/custom/countdown/index.php:210
 msgid "Days Bg Color"
 msgstr ""
 
-#: shortcodes/custom/countdown/index.php:209
+#: shortcodes/custom/countdown/index.php:212
 msgid "Choose bg color for days"
 msgstr ""
 
-#: shortcodes/custom/countdown/index.php:218
+#: shortcodes/custom/countdown/index.php:221
 msgid "Display Hours"
 msgstr ""
 
-#: shortcodes/custom/countdown/index.php:221
+#: shortcodes/custom/countdown/index.php:224
 msgid "Check if you want to display hours"
 msgstr ""
 
-#: shortcodes/custom/countdown/index.php:226
+#: shortcodes/custom/countdown/index.php:229
 msgid "Hours Text Color"
 msgstr ""
 
-#: shortcodes/custom/countdown/index.php:228
+#: shortcodes/custom/countdown/index.php:231
 msgid "Choose text color for hours"
 msgstr ""
 
-#: shortcodes/custom/countdown/index.php:234
+#: shortcodes/custom/countdown/index.php:237
 msgid "Hours Bg Color"
 msgstr ""
 
-#: shortcodes/custom/countdown/index.php:236
+#: shortcodes/custom/countdown/index.php:239
 msgid "Choose bg color for hours"
 msgstr ""
 
-#: shortcodes/custom/countdown/index.php:245
+#: shortcodes/custom/countdown/index.php:248
 msgid "Display Minutes"
 msgstr ""
 
-#: shortcodes/custom/countdown/index.php:248
+#: shortcodes/custom/countdown/index.php:251
 msgid "Check if you want to display minutes"
 msgstr ""
 
-#: shortcodes/custom/countdown/index.php:253
+#: shortcodes/custom/countdown/index.php:256
 msgid "Minutes Text Color"
 msgstr ""
 
-#: shortcodes/custom/countdown/index.php:255
+#: shortcodes/custom/countdown/index.php:258
 msgid "Choose text color for minutes"
 msgstr ""
 
-#: shortcodes/custom/countdown/index.php:261
+#: shortcodes/custom/countdown/index.php:264
 msgid "Minutes Bg Color"
 msgstr ""
 
-#: shortcodes/custom/countdown/index.php:263
+#: shortcodes/custom/countdown/index.php:266
 msgid "Choose bg color for minutes"
 msgstr ""
 
-#: shortcodes/custom/countdown/index.php:271
+#: shortcodes/custom/countdown/index.php:274
 msgid "Display Seconds"
 msgstr ""
 
-#: shortcodes/custom/countdown/index.php:274
+#: shortcodes/custom/countdown/index.php:277
 msgid "Check if you want to display seconds"
 msgstr ""
 
-#: shortcodes/custom/countdown/index.php:279
+#: shortcodes/custom/countdown/index.php:282
 msgid "Seconds Text Color"
 msgstr ""
 
-#: shortcodes/custom/countdown/index.php:281
+#: shortcodes/custom/countdown/index.php:284
 msgid "Choose text color for seconds"
 msgstr ""
 
-#: shortcodes/custom/countdown/index.php:287
+#: shortcodes/custom/countdown/index.php:290
 msgid "Seconds Bg Color"
 msgstr ""
 
-#: shortcodes/custom/countdown/index.php:289
+#: shortcodes/custom/countdown/index.php:292
 msgid "Choose bg color for seconds"
 msgstr ""
 
-#: shortcodes/custom/counter/index.php:115
+#: shortcodes/custom/counter/index.php:112
 msgid "Counter"
 msgstr ""
 
-#: shortcodes/custom/counter/index.php:117
+#: shortcodes/custom/counter/index.php:114
 msgid "Add Counter"
 msgstr ""
 
-#: shortcodes/custom/counter/index.php:135
+#: shortcodes/custom/counter/index.php:132
 #: shortcodes/custom/focus-number/index.php:99
 #: shortcodes/custom/service/index.php:133
 msgid "Number"
 msgstr ""
 
-#: shortcodes/custom/counter/index.php:137
+#: shortcodes/custom/counter/index.php:134
 msgid "Insert number"
 msgstr ""
 
-#: shortcodes/custom/counter/index.php:145
+#: shortcodes/custom/counter/index.php:142
 msgid "Choose color for the number"
 msgstr ""
 
-#: shortcodes/custom/counter/index.php:150
+#: shortcodes/custom/counter/index.php:147
 #: shortcodes/custom/focus-number/index.php:121
-#: shortcodes/custom/open-sidebar/index.php:212
-#: shortcodes/custom/price/index.php:194 shortcodes/focus/index.php:167
+#: shortcodes/custom/open-sidebar/index.php:218
+#: shortcodes/custom/price/index.php:203 shortcodes/focus/index.php:167
 msgid "Bg Color"
 msgstr ""
 
-#: shortcodes/custom/counter/index.php:153
+#: shortcodes/custom/counter/index.php:150
 #: shortcodes/custom/focus-number/index.php:123 shortcodes/focus/index.php:169
 msgid "Choose color for the background"
 msgstr ""
 
-#: shortcodes/custom/counter/index.php:158
+#: shortcodes/custom/counter/index.php:155
 msgid "Number Padding"
 msgstr ""
 
-#: shortcodes/custom/counter/index.php:161
+#: shortcodes/custom/counter/index.php:158
 msgid "Select padding for number 'TOP/BOTTOM' and 'LEFT/RIGHT'"
 msgstr ""
 
-#: shortcodes/custom/counter/index.php:167
+#: shortcodes/custom/counter/index.php:164
 msgid "Number Font Size"
 msgstr ""
 
-#: shortcodes/custom/counter/index.php:173 shortcodes/custom/menu/index.php:246
-#: shortcodes/custom/text/index.php:144
+#: shortcodes/custom/counter/index.php:170 shortcodes/custom/menu/index.php:250
+#: shortcodes/custom/text/index.php:149
 msgid "Text Align"
 msgstr ""
 
-#: shortcodes/custom/counter/index.php:176 shortcodes/custom/menu/index.php:249
-#: shortcodes/custom/text/index.php:147
+#: shortcodes/custom/counter/index.php:173 shortcodes/custom/menu/index.php:253
+#: shortcodes/custom/text/index.php:152
 msgid "Select the text align"
 msgstr ""
 
@@ -2386,8 +2493,9 @@ msgstr ""
 
 #: shortcodes/custom/divider/index.php:84
 #: shortcodes/custom/focus-number/index.php:91
-#: shortcodes/custom/magic-popup/index.php:119 shortcodes/focus/index.php:107
-#: shortcodes/team/index.php:102 shortcodes/testimonial/index.php:92
+#: shortcodes/custom/magic-popup/index.php:137 shortcodes/focus/index.php:107
+#: shortcodes/progress/index.php:89 shortcodes/team/index.php:139
+#: shortcodes/testimonial/index.php:92
 msgid "Layout"
 msgstr ""
 
@@ -2399,12 +2507,12 @@ msgstr ""
 msgid "Insert the height in px: eg 5px"
 msgstr ""
 
-#: shortcodes/custom/divider/index.php:107
+#: shortcodes/custom/divider/index.php:107 shortcodes/progress/index.php:113
 msgid "BG Color"
 msgstr ""
 
 #: shortcodes/custom/divider/index.php:109
-#: shortcodes/custom/open-sidebar/index.php:214
+#: shortcodes/custom/open-sidebar/index.php:220
 #: shortcodes/custom/service-pro/index.php:374
 msgid "Choose bg color"
 msgstr ""
@@ -2415,7 +2523,7 @@ msgid "Align"
 msgstr ""
 
 #: shortcodes/custom/divider/index.php:116
-#: shortcodes/custom/magic-popup/index.php:129
+#: shortcodes/custom/magic-popup/index.php:147
 msgid "Select the magic popup type"
 msgstr ""
 
@@ -2441,34 +2549,34 @@ msgid "Add Image"
 msgstr ""
 
 #: shortcodes/custom/image/index.php:63
-#: shortcodes/custom/open-sidebar/index.php:194
+#: shortcodes/custom/open-sidebar/index.php:200
 #, php-format
 msgid "Insert image width, '100%' or fixed width as '200px'"
 msgstr ""
 
 #: shortcodes/custom/image/index.php:67
-#: shortcodes/custom/open-sidebar/index.php:198
+#: shortcodes/custom/open-sidebar/index.php:204
 #: shortcodes/custom/post-grid/index.php:143
 msgid "Image Align"
 msgstr ""
 
 #: shortcodes/custom/image/index.php:69
-#: shortcodes/custom/open-sidebar/index.php:200
+#: shortcodes/custom/open-sidebar/index.php:206
 msgid "Left"
 msgstr ""
 
 #: shortcodes/custom/image/index.php:69
-#: shortcodes/custom/open-sidebar/index.php:200
+#: shortcodes/custom/open-sidebar/index.php:206
 msgid "Right"
 msgstr ""
 
 #: shortcodes/custom/image/index.php:69
-#: shortcodes/custom/open-sidebar/index.php:200
+#: shortcodes/custom/open-sidebar/index.php:206
 msgid "Center"
 msgstr ""
 
 #: shortcodes/custom/image/index.php:70
-#: shortcodes/custom/open-sidebar/index.php:201
+#: shortcodes/custom/open-sidebar/index.php:207
 msgid "Choose alignment for your image"
 msgstr ""
 
@@ -2480,14 +2588,16 @@ msgstr ""
 msgid "Add List"
 msgstr ""
 
-#: shortcodes/custom/list/index.php:107 shortcodes/custom/price/index.php:105
-#: shortcodes/custom/price/index.php:148 shortcodes/price/index.php:107
-#: shortcodes/price/index.php:134
+#: shortcodes/custom/list/index.php:107
+#: shortcodes/custom/magic-popup/index.php:201
+#: shortcodes/custom/price/index.php:107 shortcodes/custom/price/index.php:150
+#: shortcodes/price/index.php:107 shortcodes/price/index.php:134
 msgid "Price"
 msgstr ""
 
-#: shortcodes/custom/list/index.php:109 shortcodes/custom/price/index.php:151
-#: shortcodes/price/index.php:137
+#: shortcodes/custom/list/index.php:109
+#: shortcodes/custom/magic-popup/index.php:203
+#: shortcodes/custom/price/index.php:153 shortcodes/price/index.php:137
 msgid "Insert the price"
 msgstr ""
 
@@ -2500,6 +2610,7 @@ msgid "Insert the label"
 msgstr ""
 
 #: shortcodes/custom/list/index.php:128
+#: shortcodes/custom/magic-popup/index.php:217
 msgid "Label Bg Color"
 msgstr ""
 
@@ -2507,186 +2618,227 @@ msgstr ""
 msgid "Choose label background color"
 msgstr ""
 
-#: shortcodes/custom/magic-popup/index.php:108
+#: shortcodes/custom/magic-popup/index.php:126
 msgid "Magic PopUp"
 msgstr ""
 
-#: shortcodes/custom/magic-popup/index.php:110
+#: shortcodes/custom/magic-popup/index.php:128
 msgid "Add single popup"
 msgstr ""
 
-#: shortcodes/custom/magic-popup/index.php:126
+#: shortcodes/custom/magic-popup/index.php:144
 msgid "Popup Type"
 msgstr ""
 
-#: shortcodes/custom/magic-popup/index.php:142
+#: shortcodes/custom/magic-popup/index.php:159 shortcodes/focus/index.php:120
+msgid "Icon"
+msgstr ""
+
+#: shortcodes/custom/magic-popup/index.php:161
+#: shortcodes/custom/open-sidebar/index.php:232 shortcodes/focus/index.php:122
+msgid "Select icon from media library."
+msgstr ""
+
+#: shortcodes/custom/magic-popup/index.php:167
+msgid "Bg Icon"
+msgstr ""
+
+#: shortcodes/custom/magic-popup/index.php:170
+msgid "Choose background icon color"
+msgstr ""
+
+#: shortcodes/custom/magic-popup/index.php:178
 msgid "Insert the image width, eg: 100px or 50%"
 msgstr ""
 
-#: shortcodes/custom/magic-popup/index.php:158
+#: shortcodes/custom/magic-popup/index.php:193 shortcodes/focus/index.php:136
+msgid "Subtitle"
+msgstr ""
+
+#: shortcodes/custom/magic-popup/index.php:195 shortcodes/focus/index.php:138
+msgid "Insert the subtitle"
+msgstr ""
+
+#: shortcodes/custom/magic-popup/index.php:209
+msgid "Label text"
+msgstr ""
+
+#: shortcodes/custom/magic-popup/index.php:220
+msgid "Choose label bg color"
+msgstr ""
+
+#: shortcodes/custom/magic-popup/index.php:233
+msgid "Link Type"
+msgstr ""
+
+#: shortcodes/custom/magic-popup/index.php:236
+msgid "Select the link type"
+msgstr ""
+
+#: shortcodes/custom/magic-popup/index.php:243
 msgid "Insert popup link"
 msgstr ""
 
-#: shortcodes/custom/magic-popup/index.php:163
+#: shortcodes/custom/magic-popup/index.php:249
 #: shortcodes/custom/service-pro/index.php:232
 msgid "Title Advanced Options"
 msgstr ""
 
-#: shortcodes/custom/magic-popup/index.php:166
+#: shortcodes/custom/magic-popup/index.php:252
 #: shortcodes/custom/service-pro/index.php:235
 msgid "Enable advanced options for title"
 msgstr ""
 
-#: shortcodes/custom/magic-popup/index.php:172
+#: shortcodes/custom/magic-popup/index.php:258
 #: shortcodes/custom/service-pro/index.php:240
 #: shortcodes/custom/service/index.php:157
 msgid "Title Color"
 msgstr ""
 
-#: shortcodes/custom/magic-popup/index.php:175
+#: shortcodes/custom/magic-popup/index.php:261
 #: shortcodes/custom/service-pro/index.php:243
 #: shortcodes/custom/service-pro/index.php:292
 #: shortcodes/custom/service/index.php:160
 msgid "Choose title color"
 msgstr ""
 
-#: shortcodes/custom/magic-popup/index.php:181
+#: shortcodes/custom/magic-popup/index.php:267
 #: shortcodes/custom/service-pro/index.php:249
 msgid "Title Font Size"
 msgstr ""
 
-#: shortcodes/custom/magic-popup/index.php:183
+#: shortcodes/custom/magic-popup/index.php:269
 #: shortcodes/custom/service-pro/index.php:251
 #: shortcodes/custom/service-pro/index.php:300
 msgid "Insert the font size for the title, eg: 20 (only numbers)"
 msgstr ""
 
-#: shortcodes/custom/magic-popup/index.php:188
+#: shortcodes/custom/magic-popup/index.php:274
 #: shortcodes/custom/service-pro/index.php:256
 msgid "Title Font"
 msgstr ""
 
-#: shortcodes/custom/magic-popup/index.php:191
+#: shortcodes/custom/magic-popup/index.php:277
 #: shortcodes/custom/service-pro/index.php:259
 #: shortcodes/custom/service-pro/index.php:308
 msgid "Select font for title"
 msgstr ""
 
-#: shortcodes/custom/magic-popup/index.php:197
+#: shortcodes/custom/magic-popup/index.php:283
 #: shortcodes/custom/service-pro/index.php:330
 msgid "Link Advanced Options"
 msgstr ""
 
-#: shortcodes/custom/magic-popup/index.php:200
+#: shortcodes/custom/magic-popup/index.php:286
 #: shortcodes/custom/service-pro/index.php:333
 msgid "Enable advanced options for link"
 msgstr ""
 
-#: shortcodes/custom/magic-popup/index.php:205
+#: shortcodes/custom/magic-popup/index.php:291
 msgid "Link Font"
 msgstr ""
 
-#: shortcodes/custom/magic-popup/index.php:208
+#: shortcodes/custom/magic-popup/index.php:294
 msgid "Select font for link"
 msgstr ""
 
-#: shortcodes/custom/magic-popup/index.php:214
+#: shortcodes/custom/magic-popup/index.php:300
 msgid "Link Font Size"
 msgstr ""
 
-#: shortcodes/custom/magic-popup/index.php:216
+#: shortcodes/custom/magic-popup/index.php:302
 msgid "Insert the font size for the link, eg: 20 (only numbers)"
 msgstr ""
 
-#: shortcodes/custom/magic-popup/index.php:222
+#: shortcodes/custom/magic-popup/index.php:308
 msgid "Link Text Color"
 msgstr ""
 
-#: shortcodes/custom/menu/index.php:193 shortcodes/custom/menu/index.php:204
+#: shortcodes/custom/magic-popup/index.php:317
+msgid "Bg Link"
+msgstr ""
+
+#: shortcodes/custom/menu/index.php:197 shortcodes/custom/menu/index.php:208
 msgid "Menu"
 msgstr ""
 
-#: shortcodes/custom/menu/index.php:195
+#: shortcodes/custom/menu/index.php:199
 msgid "Add Your Menu"
 msgstr ""
 
-#: shortcodes/custom/menu/index.php:207
+#: shortcodes/custom/menu/index.php:211
 msgid "Select your menu"
 msgstr ""
 
-#: shortcodes/custom/menu/index.php:214 shortcodes/custom/text/index.php:98
+#: shortcodes/custom/menu/index.php:218 shortcodes/custom/text/index.php:103
 msgid "Choose the color for your text"
 msgstr ""
 
-#: shortcodes/custom/menu/index.php:221 shortcodes/custom/text/index.php:112
+#: shortcodes/custom/menu/index.php:225 shortcodes/custom/text/index.php:117
 msgid "Select the font weight"
 msgstr ""
 
-#: shortcodes/custom/menu/index.php:228 shortcodes/custom/text/index.php:119
+#: shortcodes/custom/menu/index.php:232 shortcodes/custom/text/index.php:124
 msgid "Select the font family"
 msgstr ""
 
-#: shortcodes/custom/menu/index.php:235 shortcodes/custom/text/index.php:126
+#: shortcodes/custom/menu/index.php:239 shortcodes/custom/text/index.php:131
 msgid "Insert font size in px ( only number )"
 msgstr ""
 
-#: shortcodes/custom/menu/index.php:242 shortcodes/custom/text/index.php:140
+#: shortcodes/custom/menu/index.php:246 shortcodes/custom/text/index.php:145
 msgid "Insert letter spacing in px ( only number )"
 msgstr ""
 
-#: shortcodes/custom/menu/index.php:254 shortcodes/custom/text/index.php:152
+#: shortcodes/custom/menu/index.php:258 shortcodes/custom/text/index.php:157
 msgid "Text Padding"
 msgstr ""
 
-#: shortcodes/custom/menu/index.php:256 shortcodes/custom/text/index.php:154
+#: shortcodes/custom/menu/index.php:260 shortcodes/custom/text/index.php:159
 msgid "Insert padding in px ( only number )"
 msgstr ""
 
-#: shortcodes/custom/open-sidebar/index.php:174
+#: shortcodes/custom/open-sidebar/index.php:180
 msgid "Open Sidebar"
 msgstr ""
 
-#: shortcodes/custom/open-sidebar/index.php:176
+#: shortcodes/custom/open-sidebar/index.php:182
 msgid "Add your open sidebar element"
 msgstr ""
 
-#: shortcodes/custom/open-sidebar/index.php:205
+#: shortcodes/custom/open-sidebar/index.php:211
 msgid "Page on Sidebar"
 msgstr ""
 
-#: shortcodes/custom/open-sidebar/index.php:208
+#: shortcodes/custom/open-sidebar/index.php:214
 msgid "Choose your page that you want to display on the sidebar."
 msgstr ""
 
-#: shortcodes/custom/open-sidebar/index.php:218
+#: shortcodes/custom/open-sidebar/index.php:224
 msgid "Sidebar Width"
 msgstr ""
 
-#: shortcodes/custom/open-sidebar/index.php:220
+#: shortcodes/custom/open-sidebar/index.php:226
 msgid "Insert sidebar width, for example '300' ONLY NUMBER"
 msgstr ""
 
-#: shortcodes/custom/open-sidebar/index.php:224
+#: shortcodes/custom/open-sidebar/index.php:230
 msgid "Icon Close"
 msgstr ""
 
-#: shortcodes/custom/open-sidebar/index.php:226 shortcodes/focus/index.php:122
-msgid "Select icon from media library."
-msgstr ""
-
-#: shortcodes/custom/open-sidebar/index.php:231
+#: shortcodes/custom/open-sidebar/index.php:237
 msgid "Icon Close Width"
 msgstr ""
 
-#: shortcodes/custom/open-sidebar/index.php:233
+#: shortcodes/custom/open-sidebar/index.php:239
 msgid "Insert image width, example '20' ONLY NUMBER"
 msgstr ""
 
-#: shortcodes/custom/open-sidebar/index.php:238
+#: shortcodes/custom/open-sidebar/index.php:244
 msgid "Icon Close Position"
 msgstr ""
 
-#: shortcodes/custom/open-sidebar/index.php:240
+#: shortcodes/custom/open-sidebar/index.php:246
 msgid ""
 "Insert icon position, example '20 20' ONLY NUMBER, the first number is the "
 "right position and the second number is the top position"
@@ -2724,6 +2876,7 @@ msgstr ""
 
 #: shortcodes/custom/post-grid/layout/layout-10.php:59
 #: shortcodes/custom/post-grid/layout/layout-11.php:59
+#: shortcodes/custom/post-grid/layout/layout-14.php:59
 #: shortcodes/custom/post-grid/layout/layout-3.php:59
 #: shortcodes/custom/post-grid/layout/layout-6.php:59
 #: shortcodes/custom/post-grid/layout/layout-9.php:59
@@ -2732,65 +2885,74 @@ msgstr ""
 
 #: shortcodes/custom/post-grid/layout/layout-10.php:61
 #: shortcodes/custom/post-grid/layout/layout-11.php:61
+#: shortcodes/custom/post-grid/layout/layout-14.php:61
 #: shortcodes/custom/post-grid/layout/layout-3.php:61
 #: shortcodes/custom/post-grid/layout/layout-6.php:61
 #: shortcodes/custom/post-grid/layout/layout-9.php:61
 msgid "Insert Author"
 msgstr ""
 
-#: shortcodes/custom/post-search/index.php:115
+#: shortcodes/custom/post-search/index.php:116
 msgid "Post Search"
 msgstr ""
 
-#: shortcodes/custom/post-search/index.php:117
+#: shortcodes/custom/post-search/index.php:118
 msgid "Add Search Form Posts"
 msgstr ""
 
-#: shortcodes/custom/post-search/index.php:133
+#: shortcodes/custom/post-search/index.php:134
 msgid "Search in Category/s Slug"
 msgstr ""
 
-#: shortcodes/custom/post-search/index.php:135
+#: shortcodes/custom/post-search/index.php:136
 msgid ""
 "Insert the slug of your category ( NB: you can use multiple slug divided by "
 "',' eg: slug1,slug2,slug3 ), leave empty if you want to search in all site"
 msgstr ""
 
-#: shortcodes/custom/post-search/index.php:231
+#: shortcodes/custom/post-search/index.php:234
 msgid "VIEW MORE RESULTS"
 msgstr ""
 
-#: shortcodes/custom/price/index.php:107 shortcodes/price/index.php:109
+#: shortcodes/custom/price/index.php:109 shortcodes/price/index.php:109
 msgid "Add single Price"
 msgstr ""
 
-#: shortcodes/custom/price/index.php:156
+#: shortcodes/custom/price/index.php:158
 msgid "Currency"
 msgstr ""
 
-#: shortcodes/custom/price/index.php:158
+#: shortcodes/custom/price/index.php:160
 msgid "Insert the currency"
 msgstr ""
 
-#: shortcodes/custom/price/index.php:166
+#: shortcodes/custom/price/index.php:168
 msgid ""
 "Use this shortcode for price rows [nd_price_row image='yes' text='Your text']"
 msgstr ""
 
-#: shortcodes/custom/price/index.php:190 shortcodes/price/index.php:158
+#: shortcodes/custom/price/index.php:192 shortcodes/price/index.php:158
 #: shortcodes/service/index.php:109
 msgid "Choose button color"
 msgstr ""
 
-#: shortcodes/custom/price/index.php:197
+#: shortcodes/custom/price/index.php:196
+msgid "Image Bg Price"
+msgstr ""
+
+#: shortcodes/custom/price/index.php:198
+msgid "Select image that you want to use as a bg for the price section"
+msgstr ""
+
+#: shortcodes/custom/price/index.php:206
 msgid "Use the color above as bg color"
 msgstr ""
 
-#: shortcodes/custom/price/index.php:202
+#: shortcodes/custom/price/index.php:211
 msgid "Header Bg Color"
 msgstr ""
 
-#: shortcodes/custom/price/index.php:205
+#: shortcodes/custom/price/index.php:214
 msgid "Use the color above as header bg color"
 msgstr ""
 
@@ -2972,45 +3134,45 @@ msgstr ""
 msgid "Choose spacer color"
 msgstr ""
 
-#: shortcodes/custom/text/index.php:76 shortcodes/custom/text/index.php:89
+#: shortcodes/custom/text/index.php:81 shortcodes/custom/text/index.php:94
 msgid "Text"
 msgstr ""
 
-#: shortcodes/custom/text/index.php:78
+#: shortcodes/custom/text/index.php:83
 msgid "Add Some Text"
 msgstr ""
 
-#: shortcodes/custom/text/index.php:91
+#: shortcodes/custom/text/index.php:96
 msgid "Insert Text"
 msgstr ""
 
-#: shortcodes/custom/text/index.php:105
+#: shortcodes/custom/text/index.php:110
 msgid "Select the tag for your text"
 msgstr ""
 
-#: shortcodes/custom/text/index.php:131
+#: shortcodes/custom/text/index.php:136
 msgid "Line Height"
 msgstr ""
 
-#: shortcodes/custom/text/index.php:133
+#: shortcodes/custom/text/index.php:138
 msgid "Insert line height in px ( only number )"
 msgstr ""
 
-#: shortcodes/custom/text/index.php:158
+#: shortcodes/custom/text/index.php:163
 msgid "Add Underline Effect"
 msgstr ""
 
-#: shortcodes/custom/text/index.php:161
+#: shortcodes/custom/text/index.php:166
 msgid ""
 "Select if you want to add the underline effect on your text. Remember to "
 "inser the proper u tag, Example : &lt;u&gt;Text&lt;/u&gt;"
 msgstr ""
 
-#: shortcodes/custom/text/index.php:166
+#: shortcodes/custom/text/index.php:171
 msgid "Underline Color"
 msgstr ""
 
-#: shortcodes/custom/text/index.php:169
+#: shortcodes/custom/text/index.php:174
 msgid "Choose underline color"
 msgstr ""
 
@@ -3078,18 +3240,6 @@ msgstr ""
 msgid "Add single Focus"
 msgstr ""
 
-#: shortcodes/focus/index.php:120
-msgid "Icon"
-msgstr ""
-
-#: shortcodes/focus/index.php:136
-msgid "Subtitle"
-msgstr ""
-
-#: shortcodes/focus/index.php:138
-msgid "Insert the subtitle"
-msgstr ""
-
 #: shortcodes/focus/index.php:145
 msgid "Insert title link"
 msgstr ""
@@ -3098,40 +3248,120 @@ msgstr ""
 msgid "Choose color for the elements"
 msgstr ""
 
+#: shortcodes/progress/index.php:77 shortcodes/progress/index.php:97
+msgid "Progress"
+msgstr ""
+
+#: shortcodes/progress/index.php:79
+msgid "Add progress bar"
+msgstr ""
+
+#: shortcodes/progress/index.php:100
+msgid "Insert the number of the progress, from 1 % to 100 % ( ONLY NUMBER ) "
+msgstr ""
+
+#: shortcodes/progress/index.php:105
+msgid "Bar Color"
+msgstr ""
+
+#: shortcodes/progress/index.php:108
+msgid "Choose bar color"
+msgstr ""
+
+#: shortcodes/progress/index.php:116
+msgid "Choose the background color"
+msgstr ""
+
+#: shortcodes/progress/index.php:120
+msgid "Bar Image"
+msgstr ""
+
+#: shortcodes/progress/index.php:122
+msgid "Set the image for replace the bar color"
+msgstr ""
+
 #: shortcodes/service/index.php:68
 msgid "Add single Service"
 msgstr ""
 
-#: shortcodes/team/index.php:90
+#: shortcodes/team/index.php:127
 msgid "Team"
 msgstr ""
 
-#: shortcodes/team/index.php:92
+#: shortcodes/team/index.php:129
 msgid "Add single Team"
 msgstr ""
 
-#: shortcodes/team/index.php:110 shortcodes/testimonial/index.php:121
+#: shortcodes/team/index.php:147 shortcodes/testimonial/index.php:121
 msgid "Name"
 msgstr ""
 
-#: shortcodes/team/index.php:113 shortcodes/testimonial/index.php:124
+#: shortcodes/team/index.php:150 shortcodes/testimonial/index.php:124
 msgid "Insert the name"
 msgstr ""
 
-#: shortcodes/team/index.php:118 shortcodes/testimonial/index.php:129
+#: shortcodes/team/index.php:155 shortcodes/testimonial/index.php:129
 msgid "Role"
 msgstr ""
 
-#: shortcodes/team/index.php:121 shortcodes/testimonial/index.php:131
+#: shortcodes/team/index.php:158 shortcodes/testimonial/index.php:131
 msgid "Insert the role"
 msgstr ""
 
-#: shortcodes/team/index.php:154
+#: shortcodes/team/index.php:193
 msgid "Color 2"
 msgstr ""
 
-#: shortcodes/team/index.php:157
+#: shortcodes/team/index.php:196
 msgid "Choose color 2"
+msgstr ""
+
+#: shortcodes/team/index.php:201
+msgid "Icon Social 1"
+msgstr ""
+
+#: shortcodes/team/index.php:203
+msgid "Select image for social 1."
+msgstr ""
+
+#: shortcodes/team/index.php:210
+msgid "Insert link for Social 1"
+msgstr ""
+
+#: shortcodes/team/index.php:216
+msgid "Icon Social 2"
+msgstr ""
+
+#: shortcodes/team/index.php:218
+msgid "Select image for social 2."
+msgstr ""
+
+#: shortcodes/team/index.php:225
+msgid "Insert link for Social 2"
+msgstr ""
+
+#: shortcodes/team/index.php:231
+msgid "Icon Social 3"
+msgstr ""
+
+#: shortcodes/team/index.php:233
+msgid "Select image for social 3."
+msgstr ""
+
+#: shortcodes/team/index.php:240
+msgid "Insert link for Social 3"
+msgstr ""
+
+#: shortcodes/team/index.php:246
+msgid "Icon Social 4"
+msgstr ""
+
+#: shortcodes/team/index.php:248
+msgid "Select image for social 4."
+msgstr ""
+
+#: shortcodes/team/index.php:255
+msgid "Insert link for Social 4"
 msgstr ""
 
 #: shortcodes/testimonial/index.php:80 shortcodes/testimonial/index.php:100

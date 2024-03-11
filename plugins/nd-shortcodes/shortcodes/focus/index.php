@@ -17,6 +17,7 @@ function nd_options_shortcode_focus($atts, $content = null)
     'nd_options_title' => '',
     'nd_options_subtitle' => '',
     'nd_options_link' => '',
+    'nd_options_descr' => '',
   ), $atts);
 
   $str = '';
@@ -29,6 +30,7 @@ function nd_options_shortcode_focus($atts, $content = null)
   $nd_options_color = $atts['nd_options_color'];
   $nd_options_text_color = $atts['nd_options_text_color'];
   $nd_options_bg_color = $atts['nd_options_bg_color'];
+  $nd_options_descr = $atts['nd_options_descr'];
 
   //nd_options_link 
   $nd_options_link = vc_build_link( $atts['nd_options_link'] );
@@ -97,7 +99,7 @@ function nd_options_focus() {
       "base" => "nd_options_focus",
       'description' => __( 'Add single Focus', 'nd-shortcodes' ),
       'show_settings_on_create' => true,
-      "icon" => plugins_url() . "/nd-shortcodes/shortcodes/thumb/focus.jpg",
+      "icon" => esc_url(plugins_url('focus.jpg', __FILE__ )),
       "class" => "",
       "category" => __( "ND Shortcodes", "nd-shortcodes"),
       "params" => array(
@@ -120,7 +122,7 @@ function nd_options_focus() {
             'heading' => __( 'Icon', 'nd-shortcodes' ),
             'param_name' => 'nd_options_icon',
             'description' => __( 'Select icon from media library.', 'nd-shortcodes' ),
-            'dependency' => array( 'element' => 'nd_options_layout', 'value' => array( 'layout-4' ) )
+            'dependency' => array( 'element' => 'nd_options_layout', 'value' => array( 'layout-4','layout-7' ) )
          ),
          array(
             "type" => "textfield",
@@ -136,14 +138,22 @@ function nd_options_focus() {
             "heading" => __( "Subtitle", "nd-shortcodes" ),
             "param_name" => "nd_options_subtitle",
             "description" => __( "Insert the subtitle", "nd-shortcodes" ),
-            'dependency' => array( 'element' => 'nd_options_layout', 'value' => array( 'layout-1','layout-2','layout-3','layout-4' ) )
+            'dependency' => array( 'element' => 'nd_options_layout', 'value' => array( 'layout-1','layout-2','layout-3','layout-4','layout-7' ) )
+         ),
+         array(
+            "type" => "textfield",
+            "class" => "",
+            "heading" => __( "Description", "nd-shortcodes" ),
+            "param_name" => "nd_options_descr",
+            "description" => __( "Insert the description", "nd-shortcodes" ),
+            'dependency' => array( 'element' => 'nd_options_layout', 'value' => array( 'layout-7' ) )
          ),
          array(
          'type' => 'vc_link',
           'heading' => "Link",
           'param_name' => 'nd_options_link',
           'description' => __( "Insert title link", "nd-shortcodes" ),
-          'dependency' => array( 'element' => 'nd_options_layout', 'value' => array( 'layout-1','layout-2','layout-5','layout-6' ) )
+          'dependency' => array( 'element' => 'nd_options_layout', 'value' => array( 'layout-1','layout-2','layout-5','layout-6', 'layout-7' ) )
          ),
          array(
             "type" => "colorpicker",
@@ -167,7 +177,7 @@ function nd_options_focus() {
             "heading" => __( "Bg Color", "nd-shortcodes" ),
             "param_name" => "nd_options_bg_color",
             "description" => __( "Choose color for the background", "nd-shortcodes" ),
-            'dependency' => array( 'element' => 'nd_options_layout', 'value' => array( 'layout-4' ) )
+            'dependency' => array( 'element' => 'nd_options_layout', 'value' => array( 'layout-4','layout-7' ) )
          ),
          array(
             "type" => "textfield",

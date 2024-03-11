@@ -69,17 +69,17 @@ while ( $the_query->have_posts() ) : $the_query->the_post();
 
 			<div class="nd_options_position_absolute nd_options_bottom_20 nd_options_left_30">
 			    <div class="nd_options_display_table nd_options_float_left">
-			        <img alt="" class="nd_options_display_none_all_iphone nd_options_margin_right_10 nd_options_display_table_cell nd_options_vertical_align_middle" width="20" src="'.plugins_url().'/nd-shortcodes/img/icons/icon-user-white.svg">
+			        <img alt="" class="nd_options_display_none_all_iphone nd_options_margin_right_10 nd_options_display_table_cell nd_options_vertical_align_middle" width="20" src="'.esc_url(plugins_url('icons/icon-user-white.svg', __FILE__ )).'">
 			        <p class=" nd_options_color_white nd_options_display_table_cell nd_options_vertical_align_middle nd_options_font_size_13">'.__('By','nd-shortcodes').' '.get_the_author().'</p>
 			    </div>
 			    <div class="nd_options_display_table nd_options_float_left nd_options_margin_left_20">
-			        <img alt="" class="nd_options_display_none_all_iphone nd_options_margin_right_10 nd_options_display_table_cell nd_options_vertical_align_middle" width="20" src="'.plugins_url().'/nd-shortcodes/img/icons/icon-comment-3-white.svg">
+			        <img alt="" class="nd_options_display_none_all_iphone nd_options_margin_right_10 nd_options_display_table_cell nd_options_vertical_align_middle" width="20" src="'.esc_url(plugins_url('icons/icon-comment-3-white.svg', __FILE__ )).'">
 			        <p class=" nd_options_color_white nd_options_display_table_cell nd_options_vertical_align_middle nd_options_font_size_13">'.get_comments_number().' '.__('Comments','nd-shortcodes').'</p>
 			    </div>
 			</div>
 
 			<div style="background-color:'.$nd_options_meta_box_page_color.';" class="nd_options_position_absolute nd_options_right_20 '.$nd_options_top_class.' nd_options_display_inline_block nd_options_border_radius_100_percentage nd_options_padding_10 nd_options_text_align_center nd_options_width_25 nd_options_height_25">
-			    <img alt="" class="" width="20" src="'.plugins_url().'/nd-shortcodes/img/icons/icon-picture-white.svg">
+			    <img alt="" class="" width="20" src="'.esc_url(plugins_url('icons/icon-picture-white.svg', __FILE__ )).'">
 			</div>
 		
 		</div>';

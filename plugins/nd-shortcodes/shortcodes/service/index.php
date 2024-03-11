@@ -67,7 +67,7 @@ function nd_options_service() {
       "base" => "nd_options_service",
       'description' => __( 'Add single Service', 'nd-shortcodes' ),
       'show_settings_on_create' => true,
-      "icon" => plugins_url() . "/nd-shortcodes/shortcodes/thumb/service.jpg",
+      "icon" => esc_url(plugins_url('service.jpg', __FILE__ )),
       "class" => "",
       "category" => __( "ND Shortcodes", "nd-shortcodes"),
       "params" => array(

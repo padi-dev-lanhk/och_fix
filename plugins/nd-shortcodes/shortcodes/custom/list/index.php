@@ -82,7 +82,7 @@ function nd_options_list() {
       "base" => "nd_options_list",
       'description' => __( 'Add List', 'nd-shortcodes' ),
       'show_settings_on_create' => true,
-      "icon" => plugins_url() . "/nd-shortcodes/shortcodes/custom/thumb/list.jpg",
+      "icon" => esc_url(plugins_url('list.jpg', __FILE__ )),
       "class" => "",
       "category" => __( "NDS - Violet Coll.", "nd-shortcodes"),
       "params" => array(

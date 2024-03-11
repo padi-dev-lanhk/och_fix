@@ -60,7 +60,7 @@ if ( $nd_options_customizer_rtl_enable == 'yes' ) {
 //function to add rtl style
 function nd_options_load_rtl_style() {
   
-  wp_enqueue_style( 'nd_options_rtl', plugins_url() . '/nd-shortcodes/css/rtl.css', array(), false, false );
+  wp_enqueue_style( 'nd_options_rtl', esc_url( plugins_url( 'rtl.css', __FILE__ ) ), array(), false, false );
   
 }
 

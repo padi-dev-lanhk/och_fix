@@ -108,7 +108,7 @@ function nd_options_price() {
       "base" => "nd_options_price",
       'description' => __( 'Add single Price', 'nd-shortcodes' ),
       'show_settings_on_create' => true,
-      "icon" => plugins_url() . "/nd-shortcodes/shortcodes/thumb/price.jpg",
+      "icon" => esc_url(plugins_url('price.jpg', __FILE__ )),
       "class" => "",
       "category" => __( "ND Shortcodes", "nd-shortcodes"),
       "params" => array(

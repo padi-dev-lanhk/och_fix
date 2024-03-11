@@ -76,7 +76,7 @@ $str .= '
 	            <div class="nd_options_section nd_options_height_20"></div>
 	            <p class="nd_options_margin_0_important nd_options_padding_0">'.$nd_options_excerpt.'</p>
 	            <div class="nd_options_section nd_options_height_20"></div>
-	            <a  class="nd_options_display_inline_block nd_options_line_height_16 nd_options_text_align_center nd_options_box_sizing_border_box  nd_options_color_white nd_options_first_font nd_options_padding_10_20 nd_options_border_radius_3 bgr_bottom_tur " href="'.$nd_options_permalink.'">'.__('Xem thêm','nd-shortcodes').'</a>
+	            <a style="background-color: '.$nd_options_meta_box_page_color.';" class="nd_options_display_inline_block nd_options_line_height_16 nd_options_text_align_center nd_options_box_sizing_border_box  nd_options_color_white nd_options_first_font nd_options_padding_10_20 nd_options_border_radius_3 " href="'.$nd_options_permalink.'">'.__('READ MORE','nd-shortcodes').'</a>
 
 	        </div>
 	    </div>

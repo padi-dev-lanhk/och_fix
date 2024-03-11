@@ -93,7 +93,7 @@ if ( $nd_options_meta_box_post_header_img != '' ) { ?>
 
                                     <div class="nd_options_section nd_options_height_10"></div>
                                     <div class="nd_options_section nd_options_position_relative nd_options_padding_right_40  nd_options_box_sizing_border_box">
-                                        <img alt="" class="nd_options_position_absolute nd_options_left_0" width="23" height="23" src="<?php echo plugins_url(); ?>/nd-shortcodes/img/icons/icon-calendar-2-white.svg">
+                                        <img alt="" class="nd_options_position_absolute nd_options_left_0" width="23" height="23" src="<?php echo esc_url(plugins_url('icons/icon-calendar-2-white.svg', __FILE__ )); ?>">
                                         <div class="nd_options_section nd_options_padding_left_45 nd_options_box_sizing_border_box">
                                             <div class="nd_options_section nd_options_height_5"></div>
                                             <h3 class="nd_options_color_white nd_options_font_size_14 nd_options_letter_spacing_1 nd_options_text_transform_uppercase nd_options_second_font"><?php echo the_time('d F Y'); ?></h3>
@@ -107,7 +107,7 @@ if ( $nd_options_meta_box_post_header_img != '' ) { ?>
 
                                     <div class="nd_options_section nd_options_height_10"></div>
                                     <div class="nd_options_section nd_options_position_relative nd_options_padding_right_40_all_iphone nd_options_box_sizing_border_box">
-                                        <img alt="" class="nd_options_position_absolute nd_options_left_0" width="23" height="23" src="<?php echo plugins_url(); ?>/nd-shortcodes/img/icons/icon-chat-white.svg">
+                                        <img alt="" class="nd_options_position_absolute nd_options_left_0" width="23" height="23" src="<?php echo esc_url(plugins_url('icons/icon-chat-white.svg', __FILE__ )); ?>">
                                         <div class="nd_options_section nd_options_padding_left_45 nd_options_box_sizing_border_box">
                                             <div class="nd_options_section nd_options_height_5"></div>
                                             <h3 class="nd_options_color_white nd_options_font_size_14 nd_options_letter_spacing_1 nd_options_text_transform_uppercase nd_options_second_font"><?php echo comments_number(); ?></h3>

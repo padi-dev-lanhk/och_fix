@@ -25,7 +25,7 @@ function nd_options_login( $nd_options_atts ) {
 
     }else{
 
-        $nd_options_account_avatar_url = plugins_url().'/nd-shortcodes/addons/customizer/shortcodes/login/img/avatar.jpg';
+        $nd_options_account_avatar_url = esc_url(plugins_url('img/avatar.jpg', __FILE__ ));
         $nd_options_log_link = $nd_options_login['href'];
         $nd_options_link_page = $nd_options_login['href'];
         $nd_options_log_name = __('LOG IN','nd-shortcodes');

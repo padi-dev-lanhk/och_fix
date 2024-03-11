@@ -32,7 +32,7 @@ function nd_options_metabox_post()
 
     <!--******************************COLOR******************************-->
     <p><strong><?php _e('Color','nd-shortcodes'); ?></strong></p>
-    <p><input id="nd_options_colorpicker" type="text" name="nd_options_meta_box_post_color" value="<?php echo $nd_options_meta_box_post_color; ?>" /></p>
+    <p><input id="nd_options_colorpicker" type="text" name="nd_options_meta_box_post_color" value="<?php echo esc_html($nd_options_meta_box_post_color); ?>" /></p>
     <p class="description"><?php _e('This color will be used as the background of the button "read more" in the archive page.','nd-shortcodes'); ?></p>
 
     <script type="text/javascript">
@@ -51,8 +51,8 @@ function nd_options_metabox_post()
     <p>
       <select name="nd_options_meta_box_post_title" id="nd_options_meta_box_post_title">
         
-        <option <?php if( $nd_options_meta_box_post_title == 1 ) { echo 'selected="selected"'; } ?> value="1"><?php _e('Hide Title','nd-shortcodes'); ?></option>
-        <option <?php if( $nd_options_meta_box_post_title == 0 ) { echo 'selected="selected"'; } ?> value="0"><?php _e('Show Title','nd-shortcodes'); ?></option>
+        <option <?php if( $nd_options_meta_box_post_title == 1 ) { echo esc_html('selected="selected"'); } ?> value="1"><?php _e('Hide Title','nd-shortcodes'); ?></option>
+        <option <?php if( $nd_options_meta_box_post_title == 0 ) { echo esc_html('selected="selected"'); } ?> value="0"><?php _e('Show Title','nd-shortcodes'); ?></option>
          
       </select>
     </p>
@@ -64,8 +64,8 @@ function nd_options_metabox_post()
     <p>
       <select name="nd_options_meta_box_post_margin" id="nd_options_meta_box_post_margin">
         
-        <option <?php if( $nd_options_meta_box_post_margin == 1 ) { echo 'selected="selected"'; } ?> value="1"><?php _e('Remove Spaces','nd-shortcodes'); ?></option>
-        <option <?php if( $nd_options_meta_box_post_margin == 0 ) { echo 'selected="selected"'; } ?> value="0"><?php _e('Add Spaces','nd-shortcodes'); ?></option>
+        <option <?php if( $nd_options_meta_box_post_margin == 1 ) { echo esc_html('selected="selected"'); } ?> value="1"><?php _e('Remove Spaces','nd-shortcodes'); ?></option>
+        <option <?php if( $nd_options_meta_box_post_margin == 0 ) { echo esc_html('selected="selected"'); } ?> value="0"><?php _e('Add Spaces','nd-shortcodes'); ?></option>
          
       </select>
     </p>
@@ -83,17 +83,23 @@ add_action( 'save_post', 'nd_options_meta_box_post_save' );
 function nd_options_meta_box_post_save( $post_id )
 {
 
-    //save color
-    if( isset( $_POST['nd_options_meta_box_post_color'] ) )
-    update_post_meta( $post_id, 'nd_options_meta_box_post_color', wp_kses( $_POST['nd_options_meta_box_post_color'], $allowed ) );
+    //sanitize and validate
+    $nd_options_meta_box_post_color = sanitize_hex_color( $_POST['nd_options_meta_box_post_color'] );
+    if ( isset( $nd_options_meta_box_post_color ) ) {
+    update_post_meta( $post_id, 'nd_options_meta_box_post_color' , $nd_options_meta_box_post_color );
+    }
 
-    //save title
-    if( isset( $_POST['nd_options_meta_box_post_title'] ) )
-    update_post_meta( $post_id, 'nd_options_meta_box_post_title', wp_kses( $_POST['nd_options_meta_box_post_title'], $allowed ) );
+    //sanitize and validate
+    $nd_options_meta_box_post_title = sanitize_option( 'nd_options_meta_box_post_title', $_POST['nd_options_meta_box_post_title'] );
+    if ( isset( $nd_options_meta_box_post_title ) ) {
+    update_post_meta( $post_id, 'nd_options_meta_box_post_title' , $nd_options_meta_box_post_title );
+    }
 
-    //save margin
-    if( isset( $_POST['nd_options_meta_box_post_margin'] ) )
-    update_post_meta( $post_id, 'nd_options_meta_box_post_margin', wp_kses( $_POST['nd_options_meta_box_post_margin'], $allowed ) );
+    //sanitize and validate
+    $nd_options_meta_box_post_margin = sanitize_option( 'nd_options_meta_box_post_margin', $_POST['nd_options_meta_box_post_margin'] );
+    if ( isset( $nd_options_meta_box_post_margin ) ) {
+    update_post_meta( $post_id, 'nd_options_meta_box_post_margin' , $nd_options_meta_box_post_margin );
+    }
          
 }
 //END create save metabox
@@ -128,9 +134,9 @@ function nd_options_metabox_post_sidebar()
     <p>
       <select name="nd_options_meta_box_post_sidebar_position" id="nd_options_meta_box_post_sidebar_position">
         
-        <option <?php if( $nd_options_meta_box_post_sidebar_position == 'nd_options_full_width' ) { echo 'selected="selected"'; } ?> value="nd_options_full_width">Page Full Width</option>
-        <option <?php if( $nd_options_meta_box_post_sidebar_position == 'nd_options_left_sidebar' ) { echo 'selected="selected"'; } ?> value="nd_options_left_sidebar">Left Sidebar</option>
-        <option <?php if( $nd_options_meta_box_post_sidebar_position == 'nd_options_right_sidebar' ) { echo 'selected="selected"'; } ?> value="nd_options_right_sidebar">Right Sidebar</option>
+        <option <?php if( $nd_options_meta_box_post_sidebar_position == 'nd_options_full_width' ) { echo esc_html('selected="selected"'); } ?> value="nd_options_full_width"><?php _e('Page Full Width','nd-shortcodes'); ?></option>
+        <option <?php if( $nd_options_meta_box_post_sidebar_position == 'nd_options_left_sidebar' ) { echo esc_html('selected="selected"'); } ?> value="nd_options_left_sidebar"><?php _e('Left Sidebar','nd-shortcodes'); ?></option>
+        <option <?php if( $nd_options_meta_box_post_sidebar_position == 'nd_options_right_sidebar' ) { echo esc_html('selected="selected"'); } ?> value="nd_options_right_sidebar"><?php _e('Right Sidebar','nd-shortcodes'); ?></option>
          
       </select>
     </p>
@@ -147,8 +153,11 @@ add_action( 'save_post', 'nd_options_meta_box_post_sidebar_save' );
 function nd_options_meta_box_post_sidebar_save( $post_id )
 {
 
-     if( isset( $_POST['nd_options_meta_box_post_sidebar_position'] ) )
-        update_post_meta( $post_id, 'nd_options_meta_box_post_sidebar_position', wp_kses( $_POST['nd_options_meta_box_post_sidebar_position'], $allowed ) );
+      //sanitize and validate
+      $nd_options_meta_box_post_sidebar_position = sanitize_option( 'nd_options_meta_box_post_sidebar_position', $_POST['nd_options_meta_box_post_sidebar_position'] );
+      if ( isset( $nd_options_meta_box_post_sidebar_position ) ) {
+      update_post_meta( $post_id, 'nd_options_meta_box_post_sidebar_position' , $nd_options_meta_box_post_sidebar_position );
+      }
          
 }
 //END create save metabox
@@ -182,7 +191,7 @@ function nd_options_metabox_post_header_img()
 
     <!--******************************IMAGE******************************-->
     <p><strong><?php _e('Header Image','nd-shortcodes'); ?></strong></p>
-    <p><input class="regular-text" type="text" name="nd_options_meta_box_post_header_img" id="nd_options_meta_box_post_header_img" value="<?php echo $nd_options_meta_box_post_header_img; ?>" /></p>
+    <p><input class="regular-text" type="text" name="nd_options_meta_box_post_header_img" id="nd_options_meta_box_post_header_img" value="<?php echo esc_url($nd_options_meta_box_post_header_img); ?>" /></p>
     <p>
       <input class="button nd_options_meta_box_post_header_img_button" type="button" name="nd_options_meta_box_post_header_img_button" id="nd_options_meta_box_post_header_img_button" value="<?php _e('Upload','nd-shortcodes'); ?>" />
     </p>
@@ -193,9 +202,9 @@ function nd_options_metabox_post_header_img()
     <p>
       <select name="nd_options_meta_box_post_header_img_position" id="nd_options_meta_box_post_header_img_position">
         
-        <option <?php if( $nd_options_meta_box_post_header_img_position == 'nd_options_background_position_center_top' ) { echo 'selected="selected"'; } ?> value="nd_options_background_position_center_top">Position Top</option>
-        <option <?php if( $nd_options_meta_box_post_header_img_position == 'nd_options_background_position_center_bottom' ) { echo 'selected="selected"'; } ?> value="nd_options_background_position_center_bottom">Position Bottom</option>
-        <option <?php if( $nd_options_meta_box_post_header_img_position == 'nd_options_background_position_center' ) { echo 'selected="selected"'; } ?> value="nd_options_background_position_center">Position Center</option>
+        <option <?php if( $nd_options_meta_box_post_header_img_position == 'nd_options_background_position_center_top' ) { echo esc_html('selected="selected"'); } ?> value="nd_options_background_position_center_top">Position Top</option>
+        <option <?php if( $nd_options_meta_box_post_header_img_position == 'nd_options_background_position_center_bottom' ) { echo esc_html('selected="selected"'); } ?> value="nd_options_background_position_center_bottom">Position Bottom</option>
+        <option <?php if( $nd_options_meta_box_post_header_img_position == 'nd_options_background_position_center' ) { echo esc_html('selected="selected"'); } ?> value="nd_options_background_position_center">Position Center</option>
          
       </select>
     </p>
@@ -203,7 +212,7 @@ function nd_options_metabox_post_header_img()
 
     <!--******************************TITLE******************************-->
     <p><strong><?php _e('Title','nd-shortcodes'); ?></strong></p>
-    <p><input type="text" name="nd_options_meta_box_post_header_img_title" id="nd_options_meta_box_post_header_img_title" value="<?php echo $nd_options_meta_box_post_header_img_title; ?>" /></p>
+    <p><input type="text" name="nd_options_meta_box_post_header_img_title" id="nd_options_meta_box_post_header_img_title" value="<?php echo esc_html($nd_options_meta_box_post_header_img_title); ?>" /></p>
     <p class="description"><?php _e('Insert the title/slogan over the image','nd-shortcodes'); ?></p>
 
 
@@ -273,16 +282,23 @@ add_action( 'save_post', 'nd_options_meta_box_post_header_img_save' );
 function nd_options_meta_box_post_header_img_save( $post_id )
 {
 
-    // Make sure your data is set before trying to save it
-    if( isset( $_POST['nd_options_meta_box_post_header_img'] ) )
-        update_post_meta( $post_id, 'nd_options_meta_box_post_header_img', wp_kses( $_POST['nd_options_meta_box_post_header_img'], $allowed ) );
+      //sanitize and validate
+      $nd_options_meta_box_post_header_img = esc_url_raw( $_POST['nd_options_meta_box_post_header_img'] );
+      if ( isset( $nd_options_meta_box_post_header_img ) ) {
+        update_post_meta( $post_id, 'nd_options_meta_box_post_header_img' , $nd_options_meta_box_post_header_img );
+      }
 
-      if( isset( $_POST['nd_options_meta_box_post_header_img_title'] ) )
-        update_post_meta( $post_id, 'nd_options_meta_box_post_header_img_title', wp_kses( $_POST['nd_options_meta_box_post_header_img_title'], $allowed ) );
+      //sanitize and validate
+      $nd_options_meta_box_post_header_img_title = sanitize_meta('nd_options_meta_box_post_header_img_title',$_POST['nd_options_meta_box_post_header_img_title'],'post');
+      if ( isset( $nd_options_meta_box_post_header_img_title ) ) {
+        update_post_meta( $post_id, 'nd_options_meta_box_post_header_img_title' , $nd_options_meta_box_post_header_img_title );
+      }
 
-    if( isset( $_POST['nd_options_meta_box_post_header_img_position'] ) )
-        update_post_meta( $post_id, 'nd_options_meta_box_post_header_img_position', wp_kses( $_POST['nd_options_meta_box_post_header_img_position'], $allowed ) );
-         
+      //sanitize and validate
+      $nd_options_meta_box_post_header_img_position = sanitize_option( 'nd_options_meta_box_post_header_img_position', $_POST['nd_options_meta_box_post_header_img_position'] );
+      if ( isset( $nd_options_meta_box_post_header_img_position ) ) {
+        update_post_meta( $post_id, 'nd_options_meta_box_post_header_img_position' , $nd_options_meta_box_post_header_img_position );
+      }
 }
 
 
@@ -312,11 +328,11 @@ function nd_options_metabox_post_quote()
     ?>
 
     <p><strong><?php _e('Quote Text','nd-shortcodes'); ?></strong></p>
-    <p><input type="text" name="nd_options_meta_box_post_quote" id="nd_options_meta_box_post_quote" value="<?php echo $nd_options_meta_box_post_quote; ?>" /></p>
+    <p><input type="text" name="nd_options_meta_box_post_quote" id="nd_options_meta_box_post_quote" value="<?php echo esc_html($nd_options_meta_box_post_quote); ?>" /></p>
     <p class="description"><?php _e('Insert the text quote, you can see it in the preview of your post.','nd-shortcodes'); ?></p>
 
     <p><strong><?php _e('Quote Author','nd-shortcodes'); ?></strong></p>
-    <p><input type="text" name="nd_options_meta_box_post_quote_author" id="nd_options_meta_box_post_quote_author" value="<?php echo $nd_options_meta_box_post_quote_author; ?>" /></p>
+    <p><input type="text" name="nd_options_meta_box_post_quote_author" id="nd_options_meta_box_post_quote_author" value="<?php echo esc_html($nd_options_meta_box_post_quote_author); ?>" /></p>
     <p class="description"><?php _e('Insert the quote author.','nd-shortcodes'); ?></p>
 
     <?php   
@@ -330,12 +346,17 @@ add_action( 'save_post', 'nd_options_meta_box_post_quote_save' );
 function nd_options_meta_box_post_quote_save( $post_id )
 {
 
-     if( isset( $_POST['nd_options_meta_box_post_quote'] ) )
-        update_post_meta( $post_id, 'nd_options_meta_box_post_quote', wp_kses( $_POST['nd_options_meta_box_post_quote'], $allowed ) );
+      //sanitize and validate
+      $nd_options_meta_box_post_quote = sanitize_meta('nd_options_meta_box_post_quote',$_POST['nd_options_meta_box_post_quote'],'post');
+      if ( isset( $nd_options_meta_box_post_quote ) ) {
+        update_post_meta( $post_id, 'nd_options_meta_box_post_quote' , $nd_options_meta_box_post_quote );
+      }
 
-     if( isset( $_POST['nd_options_meta_box_post_quote_author'] ) )
-        update_post_meta( $post_id, 'nd_options_meta_box_post_quote_author', wp_kses( $_POST['nd_options_meta_box_post_quote_author'], $allowed ) );
-
+      //sanitize and validate
+      $nd_options_meta_box_post_quote_author = sanitize_meta('nd_options_meta_box_post_quote_author',$_POST['nd_options_meta_box_post_quote_author'],'post');
+      if ( isset( $nd_options_meta_box_post_quote_author ) ) {
+        update_post_meta( $post_id, 'nd_options_meta_box_post_quote_author' , $nd_options_meta_box_post_quote_author );
+      }
          
 }
 //END create save metabox
@@ -367,11 +388,11 @@ function nd_options_metabox_post_link()
     ?>
 
     <p><strong><?php _e('Title Link','nd-shortcodes'); ?></strong></p>
-    <p><input type="text" name="nd_options_meta_box_post_link_title" id="nd_options_meta_box_post_link_title" value="<?php echo $nd_options_meta_box_post_link_title; ?>" /></p>
+    <p><input type="text" name="nd_options_meta_box_post_link_title" id="nd_options_meta_box_post_link_title" value="<?php echo esc_html($nd_options_meta_box_post_link_title); ?>" /></p>
     <p class="description"><?php _e('Insert the title link, you can see it in the preview of your post.','nd-shortcodes'); ?></p>
 
     <p><strong><?php _e('Link Url','nd-shortcodes'); ?></strong></p>
-    <p><input type="text" name="nd_options_meta_box_post_link_url" id="nd_options_meta_box_post_link_url" value="<?php echo $nd_options_meta_box_post_link_url; ?>" /></p>
+    <p><input type="text" name="nd_options_meta_box_post_link_url" id="nd_options_meta_box_post_link_url" value="<?php echo esc_html($nd_options_meta_box_post_link_url); ?>" /></p>
     <p class="description"><?php _e('Insert the link url ( http://www.nicdark.com ).','nd-shortcodes'); ?></p>
 
     <?php   
@@ -385,13 +406,18 @@ add_action( 'save_post', 'nd_options_meta_box_post_link_save' );
 function nd_options_meta_box_post_link_save( $post_id )
 {
 
-     if( isset( $_POST['nd_options_meta_box_post_link_title'] ) )
-        update_post_meta( $post_id, 'nd_options_meta_box_post_link_title', wp_kses( $_POST['nd_options_meta_box_post_link_title'], $allowed ) );
+      //sanitize and validate
+      $nd_options_meta_box_post_link_title = sanitize_meta('nd_options_meta_box_post_link_title',$_POST['nd_options_meta_box_post_link_title'],'post');
+      if ( isset( $nd_options_meta_box_post_link_title ) ) {
+        update_post_meta( $post_id, 'nd_options_meta_box_post_link_title' , $nd_options_meta_box_post_link_title );
+      }
 
-     if( isset( $_POST['nd_options_meta_box_post_link_url'] ) )
-        update_post_meta( $post_id, 'nd_options_meta_box_post_link_url', wp_kses( $_POST['nd_options_meta_box_post_link_url'], $allowed ) );
+      //sanitize and validate
+      $nd_options_meta_box_post_link_url = sanitize_meta('nd_options_meta_box_post_link_url',$_POST['nd_options_meta_box_post_link_url'],'post');
+      if ( isset( $nd_options_meta_box_post_link_url ) ) {
+        update_post_meta( $post_id, 'nd_options_meta_box_post_link_url' , $nd_options_meta_box_post_link_url );
+      }
 
-         
 }
 //END create save metabox
 
@@ -422,7 +448,7 @@ function nd_options_metabox_post_media()
     ?>
 
     <p><strong><?php _e('Iframe / Shortcode','nd-shortcodes'); ?></strong></p>
-    <p><textarea rows="4" cols="50" name="nd_options_meta_box_post_media_code" id="nd_options_meta_box_post_media_code" /><?php echo $nd_options_meta_box_post_media_code; ?></textarea></p>
+    <p><textarea rows="4" cols="50" name="nd_options_meta_box_post_media_code" id="nd_options_meta_box_post_media_code" /><?php echo esc_html($nd_options_meta_box_post_media_code); ?></textarea></p>
     <p class="description"><?php _e('Insert the iframe/shortcode , you can see it in the preview of your post.','nd-shortcodes'); ?></p>
 
     <?php   
@@ -436,8 +462,11 @@ add_action( 'save_post', 'nd_options_meta_box_post_media_save' );
 function nd_options_meta_box_post_media_save( $post_id )
 {
 
-     if( isset( $_POST['nd_options_meta_box_post_media_code'] ) )
-        update_post_meta( $post_id, 'nd_options_meta_box_post_media_code', $_POST['nd_options_meta_box_post_media_code'] );
+      //sanitize and validate
+      $nd_options_meta_box_post_media_code = $_POST['nd_options_meta_box_post_media_code'];
+      if ( isset( $nd_options_meta_box_post_media_code ) ) {
+        update_post_meta( $post_id, 'nd_options_meta_box_post_media_code' , $nd_options_meta_box_post_media_code );
+      }
          
 }
 //END create save metabox

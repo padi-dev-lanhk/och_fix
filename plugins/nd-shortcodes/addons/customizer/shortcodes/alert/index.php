@@ -17,7 +17,11 @@ function nd_options_alert( $nd_options_atts, $nd_options_content = null ) {
     $nd_options_atts );
 
     //image
-    if ( $nd_options_alert['image'] == '' ) { $nd_options_alert['image'] = plugins_url().'/nd-shortcodes/addons/customizer/shortcodes/alert/img/icon-message.svg'; }else{ $nd_options_alert['image'] = $nd_options_alert['image']; }
+    if ( $nd_options_alert['image'] == '' ) { 
+        $nd_options_alert['image'] = esc_url(plugins_url('img/icon-message.svg', __FILE__ )); 
+    }else{ 
+        $nd_options_alert['image'] = $nd_options_alert['image']; 
+    }
 
     //float
     if ( $nd_options_alert['float'] == '' ) { $nd_options_alert_float = 'left'; }

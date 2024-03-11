@@ -198,7 +198,7 @@ function nd_options_menu() {
       "base" => "nd_options_menu",
       'description' => __( 'Add Your Menu', 'nd-shortcodes' ),
       'show_settings_on_create' => true,
-      "icon" => plugins_url() . "/nd-shortcodes/shortcodes/custom/thumb/text.jpg",
+      "icon" => esc_url(plugins_url('menu.jpg', __FILE__ )),
       "class" => "",
       "category" => __( "NDS - Orange Coll.", "nd-shortcodes"),
       "params" => array(

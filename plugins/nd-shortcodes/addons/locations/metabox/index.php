@@ -57,21 +57,17 @@ add_action( 'save_post', 'nd_options_meta_box_location_save' );
 function nd_options_meta_box_location_save( $post_id )
 {
   
-  	//save coordinates
-    if( isset( $_POST['nd_options_meta_box_location_coordinates'] ) )
-    update_post_meta( $post_id, 'nd_options_meta_box_location_coordinates', wp_kses( $_POST['nd_options_meta_box_location_coordinates'], $allowed ) );
+    $nd_options_meta_box_location_coordinates = sanitize_meta('nd_options_meta_box_location_coordinates',$_POST['nd_options_meta_box_location_coordinates'],'post');
+    if ( isset( $nd_options_meta_box_location_coordinates ) ) { update_post_meta( $post_id, 'nd_options_meta_box_location_coordinates' , $nd_options_meta_box_location_coordinates ); }
 
-    //save title
-    if( isset( $_POST['nd_options_meta_box_location_title'] ) )
-    update_post_meta( $post_id, 'nd_options_meta_box_location_title', wp_kses( $_POST['nd_options_meta_box_location_title'], $allowed ) );
+    $nd_options_meta_box_location_title = sanitize_meta('nd_options_meta_box_location_title',$_POST['nd_options_meta_box_location_title'],'post');
+    if ( isset( $nd_options_meta_box_location_title ) ) { update_post_meta( $post_id, 'nd_options_meta_box_location_title' , $nd_options_meta_box_location_title ); }
 
-	//save sub title
-    if( isset( $_POST['nd_options_meta_box_location_sub_title'] ) )
-    update_post_meta( $post_id, 'nd_options_meta_box_location_sub_title', wp_kses( $_POST['nd_options_meta_box_location_sub_title'], $allowed ) );
+    $nd_options_meta_box_location_sub_title = sanitize_meta('nd_options_meta_box_location_sub_title',$_POST['nd_options_meta_box_location_sub_title'],'post');
+    if ( isset( $nd_options_meta_box_location_sub_title ) ) { update_post_meta( $post_id, 'nd_options_meta_box_location_sub_title' , $nd_options_meta_box_location_sub_title ); }
 
-	//save description
-    if( isset( $_POST['nd_options_meta_box_location_description'] ) )
-    update_post_meta( $post_id, 'nd_options_meta_box_location_description', wp_kses( $_POST['nd_options_meta_box_location_description'], $allowed ) );
+    $nd_options_meta_box_location_description = sanitize_meta('nd_options_meta_box_location_description',$_POST['nd_options_meta_box_location_description'],'post');
+    if ( isset( $nd_options_meta_box_location_description ) ) { update_post_meta( $post_id, 'nd_options_meta_box_location_description' , $nd_options_meta_box_location_description ); }
 
 }
 //END create save metabox

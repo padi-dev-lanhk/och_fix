@@ -21,7 +21,7 @@ $str .= '
 	<style type="text/css">
 		/* autocomplete */
 		#nd_options_autocomplete_search_button { 
-		    background-image: url("'.plugins_url().'/nd-shortcodes/img/icons/icon-search-grey.svg"); 
+		    background-image: url("'.esc_url(plugins_url('icon-search-grey.svg', __FILE__ )).'"); 
 		    background-size: 20px;
 		    background-repeat: no-repeat;
 		    background-position: left;
@@ -38,7 +38,7 @@ $str .= '
 		}
 
 		#nd_options_autocomplete_search_loader {
-		    background-image: url("'.plugins_url().'/nd-shortcodes/img/icons/icon-loader-grey.svg"); 
+		    background-image: url("'.esc_url(plugins_url('icon-loader-grey.svg', __FILE__ )).'"); 
 		    background-size: 15px;
 		    background-repeat: no-repeat;
 		    background-position: center;

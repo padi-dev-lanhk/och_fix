@@ -154,7 +154,7 @@ function nd_options_service_pro() {
       "base" => "nd_options_service_pro",
       'description' => __( 'Add Service Pro', 'nd-shortcodes' ),
       'show_settings_on_create' => true,
-      "icon" => plugins_url() . "/nd-shortcodes/shortcodes/custom/thumb/service-pro.jpg",
+      "icon" => esc_url(plugins_url('service-pro.jpg', __FILE__ )),
       "class" => "",
       "category" => __( "NDS - Violet Coll.", "nd-shortcodes"),
       "params" => array(

@@ -78,7 +78,7 @@ while ( $the_query->have_posts() ) : $the_query->the_post();
 
 	 				<div class="nd_options_display_inline_block">
                         <div class="nd_options_display_table nd_options_float_left">
-                            <img alt="" class="nd_options_margin_right_10 nd_options_display_table_cell nd_options_vertical_align_middle" width="20" height="20" src="'.plugins_url().'/nd-shortcodes/img/icons/icon-quote-white.svg">
+                            <img alt="" class="nd_options_margin_right_10 nd_options_display_table_cell nd_options_vertical_align_middle" width="20" height="20" src="'.esc_url(plugins_url('icons/icon-quote-white.svg', __FILE__ )).'">
                             <p class="nd_options_color_white nd_options_display_table_cell nd_options_vertical_align_middle nd_options_letter_spacing_3 nd_options_font_weight_lighter nd_options_font_size_11 nd_options_text_transform_uppercase">
                             	'.$nd_options_meta_box_post_quote_author.'	
                             </p>
@@ -109,7 +109,7 @@ while ( $the_query->have_posts() ) : $the_query->the_post();
 	 			<div style="background-color: '.$nd_options_meta_box_page_color.';" class="nd_options_section nd_options_text_align_center nd_options_padding_50 nd_options_box_sizing_border_box">
 	 				
 	 				<div class="nd_options_display_inline_block">
-	                    <img alt="" class="nd_options_margin_right_10" width="20" height="20" src="'.plugins_url().'/nd-shortcodes/img/icons/icon-link-2-white.svg">
+	                    <img alt="" class="nd_options_margin_right_10" width="20" height="20" src="'.esc_url(plugins_url('icons/icon-link-2-white.svg', __FILE__ )).'">
 	                    <h2 class="nd_options_color_white nd_options_line_height_35 nd_options_display_inline_block">
 	                    	<span class="nd_options_padding_botttom_5">
 	                    		<a class="nd_options_color_white nd_options_first_font nd_options_letter_spacing_3 nd_options_font_weight_lighter" href="'.$nd_options_meta_box_post_link_url.'">

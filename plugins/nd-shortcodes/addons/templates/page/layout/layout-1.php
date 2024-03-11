@@ -40,6 +40,9 @@ if ( $nd_options_meta_box_page_header_img != '' ) { ?>
 
 
 <?php } ?>
+
+
+
 <!--page margin-->
 <?php if ( get_post_meta( get_the_ID(), 'nd_options_meta_box_page_margin', true ) != 1 ) { echo '<div class="nd_options_section nd_options_height_50"></div>'; } ?>
 

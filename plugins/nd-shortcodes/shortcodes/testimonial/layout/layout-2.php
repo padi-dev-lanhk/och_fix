@@ -18,7 +18,7 @@ $str .= '
 
       <img alt="" width="70" height="70" class="nd_options_position_absolute nd_options_border_radius_100_percentage nd_options_top_0 nd_options_left_0" src="'.$nd_options_image_src[0].'">
       
-      <div class="nd_options_section nd_options_padding_left_90 nd_options_min_height_70">
+      <div class="nd_options_section nd_options_padding_left_90 nd_options_min_height_70 nd_options_box_sizing_border_box">
         <div class="nd_options_section nd_options_height_10 "></div>
         <h4 class="nd_options_margin_0_important nd_options_font_weight_normal">'.$nd_options_name.'</h4>
         <div class="nd_options_section nd_options_height_10 "></div>

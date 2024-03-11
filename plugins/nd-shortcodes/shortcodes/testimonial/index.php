@@ -81,7 +81,7 @@ function nd_options_testimonial() {
       "base" => "nd_options_testimonial",
       'description' => __( 'Add single Testimonial', 'nd-shortcodes' ),
       'show_settings_on_create' => true,
-      "icon" => plugins_url() . "/nd-shortcodes/shortcodes/thumb/testimonial.jpg",
+      "icon" => esc_url(plugins_url('testimonial.jpg', __FILE__ )),
       "class" => "",
       "category" => __( "ND Shortcodes", "nd-shortcodes"),
       "params" => array(

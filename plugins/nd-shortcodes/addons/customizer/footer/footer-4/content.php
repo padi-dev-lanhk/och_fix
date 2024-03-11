@@ -11,9 +11,11 @@ $nd_options_customizer_footer_4_border = get_option( 'nd_options_customizer_foot
 if ( $nd_options_customizer_footer_4_border == '' ) { $nd_options_customizer_footer_4_border = '#f1f1f1';  }
 
 $nd_options_customizer_footer_4_left_content = get_option( 'nd_options_customizer_footer_4_left_content' );
+$nd_options_customizer_footer_4_left_content = str_replace("&#039;","'",$nd_options_customizer_footer_4_left_content);
 if ( $nd_options_customizer_footer_4_left_content == '' ) { $nd_options_customizer_footer_4_left_content = '© Copyright 2016 nicdark.com';  }
 
 $nd_options_customizer_footer_4_right_content = get_option( 'nd_options_customizer_footer_4_right_content' );
+$nd_options_customizer_footer_4_right_content = str_replace("&#039;","'",$nd_options_customizer_footer_4_right_content);
 if ( $nd_options_customizer_footer_4_right_content == '' ) { $nd_options_customizer_footer_4_right_content = 'Wonderful Theme';  }
 
 $nd_options_customizer_footer_4_columns = get_option( 'nd_options_customizer_footer_4_columns' );

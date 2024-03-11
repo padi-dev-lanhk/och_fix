@@ -93,7 +93,7 @@ function nd_options_cf7() {
       "base" => "nd_options_cf7",
       'description' => __( 'Add single cf7', 'nd-shortcodes' ),
       'show_settings_on_create' => true,
-      "icon" => plugins_url() . "/nd-shortcodes/shortcodes/custom/thumb/cf7.jpg",
+      "icon" => esc_url(plugins_url('cf7.jpg', __FILE__ )),
       "class" => "",
       "category" => __( "NDS - Orange Coll.", "nd-shortcodes"),
       "params" => array(

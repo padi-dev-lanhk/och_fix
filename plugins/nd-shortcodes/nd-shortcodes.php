@@ -1,11 +1,11 @@
 <?php
 /*
-Plugin Name:       ND Shortcodes
-Description:       The plugin adds some useful components to the Visual Composer Plugin that can be integrated very easily with your own theme.
-Version:           5.8
-Plugin URI:        http://www.nicdark.com/
-Author:            Nicdark
-Author URI:        http://www.nicdark.com/
+Plugin Name:       Components For WP Bakery Page Builder
+Description:       The plugin adds some useful components to the WP Bakery Page Builder Plugin that can be integrated very easily with your own theme.
+Version:           6.2
+Plugin URI:        https://wordpress.org/
+Author:            Endreww
+Author URI:        https://wordpress.org/
 License:           GPLv2 or later
 */
 
@@ -24,7 +24,7 @@ add_action('plugins_loaded', 'nd_options_load_textdomain');
 function nd_options_scripts() {
   
   //basic css plugin
-  wp_enqueue_style( 'nd_options_style', plugins_url() . '/nd-shortcodes/css/style.css' );
+  wp_enqueue_style( 'nd_options_style', esc_url( plugins_url( 'css/style.css', __FILE__ ) ) );
 
   wp_enqueue_script('jquery');
   
@@ -39,7 +39,7 @@ add_action( 'wp_enqueue_scripts', 'nd_options_scripts' );
 function nd_options_notices() {
     ?>
     <div class="notice notice-error is-dismissible">
-        <p><?php _e('ND Shortcodes: For the proper functioning of the plugin is required the activation of ','nd-shortcodes'); ?><a target="_blank" href="http://codecanyon.net/item/visual-composer-page-builder-for-wordpress/242431?ref=nicdark"><?php _e('Visual Composer','nd-shortcodes'); ?></a><?php _e(' plugin.','nd-shortcodes'); ?></p>
+        <p><?php _e('Components For WP Bakery Page Builder: To take full advantage of all the features of the plugin we recommend the activation of ','nd-shortcodes'); ?><a target="_blank" href="http://codecanyon.net/item/visual-composer-page-builder-for-wordpress/242431?ref=nicdark"><?php _e('WP Bakery Page Builder','nd-shortcodes'); ?></a><?php _e(' plugin.','nd-shortcodes'); ?></p>
     </div>
     <?php
 }

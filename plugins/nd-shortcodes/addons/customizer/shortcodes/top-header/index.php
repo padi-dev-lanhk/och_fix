@@ -61,7 +61,9 @@ function nd_options_icon_text( $nd_options_atts ) {
     //icon image or empty
     if ( $nd_options_icon_text['icon'] != '' ) {
 
-        $nd_options_icon_text_image = plugins_url().'/nd-shortcodes/addons/customizer/shortcodes/top-header/img/'.$nd_options_icon_text['icon'].'.svg';
+
+        $nd_options_icon_path = 'img/'.$nd_options_icon_text['icon'].'.svg';
+        $nd_options_icon_text_image = esc_url(plugins_url($nd_options_icon_path, __FILE__ ));
 
 
         $nd_options_icon_text_icon = '

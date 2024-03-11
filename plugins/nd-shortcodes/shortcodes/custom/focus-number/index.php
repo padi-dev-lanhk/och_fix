@@ -14,7 +14,7 @@ function nd_options_shortcode_focus_number($atts, $content = null)
     'nd_options_number' => '',
     'nd_options_text_color' => '',
     'nd_options_bg_color' => '',
-
+    'nd_options_image_bg' => '',
   ), $atts);
 
   $str = '';
@@ -27,12 +27,18 @@ function nd_options_shortcode_focus_number($atts, $content = null)
   $nd_options_number = $atts['nd_options_number'];
   $nd_options_text_color = $atts['nd_options_text_color'];
   $nd_options_bg_color = $atts['nd_options_bg_color'];
-
+  $nd_options_image_src = wp_get_attachment_image_src($atts['nd_options_image_bg'],'large');
 
   //default value for avoid error include
   if ($nd_options_layout == '') { $nd_options_layout = "layout-1"; }
   if ($nd_options_text_color == '') { $nd_options_text_color = "#fff"; }
   if ($nd_options_bg_color == '') { $nd_options_bg_color = "#000"; }
+
+  if ($nd_options_image_src[0] == '') { 
+    $nd_options_bg_style = ' background-color: '.$nd_options_bg_color.' ';
+  }else{ 
+    $nd_options_bg_style = ' background-image:url('.$nd_options_image_src[0].'); '; 
+  }
 
   //include the layout selected
   include 'layout/'.$nd_options_layout.'.php';
@@ -81,7 +87,7 @@ function nd_options_focus_number() {
       "base" => "nd_options_focus_number",
       'description' => __( 'Add single Focus Number', 'nd-shortcodes' ),
       'show_settings_on_create' => true,
-      "icon" => plugins_url() . "/nd-shortcodes/shortcodes/custom/thumb/focus-number.jpg",
+      "icon" => esc_url(plugins_url('focus-number.jpg', __FILE__ )),
       "class" => "",
       "category" => __( "NDS - Violet Coll.", "nd-shortcodes"),
       "params" => array(
@@ -121,7 +127,7 @@ function nd_options_focus_number() {
             "heading" => __( "Bg Color", "nd-shortcodes" ),
             "param_name" => "nd_options_bg_color",
             "description" => __( "Choose color for the background", "nd-shortcodes" ),
-            'dependency' => array( 'element' => 'nd_options_layout', 'value' => array( 'layout-1','layout-2' ) )
+            'dependency' => array( 'element' => 'nd_options_layout', 'value' => array( 'layout-1','layout-2','layout-4','layout-5' ) )
          ),
          array(
             "type" => "colorpicker",
@@ -129,7 +135,14 @@ function nd_options_focus_number() {
             "heading" => __( "Text Color", "nd-shortcodes" ),
             "param_name" => "nd_options_text_color",
             "description" => __( "Choose color for text", "nd-shortcodes" ),
-            'dependency' => array( 'element' => 'nd_options_layout', 'value' => array( 'layout-1','layout-3' ) )
+            'dependency' => array( 'element' => 'nd_options_layout', 'value' => array( 'layout-1','layout-3','layout-4' ) )
+         ),
+         array(
+            'type' => 'attach_image',
+            'heading' => __( 'Image Bg', 'nd-shortcodes' ),
+            'param_name' => 'nd_options_image_bg',
+            'description' => __( 'Select image from media library.', 'nd-shortcodes' ),
+            'dependency' => array( 'element' => 'nd_options_layout', 'value' => array( 'layout-4' ) )
          ),
          array(
             "type" => "textfield",

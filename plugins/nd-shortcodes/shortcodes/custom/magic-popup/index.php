@@ -74,8 +74,8 @@ function nd_options_shortcode_magic_popup($atts, $content = null)
     $nd_options_link_output = '<a style="font-size:'.$nd_options_link_size.'px; line-height:'.$nd_options_link_size.'px; color:'.$nd_options_link_color.';" class=" nd_options_outline_0 '.$nd_options_link_font.' '.$nd_options_type.'" href="'.$nd_options_link_url.'">'.$nd_options_link_title.'</a>';  
   }
   
-  wp_enqueue_script('nd_options_magnific_popup_plugin', plugins_url() . '/nd-shortcodes/shortcodes/custom/magic-popup/js/jquery.magnific-popup.min.js');
-  wp_enqueue_style('nd_options_magnific_popup_style', plugins_url() . '/nd-shortcodes/shortcodes/custom/magic-popup/css/magnific-popup.css');
+  wp_enqueue_script( 'nd_options_magnific_popup_plugin', esc_url( plugins_url( 'js/jquery.magnific-popup.min.js', __FILE__ ) ) );
+  wp_enqueue_style( 'nd_options_magnific_popup_style', esc_url( plugins_url( 'css/magnific-popup.css', __FILE__ ) ) );
 
   //default value for avoid error include
   if ($nd_options_image_width == '') { $nd_options_image_width = "100%"; }
@@ -127,7 +127,7 @@ function nd_options_magic_popup() {
       "base" => "nd_options_magic_popup",
       'description' => __( 'Add single popup', 'nd-shortcodes' ),
       'show_settings_on_create' => true,
-      "icon" => plugins_url() . "/nd-shortcodes/shortcodes/custom/thumb/magic-popup.jpg",
+      "icon" => esc_url(plugins_url('magic-popup.jpg', __FILE__ )),
       "class" => "",
       "category" => __( "NDS - Violet Coll.", "nd-shortcodes"),
       "params" => array(

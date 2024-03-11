@@ -37,7 +37,13 @@ function nd_options_shortcode_open_sidebar($atts, $content = null)
   //default
   if ( $nd_options_bg_color == '' ) { $nd_options_bg_color = '#fff'; }
   if ( $nd_options_sidebar_width == '' ) { $nd_options_sidebar_width = '300'; }
-  if ( $nd_options_image_close[0] == '' ) { $nd_options_image_close_src = plugins_url().'/nd-shortcodes/addons/customizer/header/header-2/img/icon-close-white.svg'; }else{ $nd_options_image_close_src = $nd_options_image_close[0]; }
+  
+  if ( $nd_options_image_close[0] == '' ) { 
+    $nd_options_image_close_src = esc_url(plugins_url('icon-close-white.svg', __FILE__ ));
+  }else{ 
+    $nd_options_image_close_src = $nd_options_image_close[0]; 
+  }
+
   if ( $nd_options_image_close_width == '' ) { $nd_options_image_close_width = '20'; }
   if ( $nd_options_image_close_position == '' ) { $nd_options_image_close_position = '20 20'; }
   if ( $nd_options_width == '' ) { $nd_options_width = '25px'; }
@@ -175,7 +181,7 @@ function nd_options_open_sidebar() {
       "base" => "nd_options_open_sidebar",
       'description' => __( 'Add your open sidebar element', 'nd-shortcodes' ),
       'show_settings_on_create' => true,
-      "icon" => plugins_url() . "/nd-shortcodes/shortcodes/custom/thumb/image.jpg",
+      "icon" => esc_url(plugins_url('open-sidebar.jpg', __FILE__ )),
       "class" => "",
       "category" => __( "NDS - Orange Coll.", "nd-shortcodes"),
       "params" => array(

@@ -69,7 +69,7 @@ function nd_options_badge() {
       "base" => "nd_options_badge",
       'description' => __( 'Add Badge', 'nd-shortcodes' ),
       'show_settings_on_create' => true,
-      "icon" => plugins_url() . "/nd-shortcodes/shortcodes/custom/thumb/badge.jpg",
+      "icon" => esc_url(plugins_url('badge.jpg', __FILE__ )),
       "class" => "",
       "category" => __( "NDS - Orange Coll.", "nd-shortcodes"),
       "params" => array(

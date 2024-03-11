@@ -19,7 +19,7 @@ function nd_options_shortcode_gmaps_markers($atts, $content = null)
    $nd_options_str = '';
 
   //directory
-  $nd_options_theme_directory = plugins_url()."/nd-shortcodes/addons/locations/";
+  $nd_options_theme_directory = esc_url( plugins_url('/',dirname(__FILE__)) );
 
   //get values
   $nd_options_height = $atts['nd_options_height']; if ( $nd_options_height == '' ) { $nd_options_height = '400'; }
@@ -197,7 +197,7 @@ function nd_options_gmaps_markers() {
       "base" => "nd_options_gmaps_markers",
       'description' => __( 'Add gmaps markers', 'nd-shortcodes' ),
       'show_settings_on_create' => true,
-      "icon" => plugins_url() . "/nd-shortcodes/addons/locations/img/thumb/gmaps-markers.jpg",
+      "icon" => esc_url(plugins_url('gmaps-markers.jpg', __FILE__ )),
       "class" => "",
       "category" => __( "NDS - Violet Coll.", "nd-shortcodes"),
       "params" => array(
@@ -215,7 +215,6 @@ function nd_options_gmaps_markers() {
             "heading" => __( "Height", "nd-shortcodes" ),
             "param_name" => "nd_options_height",
             'admin_label' => true,
-            "value" => __( "", "nd-shortcodes" ),
             "description" => __( "Insert the map height", "nd-shortcodes" )
          ),
         array(

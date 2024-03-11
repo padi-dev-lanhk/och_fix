@@ -33,7 +33,7 @@ function nd_options_shortcode_typewriter($atts, $content = null)
   $nd_options_text_underline_color = $atts['nd_options_text_underline_color'];
 
   
-  wp_enqueue_script('nd_options_typed_plugin', plugins_url() . '/nd-shortcodes/shortcodes/custom/typewriter/js/typewriter.js'); 
+  wp_enqueue_script( 'nd_options_typed_plugin', esc_url( plugins_url( 'js/typewriter.js', __FILE__ ) ) );
   
   
   $str .='
@@ -124,7 +124,7 @@ function nd_options_typewriter() {
       "base" => "nd_options_typewriter",
       'description' => __( 'Add Text Typewriter', 'nd-shortcodes' ),
       'show_settings_on_create' => true,
-      "icon" => plugins_url() . "/nd-shortcodes/shortcodes/custom/thumb/typewriter.jpg",
+      "icon" => esc_url(plugins_url('typewriter.jpg', __FILE__ )),
       "class" => "",
       "category" => __( "NDS - Orange Coll.", "nd-shortcodes"),
       "params" => array(

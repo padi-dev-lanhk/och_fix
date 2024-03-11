@@ -90,7 +90,7 @@ if ( $nd_options_meta_box_post_header_img != '' ) { ?>
 
                                     <div class="nd_options_section nd_options_height_10"></div>
                                     <div class="nd_options_section nd_options_position_relative nd_options_padding_right_40 nd_options_box_sizing_border_box">
-                                        <img alt="" class="nd_options_position_absolute nd_options_left_0" width="30" height="30" src="<?php echo plugins_url(); ?>/nd-shortcodes/img/icons/icon-calendar-2-white.svg">
+                                        <img alt="" class="nd_options_position_absolute nd_options_left_0" width="30" height="30" src="<?php echo esc_url(plugins_url('icons/icon-calendar-2-white.svg', __FILE__ )); ?>">
                                         <div class="nd_options_section nd_options_padding_left_45 nd_options_box_sizing_border_box">
                                             <div class="nd_options_section nd_options_height_10"></div>
                                             <h3 class="nd_options_color_white nd_options_second_font nd_options_letter_spacing_3 nd_options_font_weight_lighter nd_options_font_size_13 nd_options_text_transform_uppercase"><?php echo the_time('d F Y'); ?></h3>
@@ -104,7 +104,7 @@ if ( $nd_options_meta_box_post_header_img != '' ) { ?>
 
                                     <div class="nd_options_section nd_options_height_10"></div>
                                     <div class="nd_options_section nd_options_position_relative">
-                                        <img alt="" class="nd_options_position_absolute nd_options_left_0" width="30" height="30" src="<?php echo plugins_url(); ?>/nd-shortcodes/img/icons/icon-comment-2-white.svg">
+                                        <img alt="" class="nd_options_position_absolute nd_options_left_0" width="30" height="30" src="<?php echo esc_url(plugins_url('icons/icon-comment-2-white.svg', __FILE__ )); ?>">
                                         <div class="nd_options_section nd_options_padding_left_45 nd_options_box_sizing_border_box">
                                             <div class="nd_options_section nd_options_height_10"></div>
                                             <h3 class="nd_options_color_white nd_options_second_font nd_options_letter_spacing_3 nd_options_font_weight_lighter nd_options_font_size_13 nd_options_text_transform_uppercase"><?php echo comments_number(); ?></h3>
@@ -199,9 +199,6 @@ if ( $nd_options_meta_box_post_header_img != '' ) { ?>
                 <!--#post-->
                 <div style="float:left; width:100%;" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
                     <!--automatic title-->
-                    <div class="banner-header">
-                        <?php the_field('img_header'); ?>
-                    </div>
                     <?php if ( get_post_meta( get_the_ID(), 'nd_options_meta_box_post_title', true ) != 1 ) { echo '<h1 class=""><strong>'.get_the_title().'</strong></h1><div class="nd_options_section nd_options_height_20"></div>'; } ?>
                     <!--start content-->
                     <?php the_content(); ?>

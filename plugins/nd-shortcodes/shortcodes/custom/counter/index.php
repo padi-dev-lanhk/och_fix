@@ -29,10 +29,7 @@ function nd_options_shortcode_counter($atts, $content = null)
   $nd_options_text_align = $atts['nd_options_text_align'];
   $nd_options_bg_color = $atts['nd_options_bg_color'];
 
-
-  wp_enqueue_script('nd_options_counter_plugin', plugins_url() . '/nd-shortcodes/shortcodes/custom/counter/js/counter.js');
-
-
+  wp_enqueue_script( 'nd_options_counter_plugin', esc_url( plugins_url( 'js/counter.js', __FILE__ ) ) );
 
   $str .='
  
@@ -116,7 +113,7 @@ function nd_options_counter() {
       "base" => "nd_options_counter",
       'description' => __( 'Add Counter', 'nd-shortcodes' ),
       'show_settings_on_create' => true,
-      "icon" => plugins_url() . "/nd-shortcodes/shortcodes/custom/thumb/counter.jpg",
+      "icon" => esc_url(plugins_url('counter.jpg', __FILE__ )),
       "class" => "",
       "category" => __( "NDS - Orange Coll.", "nd-shortcodes"),
       "params" => array(

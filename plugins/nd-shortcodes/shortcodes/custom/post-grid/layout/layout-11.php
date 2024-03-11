@@ -76,7 +76,7 @@ while ( $the_query->have_posts() ) : $the_query->the_post();
 
 	 				<div class="nd_options_display_inline_block">
                         <div class="nd_options_display_table nd_options_float_left">
-                            <img alt="" class="nd_options_margin_right_10 nd_options_display_table_cell nd_options_vertical_align_middle" width="30" height="30" src="'.plugins_url().'/nd-shortcodes/img/icons/icon-quote-alpha.svg">
+                            <img alt="" class="nd_options_margin_right_10 nd_options_display_table_cell nd_options_vertical_align_middle" width="30" height="30" src="'.esc_url(plugins_url('icons/icon-quote-alpha.svg', __FILE__ )).'">
                             <p class="nd_options_color_white nd_options_display_table_cell nd_options_vertical_align_middle">
                             	'.$nd_options_meta_box_post_quote_author.'	
                             </p>
@@ -107,7 +107,7 @@ while ( $the_query->have_posts() ) : $the_query->the_post();
 	 			<div style="background-color: '.$nd_options_meta_box_page_color.';" class="nd_options_section nd_options_text_align_center nd_options_padding_50 nd_options_box_sizing_border_box nd_options_border_radius_4">
 	 				
 	 				<div class="nd_options_display_inline_block">
-	                    <img alt="" class="nd_options_margin_right_10" width="20" height="20" src="'.plugins_url().'/nd-shortcodes/img/icons/icon-link-white.svg">
+	                    <img alt="" class="nd_options_margin_right_10" width="20" height="20" src="'.esc_url(plugins_url('icons/icon-link-white.svg', __FILE__ )).'">
 	                    <h3 class="nd_options_color_white nd_options_line_height_35 nd_options_display_inline_block nd_options_font_weight_normal">
 	                    	<span class="nd_options_padding_botttom_5">
 	                    		<a class="nd_options_color_white nd_options_first_font" href="'.$nd_options_meta_box_post_link_url.'">
@@ -214,7 +214,7 @@ while ( $the_query->have_posts() ) : $the_query->the_post();
 
 					    <div class="nd_options_width_50_percentage nd_options_float_left">
 					        <div class="nd_options_display_table nd_options_float_left">
-					            <img alt="" class="nd_options_margin_right_10 nd_options_display_table_cell nd_options_vertical_align_middle " width="23" height="23" src="'.plugins_url().'/nd-shortcodes/img/icons/icon-comment-grey.svg">
+					            <img alt="" class="nd_options_margin_right_10 nd_options_display_table_cell nd_options_vertical_align_middle " width="23" height="23" src="'.esc_url(plugins_url('icons/icon-comment-grey.svg', __FILE__ )).'">
 					            <p class="nd_options_display_table_cell nd_options_vertical_align_middle nd_options_font_size_15"><a href="'.$nd_options_permalink.'">'.get_comments_number().' '.__('Comments','nd-shortcodes').'</a></p>
 					        </div>
 					    </div> 

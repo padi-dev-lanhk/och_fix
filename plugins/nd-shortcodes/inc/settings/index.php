@@ -6,7 +6,7 @@
 //START add custom css
 function nd_options_admin_style() {
   
-  wp_enqueue_style( 'nd_options_style', plugins_url() . '/nd-shortcodes/css/admin-style.css', array(), false, false );
+  wp_enqueue_style( 'nd_options_style', esc_url( plugins_url( 'admin-style.css', __FILE__ ) ) , array(), false, false );
   
 }
 add_action( 'admin_enqueue_scripts', 'nd_options_admin_style' );
@@ -90,8 +90,17 @@ function nd_options_settings_menu_page() {
           <li><a style="background-color:<?php echo nd_options_get_profile_bg_color(2); ?>;" href="#"><?php _e('Plugin Settings','nd-shortcodes'); ?></a></li>
           <li><a class="" href="<?php echo admin_url('customize.php'); ?>"><?php _e('Theme Options','nd-shortcodes'); ?></a></li>
           <li><a class="" href="<?php echo admin_url('admin.php?page=nd-shortcodes-settings-import-export'); ?>"><?php _e('Import Export','nd-shortcodes'); ?></a></li>
+          <li id="nd_options_import_demo_li"><a class="" href="<?php echo admin_url('admin.php?page=nd-shortcodes-settings-import-demo'); ?>"><?php _e('Import Demo','nd-shortcodes'); ?></a></li>
 
-          <?php do_action('nd_options_admin_navigation_hook'); ?>
+          <?php
+
+          if ( get_option('nd_options_locations_enable') == 1 ) { ?>
+
+          <li><a class="" href="<?php echo admin_url('admin.php?page=nd-shortcodes-settings-locations'); ?>"><?php _e('Locations','nd-shortcodes'); ?></a></li>
+
+          <?php }
+
+          ?>
 
           <li><a target="_blank" href="http://documentations.nicdark.com/"><?php _e('Documentation','nd-shortcodes'); ?></a></li>
         </ul>

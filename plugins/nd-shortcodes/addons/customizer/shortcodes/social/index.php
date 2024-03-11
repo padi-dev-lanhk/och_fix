@@ -18,7 +18,8 @@ function nd_options_social( $nd_options_atts ) {
     //image
     if ( $nd_options_social['image'] == '' ) { 
 
-    	$nd_options_social_image = plugins_url().'/nd-shortcodes/addons/customizer/shortcodes/social/img/'.$nd_options_social['social'].'.svg';	
+        $nd_options_image_path = 'img/'.$nd_options_social['social'].'.svg';
+    	$nd_options_social_image = esc_url(plugins_url($nd_options_image_path, __FILE__ ));
 
     }else {
 

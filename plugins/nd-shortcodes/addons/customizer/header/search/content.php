@@ -95,7 +95,7 @@ function nd_options_add_navigation_icon_search(){ ?>
 		//icon
 		$nd_options_customizer_header_search_icon = get_option( 'nd_options_customizer_header_search_icon' );
 		if ( $nd_options_customizer_header_search_icon == '' ) { 
-		    $nd_options_customizer_header_search_icon = plugins_url().'/nd-shortcodes/addons/customizer/header/img/icon-search-grey.svg';  
+		    $nd_options_customizer_header_search_icon = esc_url(plugins_url('icon-search-grey.svg', __FILE__ )); 
 		}else{
 		    $nd_options_customizer_header_search_icon = wp_get_attachment_url($nd_options_customizer_header_search_icon);
 		}

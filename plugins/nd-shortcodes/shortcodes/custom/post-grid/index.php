@@ -18,6 +18,7 @@ function nd_options_shortcode_post_grid($atts, $content = null)
     'nd_options_id' => '',
     'nd_options_order' => '',
     'nd_options_orderby' => '',
+    'nd_options_padding' => '',
   ), $atts);
 
   $str = '';
@@ -33,6 +34,7 @@ function nd_options_shortcode_post_grid($atts, $content = null)
   $nd_options_id = $atts['nd_options_id'];
   $nd_options_order = $atts['nd_options_order'];
   $nd_options_orderby = $atts['nd_options_orderby'];
+  $nd_options_padding = $atts['nd_options_padding'];
 
 
   //default value
@@ -109,7 +111,7 @@ function nd_options_post_grid() {
       "base" => "nd_options_post_grid",
       'description' => __( 'Add Post Grid', 'nd-shortcodes' ),
       'show_settings_on_create' => true,
-      "icon" => plugins_url() . "/nd-shortcodes/shortcodes/custom/thumb/post-grid.jpg",
+      "icon" => esc_url(plugins_url('post-grid.jpg', __FILE__ )),
       "class" => "",
       "category" => __( "NDS - Orange Coll.", "nd-shortcodes"),
       "params" => array(
@@ -128,7 +130,7 @@ function nd_options_post_grid() {
           'param_name' => 'nd_options_width',
           'value' => array( __( 'Select Width', 'nd-shortcodes' ) => 'nd_options_width_100_percentage nd_options_float_left', __( '20 %', 'nd-shortcodes' ) => 'nd_options_width_20_percentage nd_options_float_left', __( '25 %', 'nd-shortcodes' ) => 'nd_options_width_25_percentage nd_options_float_left', __( '33 %', 'nd-shortcodes' ) => 'nd_options_width_33_percentage nd_options_float_left', __( '50 %', 'nd-shortcodes' ) => 'nd_options_width_50_percentage nd_options_float_left', __( '100 %', 'nd-shortcodes' ) => 'nd_options_width_100_percentage nd_options_float_left' ),
           'description' => __( "Select the width for post preview grid", "nd-shortcodes" ),
-          'dependency' => array( 'element' => 'nd_options_layout', 'value' => array( 'layout-1','layout-2','layout-3','layout-4','layout-6','layout-7','layout-8','layout-9','layout-10','layout-11','layout-12','layout-13','layout-14' ) )
+          'dependency' => array( 'element' => 'nd_options_layout', 'value' => array( 'layout-1','layout-2','layout-3','layout-4','layout-6','layout-7','layout-8','layout-9','layout-10','layout-11','layout-12','layout-13','layout-14','layout-15' ) )
          ),
           array(
          'type' => 'dropdown',
@@ -180,6 +182,14 @@ function nd_options_post_grid() {
             "heading" => __( "Category/s Slug", "nd-shortcodes" ),
             "param_name" => "nd_options_category_slug",
             "description" => __( "Insert the slug of your category ( NB: you can use multiple slug divided by ',' eg: slug1,slug2,slug3 )", "nd-shortcodes" )
+         ),
+           array(
+            "type" => "textfield",
+            "class" => "",
+            "heading" => __( "Padding", "nd-shortcodes" ),
+            "param_name" => "nd_options_padding",
+            "description" => __( "Insert the padding between each element Eg: 10px 20px.", "nd-shortcodes" ),
+            'dependency' => array( 'element' => 'nd_options_layout', 'value' => array( 'layout-15' ) )
          ),
          array(
             "type" => "textfield",

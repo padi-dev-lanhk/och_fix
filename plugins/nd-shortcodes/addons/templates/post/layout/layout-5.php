@@ -67,20 +67,30 @@ if ( $nd_options_meta_box_post_header_img != '' ) { ?>
 
                         <div class="nd_options_section nd_options_padding_15 nd_options_box_sizing_border_box nd_options_text_align_center">
 
-                            <!-- <h1 class="nd_options_color_white nd_options_font_size_55 nd_options_font_size_40_all_iphone nd_options_line_height_40_all_iphone nd_options_first_font">
-                                
-                            </h1> -->
-                             <?php if ( get_post_meta( get_the_ID(), 'nd_options_meta_box_post_title', true ) != 1 ) { echo '<h1 class="nd_options_color_white nd_options_font_size_40 nd_options_font_size_40_all_iphone nd_options_line_height_40_all_iphone nd_options_first_font"><strong>'.get_the_title().'</strong></h1><div class="nd_options_section nd_options_height_20"></div>'; } ?>
+                            <h1 class="nd_options_color_white nd_options_font_size_55 nd_options_font_size_40_all_iphone nd_options_line_height_40_all_iphone nd_options_first_font"><?php echo $nd_options_meta_box_post_header_img_title; ?></h1>
                             <div class="nd_options_section nd_options_height_90"></div>
 
 
                             <div class="nd_options_section">
+                                <div class="nd_options_display_inline_block">
+
+                                    <div class="nd_options_section nd_options_height_10"></div>
+                                    <div class="nd_options_section nd_options_position_relative nd_options_padding_right_40 nd_options_box_sizing_border_box">
+                                        <img alt="" class="nd_options_position_absolute nd_options_left_0 nd_options_border_radius_100_percentage" width="23" height="23" src="<?php echo get_avatar_url(get_the_author_meta('ID')); ?>">
+                                        <div class="nd_options_section nd_options_padding_left_45 nd_options_box_sizing_border_box">
+                                            <div class="nd_options_section nd_options_height_5"></div>
+                                            <h3 class="nd_options_color_white nd_options_font_size_12 nd_options_letter_spacing_2 nd_options_text_transform_uppercase nd_options_second_font"><?php echo get_the_author(); ?></h3>
+                                        </div>
+                                    </div>
+                                    <div class="nd_options_section nd_options_height_10"></div>
+
+                                </div>
 
                                 <div class="nd_options_display_inline_block">
 
                                     <div class="nd_options_section nd_options_height_10"></div>
                                     <div class="nd_options_section nd_options_position_relative nd_options_padding_right_40 nd_options_box_sizing_border_box">
-                                        <img alt="" class="nd_options_position_absolute nd_options_left_0" width="23" height="23" src="<?php echo plugins_url(); ?>/nd-shortcodes/img/icons/icon-calendar-2-white.svg">
+                                        <img alt="" class="nd_options_position_absolute nd_options_left_0" width="23" height="23" src="<?php echo esc_url(plugins_url('icons/icon-calendar-2-white.svg', __FILE__ )); ?>">
                                         <div class="nd_options_section nd_options_padding_left_45 nd_options_box_sizing_border_box">
                                             <div class="nd_options_section nd_options_height_5"></div>
                                             <h3 class="nd_options_color_white nd_options_font_size_12 nd_options_letter_spacing_2 nd_options_text_transform_uppercase nd_options_second_font"><?php echo the_time('d F Y'); ?></h3>
@@ -90,7 +100,19 @@ if ( $nd_options_meta_box_post_header_img != '' ) { ?>
 
                                 </div>
 
-                               
+                                <div class="nd_options_display_inline_block">
+
+                                    <div class="nd_options_section nd_options_height_10"></div>
+                                    <div class="nd_options_section nd_options_position_relative">
+                                        <img alt="" class="nd_options_position_absolute nd_options_left_0" width="23" height="23" src="<?php echo esc_url(plugins_url('icons/icon-chat-white.svg', __FILE__ )); ?>">
+                                        <div class="nd_options_section nd_options_padding_left_45 nd_options_box_sizing_border_box">
+                                            <div class="nd_options_section nd_options_height_5"></div>
+                                            <h3 class="nd_options_color_white nd_options_font_size_12 nd_options_letter_spacing_2 nd_options_text_transform_uppercase nd_options_second_font"><?php echo comments_number(); ?></h3>
+                                        </div>
+                                    </div>
+                                    <div class="nd_options_section nd_options_height_10"></div>
+
+                                </div>
                             </div>
 
 
@@ -108,20 +130,8 @@ if ( $nd_options_meta_box_post_header_img != '' ) { ?>
 
 
 <?php } ?>
-<?php if( get_field('img_banner') ): ?>
-                        <div class="img_header nd_options_background_position_center nd_options_background_size_cover nd_options_section" style="background-image:url(<?php echo the_field('img_banner'); ?>);"> 
-                             <div class="nd_options_section nd_options_bg_greydark_alpha_3">
-                                <div class="nd_options_container nd_options_clearfix">
-                                   <div class="nd_options_section nd_options_height_110"></div>
-                                        <div class="nd_options_section nd_options_padding_15 nd_options_box_sizing_border_box nd_options_text_align_center">
-                                            <!-- <h1 class="nd_options_color_white nd_options_font_size_55 nd_options_font_size_40_all_iphone nd_options_line_height_40_all_iphone nd_options_first_font"><?php the_field('title_project_header'); ?></h1> -->
-                                            <?php if ( get_post_meta( get_the_ID(), 'nd_options_meta_box_post_title', true ) != 1 ) { echo '<h1 class="nd_options_color_white nd_options_font_size_40 nd_options_font_size_40_all_iphone nd_options_line_height_40_all_iphone nd_options_first_font"><strong>'.get_the_title().'</strong></h1><div class="nd_options_section nd_options_height_20"></div>'; } ?>
-                                        </div>
-                                   <div class="nd_options_section nd_options_height_110"></div>
-                                </div>
-                            </div>
-                        </div>
-<?php endif; ?>
+
+
 <!--post margin-->
 <?php if ( get_post_meta( get_the_ID(), 'nd_options_meta_box_post_margin', true ) != 1 ) { echo '<div class="nd_options_section nd_options_height_50"></div>'; } ?>
 
@@ -174,14 +184,15 @@ if ( $nd_options_meta_box_post_header_img != '' ) { ?>
 
 
             <?php } ?>
+
+
+
             <!--START all content-->
             <div class="<?php echo $nd_options_content_class; ?>">
 
                 <!--#post-->
                 <div style="float:left; width:100%;" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
                     <!--automatic title-->
-                   
-
                     <?php if ( get_post_meta( get_the_ID(), 'nd_options_meta_box_post_title', true ) != 1 ) { echo '<h1 class=""><strong>'.get_the_title().'</strong></h1><div class="nd_options_section nd_options_height_20"></div>'; } ?>
                     <!--start content-->
                     <?php the_content(); ?>

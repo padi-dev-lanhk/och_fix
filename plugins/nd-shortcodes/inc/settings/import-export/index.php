@@ -12,9 +12,13 @@ function nd_options_add_settings_menu_import_export(){
 
 function nd_options_settings_menu_import_export() {
 
-  wp_enqueue_script( 'nd_options_import_sett', plugins_url() . '/nd-shortcodes/inc/settings/import-export/js/nd_options_import_settings.js', array( 'jquery' ) ); 
+  $nd_options_import_settings_params = array(
+      'nd_options_ajaxurl_import_settings' => admin_url('admin-ajax.php'),
+      'nd_options_ajaxnonce_import_settings' => wp_create_nonce('nd_options_import_settings_nonce'),
+  );
 
-  wp_localize_script( 'nd_options_import_sett', 'nd_options_my_vars_import_settings', array( 'nd_options_ajaxurl_import_settings'   => admin_url( 'admin-ajax.php' )) ); 
+  wp_enqueue_script( 'nd_options_import_sett', esc_url( plugins_url( 'js/nd_options_import_settings.js', __FILE__ ) ), array( 'jquery' ) ); 
+  wp_localize_script( 'nd_options_import_sett', 'nd_options_my_vars_import_settings', $nd_options_import_settings_params ); 
 
 ?>
 
@@ -38,7 +42,18 @@ function nd_options_settings_menu_import_export() {
           <li><a class="" href="<?php echo admin_url('admin.php?page=nd-shortcodes-settings'); ?>"><?php _e('Plugin Settings','nd-shortcodes'); ?></a></li>
           <li><a class="" href="<?php echo admin_url('customize.php'); ?>"><?php _e('Theme Options','nd-shortcodes'); ?></a></li>
           <li><a style="background-color:<?php echo nd_options_get_profile_bg_color(2); ?>;" href=""><?php _e('Import Export','nd-shortcodes'); ?></a></li>
-          <?php do_action('nd_options_admin_navigation_hook'); ?>
+          <li id="nd_options_import_demo_li"><a class="" href="<?php echo admin_url('admin.php?page=nd-shortcodes-settings-import-demo'); ?>"><?php _e('Import Demo','nd-shortcodes'); ?></a></li>
+          
+          <?php
+
+          if ( get_option('nd_options_locations_enable') == 1 ) { ?>
+
+          <li><a class="" href="<?php echo admin_url('admin.php?page=nd-shortcodes-settings-locations'); ?>"><?php _e('Locations','nd-shortcodes'); ?></a></li>
+
+          <?php }
+
+          ?>
+
           <li><a target="_blank" href="http://documentations.nicdark.com/"><?php _e('Documentation','nd-shortcodes'); ?></a></li>
         </ul>
 
@@ -119,7 +134,7 @@ function nd_options_settings_menu_import_export() {
               
                 <textarea id="nd_options_import_settings" class="nd_options_margin_bottom_20 nd_options_width_100_percentage" name="nd_options_import_settings" rows="10"><?php echo esc_attr( get_option('nd_options_textarea') ); ?></textarea>
                 
-                <a onclick="nd_options_import_settings()" class="button button-primary"><?php _e('Import','nd-shortcodes'); ?></a>
+                <a onclick="nd_options_import_poptions()" class="button button-primary"><?php _e('Import','nd-shortcodes'); ?></a>
 
                 <div class="nd_options_margin_top_20 nd_options_section" id="nd_options_import_settings_result_container"></div>
                 
@@ -147,84 +162,122 @@ function nd_options_settings_menu_import_export() {
 
 
 
-//START nd_options_import_settings_php_function for AJAX
-function nd_options_import_settings_php_function() {
+//START nd_options_import_plugin_function for AJAX
+function nd_options_import_plugin_function() {
 
+  check_ajax_referer( 'nd_options_import_settings_nonce', 'nd_options_import_settings_security' );
 
   //recover datas
-  $nd_options_value_import_settings = $_GET['nd_options_value_import_settings'];
+  $nd_options_value_import_settings = sanitize_text_field($_GET['nd_options_value_import_settings']);
 
-  $nd_options_import_settings_result = '';
+  $nd_options_import_settings_result .= '';
 
-  if ( $nd_options_value_import_settings != '' ) {
 
-    $nd_options_array_options = explode("[nd_options_end_option]", $nd_options_value_import_settings);
+  //START import and update options only if is superadmin
+  if ( current_user_can('manage_options') ) {
 
-    foreach ($nd_options_array_options as $nd_options_array_option) {
+
+
+    if ( $nd_options_value_import_settings != '' ) {
+
+      $nd_options_array_options = explode("[nd_options_end_option]", $nd_options_value_import_settings);
+
+      foreach ($nd_options_array_options as $nd_options_array_option) {
+          
+        $nd_options_array_single_option = explode("[nd_options_option_value]", $nd_options_array_option);
         
-      $nd_options_array_single_option = explode("[nd_options_option_value]", $nd_options_array_option);
-      $nd_options_option = $nd_options_array_single_option[0];
-      $nd_options_new_value = $nd_options_array_single_option[1];
-      $nd_options_new_value = str_replace("[SHARP]","#",$nd_options_new_value);
+        $nd_options_option = $nd_options_array_single_option[0];
+        $nd_options_new_value = $nd_options_array_single_option[1];
+        $nd_options_new_value = str_replace("[SHARP]","#",$nd_options_new_value);
 
-      if ( $nd_options_new_value != '' ){
+        if ( $nd_options_new_value != '' ){
 
-        //remove \ from new value
-        $nd_options_new_value_str_replace = str_replace("\'", "'", $nd_options_new_value );
+          //remove \ from new value
+          $nd_options_new_value_str_replace = str_replace("\'", "'", $nd_options_new_value );
 
-        $nd_options_update_result = update_option($nd_options_option,$nd_options_new_value_str_replace);  
 
-        if ( $nd_options_update_result == 1 ) {
-          $nd_options_import_settings_result .= '
+          //START update option only it contains the plugin suffix
+          if ( strpos($nd_options_option, 'nd_options_') !== false ) {
 
-            <div class="notice updated is-dismissible nd_options_margin_0_important">
-              <p>'.__('Updated option','nd-shortcodes').' "'.$nd_options_option.'" '.__('with','nd-shortcodes').' '.$nd_options_new_value.'.</p>
-            </div>
+            $nd_options_update_result = update_option($nd_options_option,$nd_options_new_value_str_replace);  
 
-            ';
+            if ( $nd_options_update_result == 1 ) {
+
+                $nd_options_import_settings_result .= '
+                <div class="notice updated is-dismissible nd_options_margin_0_important">
+                <p>'.__('Updated option','nd-shortcodes').' "'.$nd_options_option.'" '.__('with','nd-shortcodes').' '.$nd_options_new_value.'.</p>
+                </div>';
+
+            }else{
+
+              $nd_options_import_settings_result .= '
+              <div class="notice updated is-dismissible nd_options_margin_0_important">
+              <p>'.__('Updated option','nd-shortcodes').' "'.$nd_options_option.'" '.__('with the same value','nd-shortcodes').'.</p>
+              </div>'; 
+
+            }
+
+
+          }else{
+
+            $nd_options_import_settings_result .= '
+            <div class="notice notice-error is-dismissible nd_options_margin_0">
+              <p>'.__('You do not have permission to change this option','nd-shortcodes').'</p>
+            </div>';
+
+          }
+          //END update option only it contains the plugin suffix
+
+
+          
 
         }else{
-          $nd_options_import_settings_result .= '
 
-            <div class="notice updated is-dismissible nd_options_margin_0_important">
-              <p>'.__('Updated option','nd-shortcodes').' "'.$nd_options_option.'" '.__('with the same value','nd-shortcodes').'.</p>
-            </div>
+          if ( $nd_options_option != '' ){
+            $nd_options_import_settings_result .= '
 
-          ';    
+          <div class="notice notice-warning is-dismissible nd_options_margin_0">
+            <p>'.__('No value founded for','nd-shortcodes').' "'.$nd_options_option.'" '.__('option.','nd-shortcodes').'</p>
+          </div>
+          ';
         }
 
-      }else{
-
-        if ( $nd_options_option != '' ){
-          $nd_options_import_settings_result .= '
-
-        <div class="notice notice-warning is-dismissible nd_options_margin_0">
-          <p>'.__('No value founded for','nd-shortcodes').' "'.$nd_options_option.'" '.__('option.','nd-shortcodes').'</p>
-        </div>
-        ';
+          
         }
-
         
       }
-      
+
+    }else{
+
+      $nd_options_import_settings_result .= '
+        <div class="notice notice-error is-dismissible nd_options_margin_0">
+          <p>'.__('Empty textarea, please paste your export options.','nd-shortcodes').'</p>
+        </div>
+      ';
+
     }
 
-  }else{
+
+    
+  }
+  else{
+    
 
     $nd_options_import_settings_result .= '
       <div class="notice notice-error is-dismissible nd_options_margin_0">
-        <p>'.__('Empty textarea, please paste your export options.','nd-shortcodes').'</p>
+        <p>'.__('You do not have the privileges to do this.','nd-shortcodes').'</p>
       </div>
     ';
 
+
   }
-  
+  //START import and update options only if is superadmin
+
   echo $nd_options_import_settings_result;
 
   die();
 
 
 }
-add_action( 'wp_ajax_nd_options_import_settings_php_function', 'nd_options_import_settings_php_function' );
-add_action( 'wp_ajax_nopriv_nd_options_import_settings_php_function', 'nd_options_import_settings_php_function' );
+add_action( 'wp_ajax_nd_options_import_plugin_function', 'nd_options_import_plugin_function' );
 //END

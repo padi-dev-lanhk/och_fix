@@ -22,14 +22,15 @@ function nd_options_shortcode_post_search($atts, $content = null)
   //default value
   if ($nd_options_category_slug == '') { $nd_options_category_slug = ''; }
 
+  //ajax results
+  $nd_options_get_search_results_params = array(
+      'nd_options_ajaxurl_get_search_results' => admin_url('admin-ajax.php'),
+      'nd_options_ajaxnonce_get_search_results' => wp_create_nonce('nd_options_get_search_results_nonce'),
+  );
 
-  //include js
-  wp_enqueue_script('nd_options_post_search_plugin', plugins_url() . '/nd-shortcodes/shortcodes/custom/post-search/js/post_search.js');
+  wp_enqueue_script( 'nd_options_post_search_plugin', esc_url( plugins_url( 'js/post_search.js', __FILE__ ) ), array( 'jquery' ) ); 
+  wp_localize_script( 'nd_options_post_search_plugin', 'nd_options_my_vars_get_search_results', $nd_options_get_search_results_params ); 
 
-  //ajax nd_options_get_search_results
-  wp_localize_script( 'nd_options_post_search_plugin', 'nd_options_my_vars_get_search_results', array( 'nd_options_ajaxurl_get_search_results'   => admin_url( 'admin-ajax.php' )) ); 
-
-  
   //default value for avoid error include
   if ($nd_options_layout == '') { $nd_options_layout = "layout-1"; }
 
@@ -115,7 +116,7 @@ function nd_options_post_search() {
       "name" => __( "Post Search", "nd-shortcodes" ),
       "base" => "nd_options_post_search",
       'description' => __( 'Add Search Form Posts', 'nd-shortcodes' ),
-      "icon" => plugins_url() . "/nd-shortcodes/shortcodes/custom/thumb/divider.jpg",
+      "icon" => esc_url(plugins_url('post-search.jpg', __FILE__ )),
       "class" => "",
       "category" => __( "NDS - Violet Coll.", "nd-shortcodes"),
       "params" => array(
@@ -156,9 +157,11 @@ function nd_options_post_search() {
 //START nd_options_get_search_results_php_function for AJAX
 function nd_options_get_search_results_php_function() {
 
+  check_ajax_referer( 'nd_options_get_search_results_nonce', 'nd_options_get_search_results_security' );
+
   //recover datas
-  $nd_options_keyword = $_GET['nd_options_keyword'];
-  $nd_options_category_slug = $_GET['nd_options_category_slug'];
+  $nd_options_keyword = sanitize_text_field($_GET['nd_options_keyword']);
+  $nd_options_category_slug = sanitize_text_field($_GET['nd_options_category_slug']);
   
   // La Query
   $args = array(

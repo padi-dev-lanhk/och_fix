@@ -68,7 +68,10 @@ function nd_options_shortcode_countdown($atts, $content = null)
   $nd_options_text_seconds = __('SECONDS','nd-shortcodes');
 
   //add script
-  wp_enqueue_script('nd_options_countdown_plugin', plugins_url() . '/nd-shortcodes/shortcodes/custom/countdown/js/countdown.js');
+  wp_enqueue_script( 'nd_options_countdown_plugin', esc_url( plugins_url( 'js/countdown.js', __FILE__ ) ) );
+
+
+
 
 
   //default value for avoid error include
@@ -122,7 +125,7 @@ function nd_options_countdown() {
       "base" => "nd_options_countdown",
       'description' => __( 'Add Countdown', 'nd-shortcodes' ),
       'show_settings_on_create' => true,
-      "icon" => plugins_url() . "/nd-shortcodes/shortcodes/custom/thumb/countdown.jpg",
+      "icon" => esc_url(plugins_url('countdown.jpg', __FILE__ )),
       "class" => "",
       "category" => __( "NDS - Orange Coll.", "nd-shortcodes"),
       "params" => array(

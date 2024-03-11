@@ -3,7 +3,7 @@
 //logo
 $nd_options_customizer_header_2_logo = get_option( 'nd_options_customizer_header_2_logo' );
 if ( $nd_options_customizer_header_2_logo == '' ) { 
-    $nd_options_customizer_header_2_logo = plugins_url().'/nd-shortcodes/addons/customizer/header/img/logo.png';  
+    $nd_options_customizer_header_2_logo = esc_url(plugins_url('img/logo.png', __FILE__ )); 
 }else{
     $nd_options_customizer_header_2_logo = wp_get_attachment_url($nd_options_customizer_header_2_logo);
 }
@@ -11,7 +11,7 @@ if ( $nd_options_customizer_header_2_logo == '' ) {
 //logo responsive
 $nd_options_customizer_header_2_logo_responsive = get_option( 'nd_options_customizer_header_2_logo_responsive' );
 if ( $nd_options_customizer_header_2_logo_responsive == '' ) { 
-    $nd_options_customizer_header_2_logo_responsive = plugins_url().'/nd-shortcodes/addons/customizer/header/img/logo.png';  
+    $nd_options_customizer_header_2_logo_responsive = esc_url(plugins_url('img/logo.png', __FILE__ )); 
 }else{
     $nd_options_customizer_header_2_logo_responsive = wp_get_attachment_url($nd_options_customizer_header_2_logo_responsive);
 }
@@ -20,7 +20,7 @@ if ( $nd_options_customizer_header_2_logo_responsive == '' ) {
 //icon menu responsive
 $nd_options_customizer_header_2_icon_responsive_menu = get_option( 'nd_options_customizer_header_2_icon_responsive_menu' );
 if ( $nd_options_customizer_header_2_icon_responsive_menu == '' ) { 
-    $nd_options_customizer_header_2_icon_responsive_menu = plugins_url().'/nd-shortcodes/addons/customizer/header/img/icon-menu.svg';  
+    $nd_options_customizer_header_2_icon_responsive_menu = esc_url(plugins_url('img/icon-menu.svg', __FILE__ ));
 }else{
     $nd_options_customizer_header_2_icon_responsive_menu = wp_get_attachment_url($nd_options_customizer_header_2_icon_responsive_menu);
 }

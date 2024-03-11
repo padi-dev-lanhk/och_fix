@@ -128,7 +128,7 @@ function nd_options_team() {
       "base" => "nd_options_team",
       'description' => __( 'Add single Team', 'nd-shortcodes' ),
       'show_settings_on_create' => true,
-      "icon" => plugins_url() . "/nd-shortcodes/shortcodes/thumb/team.jpg",
+      "icon" => esc_url(plugins_url('team.jpg', __FILE__ )),
       "class" => "",
       "category" => __( "ND Shortcodes", "nd-shortcodes"),
       "params" => array(

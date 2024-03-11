@@ -17,7 +17,8 @@ function nd_options_get_ajax_search_results(nd_options_keyword,nd_options_catego
     {
       action : 'nd_options_get_search_results_php_function',         
       nd_options_keyword: nd_options_keyword,
-      nd_options_category_slug: nd_options_category_slug
+      nd_options_category_slug: nd_options_category_slug,
+      nd_options_get_search_results_security : nd_options_my_vars_get_search_results.nd_options_ajaxnonce_get_search_results
     },
     //end ajax
 

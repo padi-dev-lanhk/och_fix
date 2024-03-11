@@ -30,7 +30,7 @@ function nd_options_metabox_eventscalendar()
 
     <!--******************************COLOR******************************-->
     <p><strong><?php _e('Color','nd-shortcodes'); ?></strong></p>
-    <p><input id="nd_options_colorpicker" type="text" name="nd_options_meta_box_eventscalendar_color" id="nd_options_meta_box_eventscalendar_color" value="<?php echo $nd_options_meta_box_eventscalendar_color; ?>" /></p>
+    <p><input id="nd_options_colorpicker" type="text" name="nd_options_meta_box_eventscalendar_color" id="nd_options_meta_box_eventscalendar_color" value="<?php echo esc_html($nd_options_meta_box_eventscalendar_color); ?>" /></p>
     <p class="description"><?php _e('This color will be used as the background of the button "read more" in the archive page.','nd-shortcodes'); ?></p>
 
     <script type="text/javascript">
@@ -55,9 +55,12 @@ add_action( 'save_post', 'nd_options_meta_box_eventscalendar_save' );
 function nd_options_meta_box_eventscalendar_save( $post_id )
 {
 
-	//save color
-    if( isset( $_POST['nd_options_meta_box_eventscalendar_color'] ) )
-        update_post_meta( $post_id, 'nd_options_meta_box_eventscalendar_color', wp_kses( $_POST['nd_options_meta_box_eventscalendar_color'], $allowed ) );
+
+    //sanitize and validate
+    $nd_options_meta_box_eventscalendar_color = sanitize_hex_color( $_POST['nd_options_meta_box_eventscalendar_color'] );
+    if ( isset( $nd_options_meta_box_eventscalendar_color ) ) {
+    update_post_meta( $post_id, 'nd_options_meta_box_eventscalendar_color' , $nd_options_meta_box_eventscalendar_color );
+    }
 
          
 }

@@ -99,7 +99,7 @@ function nd_options_woo_post_grid() {
       "base" => "nd_options_woo_post_grid",
       'description' => __( 'Add Post Grid', 'nd-shortcodes' ),
       'show_settings_on_create' => true,
-      "icon" => plugins_url() . "/nd-shortcodes/addons/woocommerce/vc/thumb/post-grid.jpg",
+      "icon" => esc_url(plugins_url('post-grid.jpg', __FILE__ )),
       "class" => "",
       "category" => __( "NDS - Violet Coll.", "nd-shortcodes"),
       "params" => array(

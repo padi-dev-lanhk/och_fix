@@ -55,9 +55,11 @@ if ( $nd_options_breadcrumbs_enable == 1 ) {
 
     }
 
+    //img color
+    $nd_options_img_color_path = 'img/icon-next-'.$nd_options_breadcrumbs_img_color.'.svg';
 
     //variables
-    $nd_options_delimiter = '<img alt="" class="nd_options_margin_left_10 nd_options_margin_right_10" width="10" height="10" src="'.plugins_url().'/nd-shortcodes/addons/breadcrumb/img/icon-next-'.$nd_options_breadcrumbs_img_color.'.svg">';
+    $nd_options_delimiter = '<img alt="" class="nd_options_margin_left_10 nd_options_margin_right_10" width="10" height="10" src="'.esc_url(plugins_url($nd_options_img_color_path, __FILE__ )).'">';
     $nd_options_home = __('Home', 'nd-shortcodes');
     $nd_options_before = '<p class=" nd_options_display_inline_block nd_options_current_breadcrumb '.$nd_options_breadcrumbs_link_classes.' ">';
     $nd_options_after = '</p>';

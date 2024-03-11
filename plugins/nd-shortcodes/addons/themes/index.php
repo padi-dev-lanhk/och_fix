@@ -15,7 +15,7 @@ if ( get_option('nicdark_theme_author') != 1 ){
   //START add custom css
   function nd_options_admin_style_for_theme_page() {
     
-    wp_enqueue_style( 'nd_options_style_theme_page', plugins_url() . '/nd-shortcodes/css/admin-style.css', array(), false, false );
+    wp_enqueue_style( 'nd_options_style_theme_page', esc_url( plugins_url( 'admin-style.css', __FILE__ ) ), array(), false, false );
     
   }
   add_action( 'admin_enqueue_scripts', 'nd_options_admin_style_for_theme_page' );
@@ -45,7 +45,7 @@ if ( get_option('nicdark_theme_author') != 1 ){
           <div class="theme">
 
             <div class="theme-screenshot">
-              <img src="<?php echo plugins_url(); ?>/nd-shortcodes/addons/themes/img/ristorante.jpg" alt="">
+              <img src="<?php echo esc_url(plugins_url('img/ristorante.jpg', __FILE__ )); ?>" alt="">
             </div>
 
             <span class="more-details"><a style="color:#fff; text-decoration:none;" target="_blank" href="http://www.nicdarkthemes.com/themes/restaurant/wp/demo/intro/?action=nd-shortcodes">Theme Details</a></span>
@@ -73,7 +73,7 @@ if ( get_option('nicdark_theme_author') != 1 ){
           <div class="theme">
 
             <div class="theme-screenshot">
-              <img src="<?php echo plugins_url(); ?>/nd-shortcodes/addons/themes/img/hotel-booking.jpg" alt="">
+              <img src="<?php echo esc_url(plugins_url('img/hotel-booking.jpg', __FILE__ )); ?>" alt="">
             </div>
 
             <span class="more-details"><a style="color:#fff; text-decoration:none;" target="_blank" href="http://www.nicdarkthemes.com/themes/hotel/wp/demo/intro/?action=nd-shortcodes">Theme Details</a></span>
@@ -100,7 +100,7 @@ if ( get_option('nicdark_theme_author') != 1 ){
           <div class="theme">
 
             <div class="theme-screenshot">
-              <img src="<?php echo plugins_url(); ?>/nd-shortcodes/addons/themes/img/charity-foundation.jpg" alt="">
+              <img src="<?php echo esc_url(plugins_url('img/charity-foundation.jpg', __FILE__ )); ?>" alt="">
             </div>
 
             <span class="more-details"><a style="color:#fff; text-decoration:none;" target="_blank" href="http://www.nicdarkthemes.com/themes/charity/wp/demo/intro/?action=nd-shortcodes">Theme Details</a></span>
@@ -127,7 +127,7 @@ if ( get_option('nicdark_theme_author') != 1 ){
           <div class="theme">
 
             <div class="theme-screenshot">
-              <img src="<?php echo plugins_url(); ?>/nd-shortcodes/addons/themes/img/beauty-pack.jpg" alt="">
+              <img src="<?php echo esc_url(plugins_url('img/beauty-pack.jpg', __FILE__ )); ?>" alt="">
             </div>
 
             <span class="more-details"><a style="color:#fff; text-decoration:none;" target="_blank" href="http://www.nicdarkthemes.com/themes/beauty/wp/demo/intro/?action=nd-shortcodes">Theme Details</a></span>
@@ -154,7 +154,7 @@ if ( get_option('nicdark_theme_author') != 1 ){
           <div class="theme">
 
             <div class="theme-screenshot">
-              <img src="<?php echo plugins_url(); ?>/nd-shortcodes/addons/themes/img/education-pack.jpg" alt="">
+              <img src="<?php echo esc_url(plugins_url('img/education-pack.jpg', __FILE__ )); ?>" alt="">
             </div>
 
             <span class="more-details"><a style="color:#fff; text-decoration:none;" target="_blank" href="http://www.nicdarkthemes.com/themes/education/wp/demo/intro/?action=nd-shortcodes">Theme Details</a></span>
@@ -181,7 +181,7 @@ if ( get_option('nicdark_theme_author') != 1 ){
           <div class="theme">
 
             <div class="theme-screenshot">
-              <img src="<?php echo plugins_url(); ?>/nd-shortcodes/addons/themes/img/camping-village.jpg" alt="">
+              <img src="<?php echo esc_url(plugins_url('img/camping-village.jpg', __FILE__ )); ?>" alt="">
             </div>
 
             <span class="more-details"><a style="color:#fff; text-decoration:none;" target="_blank" href="http://www.nicdarkthemes.com/themes/camping/wp/demo/?action=nd-shortcodes">Theme Details</a></span>
@@ -208,7 +208,7 @@ if ( get_option('nicdark_theme_author') != 1 ){
           <div class="theme">
 
             <div class="theme-screenshot">
-              <img src="<?php echo plugins_url(); ?>/nd-shortcodes/addons/themes/img/wedding-industry.jpg" alt="">
+              <img src="<?php echo esc_url(plugins_url('img/wedding-industry.jpg', __FILE__ )); ?>" alt="">
             </div>
 
             <span class="more-details"><a style="color:#fff; text-decoration:none;" target="_blank" href="http://www.nicdarkthemes.com/themes/wedding/wp/demo/intro/?action=nd-shortcodes">Theme Details</a></span>
@@ -235,7 +235,7 @@ if ( get_option('nicdark_theme_author') != 1 ){
           <div class="theme">
 
             <div class="theme-screenshot">
-              <img src="<?php echo plugins_url(); ?>/nd-shortcodes/addons/themes/img/baby-kids.jpg" alt="">
+              <img src="<?php echo esc_url(plugins_url('img/baby-kids.jpg', __FILE__ )); ?>" alt="">
             </div>
 
             <span class="more-details"><a style="color:#fff; text-decoration:none;" target="_blank" href="http://www.nicdarkthemes.com/themes/children/wp/demo/?action=nd-shortcodes">Theme Details</a></span>
@@ -262,7 +262,7 @@ if ( get_option('nicdark_theme_author') != 1 ){
           <div class="theme">
 
             <div class="theme-screenshot">
-              <img src="<?php echo plugins_url(); ?>/nd-shortcodes/addons/themes/img/sweet-cake.jpg" alt="">
+              <img src="<?php echo esc_url(plugins_url('img/sweet-cake.jpg', __FILE__ )); ?>" alt="">
             </div>
 
             <span class="more-details"><a style="color:#fff; text-decoration:none;" target="_blank" href="http://www.nicdarkthemes.com/themes/food/wp/demo/sweet-cake/?action=nd-shortcodes">Theme Details</a></span>
@@ -289,7 +289,7 @@ if ( get_option('nicdark_theme_author') != 1 ){
           <div class="theme">
 
             <div class="theme-screenshot">
-              <img src="<?php echo plugins_url(); ?>/nd-shortcodes/addons/themes/img/love-travel.jpg" alt="">
+              <img src="<?php echo esc_url(plugins_url('img/love-travel.jpg', __FILE__ )); ?>" alt="">
             </div>
 
             <span class="more-details"><a style="color:#fff; text-decoration:none;" target="_blank" href="http://www.nicdarkthemes.com/themes/travel/wp/demo/intro/?action=nd-shortcodes">Theme Details</a></span>

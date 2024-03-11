@@ -1,9 +1,11 @@
 <?php
 
+
 //START
 add_shortcode('nd_options_text', 'nd_options_shortcode_text');
 function nd_options_shortcode_text($atts, $content = null)
 {  
+
 
   $atts = shortcode_atts(
   array(
@@ -55,6 +57,7 @@ function nd_options_shortcode_text($atts, $content = null)
       </style>
 
     ';
+
   }else{
     $nd_options_underline_effect_class = ''; 
   }
@@ -79,7 +82,7 @@ function nd_options_text() {
       "base" => "nd_options_text",
       'description' => __( 'Add Some Text', 'nd-shortcodes' ),
       'show_settings_on_create' => true,
-      "icon" => plugins_url() . "/nd-shortcodes/shortcodes/custom/thumb/text.jpg",
+      "icon" => esc_url(plugins_url('text.jpg', __FILE__ )),
       "class" => "",
       "category" => __( "NDS - Orange Coll.", "nd-shortcodes"),
       "params" => array(

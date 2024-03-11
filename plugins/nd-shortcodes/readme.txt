@@ -1,33 +1,51 @@
-=== ND Shortcodes For Visual Composer ===
-Contributors: nicdark
-Tags: visual composer, components, shortcodes, framework, post-grid, prices, team, testimonials, services
-Requires at least: 3.6
+=== Components For WP Bakery Page Builder ===
+Contributors: endreww
+Tags: wp bakery page builder, components, shortcodes, framework, post-grid, prices, team, testimonials, services
+Requires at least: 4.5
 Tested up to: 5.2
-Stable tag: 5.8
+Stable tag: 6.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-The plugin adds some useful components to the Visual Composer Plugin. All components are full responsive and retina ready.
+The plugin adds some useful components to the WP Bakery Page Builder Plugin. All components are full responsive and retina ready.
 
 == Description ==
 
 = Some components in the preview below =
-The plugin adds some useful components to the Visual Composer Plugin that can be integrated very easily with your own theme.
-
-[youtube https://www.youtube.com/watch?v=kRXgka2DTIE]
+The plugin adds some useful components to the WP Bakery Page Builder Plugin that can be integrated very easily with your own theme.
 
 == Installation ==
 
 1. Install and activate the plugin.
-2. Be sure that you have the plugin visual composer active in your theme.
-3. Go in your pages/posts and find the new components in the new tab ND SHORTCODES in visual composer dashboard
+2. Be sure that you have the plugin WP Bakery Page Builder active in your theme.
+3. Go in your pages/posts and find the new components in the new tab in WP Bakery Page Builder dashboard
 4. Enjoy it ;)
 
 == Screenshots ==
 
-1. Example of visual Composer dashboard on ND SHORTCODES tab
+1. Example of WP Bakery Page Builder dashboard
 
 == Changelog ==
+
+= 6.2 =
+* Focus number component, added layouts 4 and 5
+* Post grid component, added layout 15
+* Focus component, added layout 7
+
+= 6.1 =
+* added some css classes
+
+= 6.0 =
+* added nonce on ajax calls
+* improved post-search, import/export and locations features. 
+
+= 5.9.1 =
+* sanitize, validate, and escape all datas on POST and GET requests
+* improved plugins_url()
+* removed post-search, import/export and locations features. 
+
+= 5.9 =
+* Improved nd_options_import_settings_php_function function for security reasons
 
 = 5.8 =
 * added IDs on some elements
@@ -156,14 +174,14 @@ The plugin adds some useful components to the Visual Composer Plugin that can be
 * enable multiplies layout on post template
 * enable multiplies layout on archive and single product page for header img
 * added custom style-2 for woo commerce ( part 1 )
-* added woo commerce component on visual composer on violet collection
+* added woo commerce component on WP Bakery Page Builder on violet collection
 * add new fonts
 * added footer 3 layout
 * added locations custom post type
 * added new rules on admin style and style.css
 * added new icons on img/icons
-* added new components collection violet on visual composer
-* added new components collection orange on visual composer
+* added new components collection violet on WP Bakery Page Builder
+* added new components collection orange on WP Bakery Page Builder
 * added components toggle ( violet coll. ) 
 * added new layout on testimonial comp.
 * added new layout on team comp.
@@ -285,7 +303,7 @@ The plugin adds some useful components to the Visual Composer Plugin that can be
 * Removed metabox.php from custom/post grid components
 
 = 1.8 =
-* Added style.css for adding some rules for adding filter overlay on visual composer parallax row.
+* Added style.css for adding some rules for adding filter overlay on WP Bakery Page Builder parallax row.
 * Edit font-size to 40px for countdown components
 * Added strong tag for counter components
 * Fixed alignment bug on badge components

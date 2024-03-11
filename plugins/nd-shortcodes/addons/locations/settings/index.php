@@ -66,7 +66,18 @@ function nd_options_create_new_admin_setting_page_locations(){
             <li><a class="" href="<?php echo admin_url('admin.php?page=nd-shortcodes-settings'); ?>"><?php _e('Plugin Settings','nd-shortcodes'); ?></a></li>
             <li><a class="" href="<?php echo admin_url('customize.php'); ?>"><?php _e('Theme Options','nd-shortcodes'); ?></a></li>
             <li><a class="" href="<?php echo admin_url('admin.php?page=nd-shortcodes-settings-import-export'); ?>"><?php _e('Import Export','nd-shortcodes'); ?></a></li>
+            <li><a class="" href="<?php echo admin_url('admin.php?page=nd-shortcodes-settings-import-demo'); ?>"><?php _e('Import Demo','nd-shortcodes'); ?></a></li>
+
+            <?php
+
+            if ( get_option('nd_options_locations_enable') == 1 ) { ?>
+
             <li><a style="background-color:<?php echo nd_options_get_profile_bg_color(2); ?>;" href=""><?php _e('Locations','nd-shortcodes'); ?></a></li>
+
+            <?php }
+
+            ?>
+
             <li><a target="_blank" href="http://documentations.nicdark.com/"><?php _e('Documentation','nd-shortcodes'); ?></a></li>
           </ul>
 

@@ -128,7 +128,7 @@ function nd_options_button() {
       "base" => "nd_options_button",
       'description' => __( 'Add Button', 'nd-shortcodes' ),
       'show_settings_on_create' => true,
-      "icon" => plugins_url() . "/nd-shortcodes/shortcodes/custom/thumb/button.jpg",
+      "icon" => esc_url(plugins_url('button.jpg', __FILE__ )),
       "class" => "",
       "category" => __( "NDS - Orange Coll.", "nd-shortcodes"),
       "params" => array(

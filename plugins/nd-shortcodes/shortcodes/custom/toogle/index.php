@@ -62,10 +62,10 @@ function nd_options_shortcode_toogle($atts, $content = null)
       <div class="nd_options_section nd_options_box_sizing_border_box">
         <p class="nd_options_toogle_title nd_options_first_font nd_options_font_size_17 nd_options_position_relative nd_options_padding_right_20 nd_options_padding_top_5 nd_options_padding_left_45 nd_options_padding_bottom_5">
           <span style="background-color:'.$nd_options_color.';" class="nd_options_cursor_pointer nd_options_text_align_center nd_options_toogle_title_open_'.$nd_options_id_component.' nd_options_width_25 nd_options_height_25  nd_options_position_absolute nd_options_top_0 nd_options_left_0">
-            <img alt="" class="nd_options_margin_top_6" width="12" src="'.plugins_url().'/nd-shortcodes/img/icons/icon-add-white.png">
+            <img alt="" class="nd_options_margin_top_6" width="12" src="'.esc_url(plugins_url('icon-add-white.png', __FILE__ )).'">
           </span> 
           <span style="background-color:'.$nd_options_color.';"  class="nd_options_cursor_pointer nd_options_text_align_center nd_options_toogle_title_close_'.$nd_options_id_component.' nd_options_width_25 nd_options_display_none nd_options_height_25  nd_options_position_absolute nd_options_top_0 nd_options_left_0">
-            <img alt="" class="nd_options_margin_top_6" width="12" src="'.plugins_url().'/nd-shortcodes/img/icons/icon-less-white.png">
+            <img alt="" class="nd_options_margin_top_6" width="12" src="'.esc_url(plugins_url('icon-less-white.png', __FILE__ )).'">
           </span>
           '.$nd_options_title.'
         </p>
@@ -96,7 +96,7 @@ function nd_options_toogle() {
       "base" => "nd_options_toogle",
       'description' => __( 'Add Toogle', 'nd-shortcodes' ),
       'show_settings_on_create' => true,
-      "icon" => plugins_url() . "/nd-shortcodes/shortcodes/custom/thumb/toogle.jpg",
+      "icon" => esc_url(plugins_url('toogle.jpg', __FILE__ )),
       "class" => "",
       "category" => __( "NDS - Violet Coll.", "nd-shortcodes"),
       "params" => array(

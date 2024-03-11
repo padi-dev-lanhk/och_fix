@@ -18,12 +18,13 @@ if ( $nd_options_customizer_footer_2_right_content == '' ) { $nd_options_customi
 
 $nd_options_customizer_footer_2_logo = get_option( 'nd_options_customizer_footer_2_logo' );
 if ( $nd_options_customizer_footer_2_logo == '' ) { 
-    $nd_options_customizer_footer_2_logo = plugins_url().'/nd-shortcodes/addons/customizer/footer/img/logo.png';  
+    $nd_options_customizer_footer_2_logo = esc_url(plugins_url('logo.png', __FILE__ ));
 }else{
     $nd_options_customizer_footer_2_logo = wp_get_attachment_url($nd_options_customizer_footer_2_logo);
 }
 
 $nd_options_customizer_footer_2_social_content = get_option( 'nd_options_customizer_footer_2_social_content' );
+$nd_options_customizer_footer_2_social_content = str_replace("&#039;","'",$nd_options_customizer_footer_2_social_content);
 if ( $nd_options_customizer_footer_2_social_content == '' ) { $nd_options_customizer_footer_2_social_content = '';  }
 
 ?>

@@ -108,7 +108,7 @@ function nd_options_prices() {
       "base" => "nd_options_prices",
       'description' => __( 'Add single Price', 'nd-shortcodes' ),
       'show_settings_on_create' => true,
-      "icon" => plugins_url() . "/nd-shortcodes/shortcodes/custom/thumb/price.jpg",
+      "icon" => esc_url(plugins_url('price.jpg', __FILE__ )),
       "class" => "",
       "category" => __( "NDS - Orange Coll.", "nd-shortcodes"),
       "params" => array(
@@ -281,10 +281,12 @@ function nd_options_price_row( $nd_options_atts ) {
     //image
     if ( $nd_options_price_row['image'] == 'yes' OR $nd_options_price_row['image'] == 'not' ) { 
 
+      $nd_options_img_path = 'img/'.$nd_options_price_row['image'].'.svg';
+
       $nd_options_str .= '
 
       <div class=" nicdark_border_bottom_'.$nd_options_price_row_border.'_solid_grey nd_options_padding_5 nd_options_section nd_options_box_sizing_border_box">
-        <img alt="" class="nd_options_display_inline_block nd_options_margin_right_10" width="'.$nd_options_price_row_image_size.'" src="'.plugins_url().'/nd-shortcodes/shortcodes/custom/price/img/'.$nd_options_price_row['image'].'.svg">
+        <img alt="" class="nd_options_display_inline_block nd_options_margin_right_10" width="'.$nd_options_price_row_image_size.'" src="'.esc_url(plugins_url($nd_options_img_path, __FILE__ )).'">
         <p style="font-size: '.$nd_options_price_row_textsize.'px; color:'.$nd_options_price_row_textcolor.'" class="nd_options_display_inline_block">'.$nd_options_price_row['text'].'</p>
       </div>'; 
 

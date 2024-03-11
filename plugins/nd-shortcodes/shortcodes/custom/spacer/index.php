@@ -39,7 +39,7 @@ function nd_options_spacer() {
       "base" => "nd_options_spacer",
       'description' => __( 'Add Spacer', 'nd-shortcodes' ),
       'show_settings_on_create' => true,
-      "icon" => plugins_url() . "/nd-shortcodes/shortcodes/custom/thumb/spacer.jpg",
+      "icon" => esc_url(plugins_url('spacer.jpg', __FILE__ )),
       "class" => "",
       "category" => __( "NDS - Orange Coll.", "nd-shortcodes"),
       "params" => array(

@@ -32,7 +32,7 @@ function nd_options_metabox_page()
 
     <!--******************************COLOR******************************-->
     <p><strong><?php _e('Color','nd-shortcodes'); ?></strong></p>
-    <p><input id="nd_options_colorpicker" type="text" name="nd_options_meta_box_page_color" id="nd_options_meta_box_page_color" value="<?php echo $nd_options_meta_box_page_color; ?>" /></p>
+    <p><input id="nd_options_colorpicker" type="text" name="nd_options_meta_box_page_color" id="nd_options_meta_box_page_color" value="<?php echo esc_html($nd_options_meta_box_page_color); ?>" /></p>
     <p class="description"><?php _e('This color will be used as the background of the button "read more" in the archive page.','nd-shortcodes'); ?></p>
 
     <script type="text/javascript">
@@ -51,8 +51,8 @@ function nd_options_metabox_page()
     <p>
       <select name="nd_options_meta_box_page_title" id="nd_options_meta_box_page_title">
         
-        <option <?php if( $nd_options_meta_box_page_title == 1 ) { echo 'selected="selected"'; } ?> value="1"><?php _e('Hide Title','nd-shortcodes'); ?></option>
-        <option <?php if( $nd_options_meta_box_page_title == 0 ) { echo 'selected="selected"'; } ?> value="0"><?php _e('Show Title','nd-shortcodes'); ?></option>
+        <option <?php if( $nd_options_meta_box_page_title == 1 ) { echo esc_html('selected="selected"'); } ?> value="1"><?php _e('Hide Title','nd-shortcodes'); ?></option>
+        <option <?php if( $nd_options_meta_box_page_title == 0 ) { echo esc_html('selected="selected"'); } ?> value="0"><?php _e('Show Title','nd-shortcodes'); ?></option>
          
       </select>
     </p>
@@ -64,8 +64,8 @@ function nd_options_metabox_page()
     <p>
       <select name="nd_options_meta_box_page_margin" id="nd_options_meta_box_page_margin">
         
-        <option <?php if( $nd_options_meta_box_page_margin == 1 ) { echo 'selected="selected"'; } ?> value="1"><?php _e('Remove Spaces','nd-shortcodes'); ?></option>
-        <option <?php if( $nd_options_meta_box_page_margin == 0 ) { echo 'selected="selected"'; } ?> value="0"><?php _e('Add Spaces','nd-shortcodes'); ?></option>
+        <option <?php if( $nd_options_meta_box_page_margin == 1 ) { echo esc_html('selected="selected"'); } ?> value="1"><?php _e('Remove Spaces','nd-shortcodes'); ?></option>
+        <option <?php if( $nd_options_meta_box_page_margin == 0 ) { echo esc_html('selected="selected"'); } ?> value="0"><?php _e('Add Spaces','nd-shortcodes'); ?></option>
          
       </select>
     </p>
@@ -83,18 +83,25 @@ add_action( 'save_post', 'nd_options_meta_box_page_save' );
 function nd_options_meta_box_page_save( $post_id )
 {
 
-  //save color
-  if( isset( $_POST['nd_options_meta_box_page_color'] ) )
-  update_post_meta( $post_id, 'nd_options_meta_box_page_color', wp_kses( $_POST['nd_options_meta_box_page_color'], $allowed ) );
+    //sanitize and validate
+    $nd_options_meta_box_page_color = sanitize_hex_color( $_POST['nd_options_meta_box_page_color'] );
+    if ( isset( $nd_options_meta_box_page_color ) ) {
+    update_post_meta( $post_id, 'nd_options_meta_box_page_color' , $nd_options_meta_box_page_color );
+    }
 
-  //save title
-  if( isset( $_POST['nd_options_meta_box_page_title'] ) )
-  update_post_meta( $post_id, 'nd_options_meta_box_page_title', wp_kses( $_POST['nd_options_meta_box_page_title'], $allowed ) );
+    //sanitize and validate
+    $nd_options_meta_box_page_title = sanitize_option( 'nd_options_meta_box_page_title', $_POST['nd_options_meta_box_page_title'] );
+    if ( isset( $nd_options_meta_box_page_title ) ) {
+    update_post_meta( $post_id, 'nd_options_meta_box_page_title' , $nd_options_meta_box_page_title );
+    }
 
-  //save margin
-  if( isset( $_POST['nd_options_meta_box_page_margin'] ) )
-  update_post_meta( $post_id, 'nd_options_meta_box_page_margin', wp_kses( $_POST['nd_options_meta_box_page_margin'], $allowed ) );
-         
+
+    //sanitize and validate
+    $nd_options_meta_box_page_margin = sanitize_option( 'nd_options_meta_box_page_margin', $_POST['nd_options_meta_box_page_margin'] );
+    if ( isset( $nd_options_meta_box_page_margin ) ) {
+    update_post_meta( $post_id, 'nd_options_meta_box_page_margin' , $nd_options_meta_box_page_margin );
+    }
+
 }
 //END create save metabox
 
@@ -127,7 +134,7 @@ function nd_options_metabox_page_header_img()
 
     <!--******************************IMAGE******************************-->
     <p><strong><?php _e('Header Image','nd-shortcodes'); ?></strong></p>
-    <p><input class="regular-text" type="text" name="nd_options_meta_box_page_header_img" id="nd_options_meta_box_page_header_img" value="<?php echo $nd_options_meta_box_page_header_img; ?>" /></p>
+    <p><input class="regular-text" type="text" name="nd_options_meta_box_page_header_img" id="nd_options_meta_box_page_header_img" value="<?php echo esc_url($nd_options_meta_box_page_header_img); ?>" /></p>
     <p>
       <input class="button nd_options_meta_box_page_header_img_button" type="button" name="nd_options_meta_box_page_header_img_button" id="nd_options_meta_box_page_header_img_button" value="<?php _e('Upload','nd-shortcodes'); ?>" />
     </p>
@@ -138,9 +145,9 @@ function nd_options_metabox_page_header_img()
     <p>
       <select name="nd_options_meta_box_page_header_img_position" id="nd_options_meta_box_page_header_img_position">
         
-        <option <?php if( $nd_options_meta_box_page_header_img_position == 'nd_options_background_position_center_top' ) { echo 'selected="selected"'; } ?> value="nd_options_background_position_center_top">Position Top</option>
-        <option <?php if( $nd_options_meta_box_page_header_img_position == 'nd_options_background_position_center_bottom' ) { echo 'selected="selected"'; } ?> value="nd_options_background_position_center_bottom">Position Bottom</option>
-        <option <?php if( $nd_options_meta_box_page_header_img_position == 'nd_options_background_position_center' ) { echo 'selected="selected"'; } ?> value="nd_options_background_position_center">Position Center</option>
+        <option <?php if( $nd_options_meta_box_page_header_img_position == 'nd_options_background_position_center_top' ) { echo esc_html('selected="selected"'); } ?> value="nd_options_background_position_center_top"><?php _e('Position Top','nd-shortcodes'); ?></option>
+        <option <?php if( $nd_options_meta_box_page_header_img_position == 'nd_options_background_position_center_bottom' ) { echo esc_html('selected="selected"'); } ?> value="nd_options_background_position_center_bottom"><?php _e('Position Bottom','nd-shortcodes'); ?></option>
+        <option <?php if( $nd_options_meta_box_page_header_img_position == 'nd_options_background_position_center' ) { echo esc_html('selected="selected"'); } ?> value="nd_options_background_position_center"><?php _e('Position Center','nd-shortcodes'); ?></option>
          
       </select>
     </p>
@@ -148,7 +155,7 @@ function nd_options_metabox_page_header_img()
 
     <!--******************************TITLE******************************-->
     <p><strong><?php _e('Title','nd-shortcodes'); ?></strong></p>
-    <p><input id="nd_options_meta_box_page_header_img_title" type="text" name="nd_options_meta_box_page_header_img_title" id="nd_options_meta_box_page_header_img_title" value="<?php echo $nd_options_meta_box_page_header_img_title; ?>" /></p>
+    <p><input id="nd_options_meta_box_page_header_img_title" type="text" name="nd_options_meta_box_page_header_img_title" id="nd_options_meta_box_page_header_img_title" value="<?php echo esc_html($nd_options_meta_box_page_header_img_title); ?>" /></p>
     <p class="description"><?php _e('Insert the title/slogan over the image','nd-shortcodes'); ?></p>
 
 
@@ -218,14 +225,28 @@ add_action( 'save_post', 'nd_options_meta_box_page_header_img_save' );
 function nd_options_meta_box_page_header_img_save( $post_id )
 {
 
-    // Make sure your data is set before trying to save it
-    if( isset( $_POST['nd_options_meta_box_page_header_img'] ) )
-        update_post_meta( $post_id, 'nd_options_meta_box_page_header_img', wp_kses( $_POST['nd_options_meta_box_page_header_img'], $allowed ) );
 
-    if( isset( $_POST['nd_options_meta_box_page_header_img_title'] ) )
-        update_post_meta( $post_id, 'nd_options_meta_box_page_header_img_title', wp_kses( $_POST['nd_options_meta_box_page_header_img_title'], $allowed ) );
 
-    if( isset( $_POST['nd_options_meta_box_page_header_img_position'] ) )
-        update_post_meta( $post_id, 'nd_options_meta_box_page_header_img_position', wp_kses( $_POST['nd_options_meta_box_page_header_img_position'], $allowed ) );
+    //sanitize and validate
+    $nd_options_meta_box_page_header_img = esc_url_raw( $_POST['nd_options_meta_box_page_header_img'] );
+    if ( isset( $nd_options_meta_box_page_header_img ) ) {
+    update_post_meta( $post_id, 'nd_options_meta_box_page_header_img' , $nd_options_meta_box_page_header_img );
+    }
+
+
+    //sanitize and validate
+    $nd_options_meta_box_page_header_img_title = sanitize_meta('nd_options_meta_box_page_header_img_title',$_POST['nd_options_meta_box_page_header_img_title'],'post');
+    if ( isset( $nd_options_meta_box_page_header_img_title ) ) {
+    update_post_meta( $post_id, 'nd_options_meta_box_page_header_img_title' , $nd_options_meta_box_page_header_img_title );
+    }
+
+
+    //sanitize and validate
+    $nd_options_meta_box_page_header_img_position = sanitize_option( 'nd_options_meta_box_page_header_img_position', $_POST['nd_options_meta_box_page_header_img_position'] );
+    if ( isset( $nd_options_meta_box_page_header_img_position ) ) {
+    update_post_meta( $post_id, 'nd_options_meta_box_page_header_img_position' , $nd_options_meta_box_page_header_img_position );
+    }
+
+
          
 }

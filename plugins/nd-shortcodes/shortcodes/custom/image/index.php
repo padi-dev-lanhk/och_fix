@@ -44,7 +44,7 @@ function nd_options_image() {
       "base" => "nd_options_image",
       'description' => __( 'Add Image', 'nd-shortcodes' ),
       'show_settings_on_create' => true,
-      "icon" => plugins_url() . "/nd-shortcodes/shortcodes/custom/thumb/image.jpg",
+      "icon" => esc_url(plugins_url('image.jpg', __FILE__ )),
       "class" => "",
       "category" => __( "NDS - Orange Coll.", "nd-shortcodes"),
       "params" => array(

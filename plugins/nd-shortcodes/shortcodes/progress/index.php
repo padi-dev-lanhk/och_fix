@@ -78,7 +78,7 @@ function nd_options_progress() {
       "base" => "nd_options_progress",
       'description' => __( 'Add progress bar', 'nd-shortcodes' ),
       'show_settings_on_create' => true,
-      "icon" => plugins_url() . "/nd-shortcodes/shortcodes/thumb/progress.jpg",
+      "icon" => esc_url(plugins_url('progress.jpg', __FILE__ )),
       "class" => "",
       "category" => __( "ND Shortcodes", "nd-shortcodes"),
       "params" => array(

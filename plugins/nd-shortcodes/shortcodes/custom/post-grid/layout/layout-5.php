@@ -106,7 +106,7 @@ while ( $the_query->have_posts() ) : $the_query->the_post();
 	        <div class="nd_options_section nd_options_height_20"></div>
 	        <p>'.$nd_options_excerpt.'</p>
 	        <div class="nd_options_section nd_options_height_20"></div>
-	        <a style="background-color: '.$nd_options_meta_box_page_color.';" class="nd_options_display_inline_block nd_options_line_height_16 nd_options_font_size_13 nd_options_text_align_center nd_options_box_sizing_border_box  nd_options_color_white nd_options_first_font nd_options_padding_8_12 nd_options_border_radius_20 " href="'.$nd_options_permalink.'">'.__('Xem thêm','nd-shortcodes').'</a>
+	        <a style="background-color: '.$nd_options_meta_box_page_color.';" class="nd_options_display_inline_block nd_options_line_height_16 nd_options_font_size_13 nd_options_text_align_center nd_options_box_sizing_border_box  nd_options_color_white nd_options_first_font nd_options_padding_8_12 nd_options_border_radius_20 " href="'.$nd_options_permalink.'">'.__('READ MORE','nd-shortcodes').'</a>
 
 	    </div>
 	    <!--END CONTENT-->';

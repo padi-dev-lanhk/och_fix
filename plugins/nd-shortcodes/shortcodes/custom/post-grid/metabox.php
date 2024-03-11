@@ -22,7 +22,7 @@ function nd_options_meta_box_post()
 
 
     <p><strong>Color</strong></p>
-    <p><input id="nd_options_colorpicker" type="text" name="nd_options_meta_box_post_color" id="nd_options_meta_box_post_color" value="<?php echo $nd_options_meta_box_post_color; ?>" /></p>
+    <p><input id="nd_options_colorpicker" type="text" name="nd_options_meta_box_post_color" id="nd_options_meta_box_post_color" value="<?php echo esc_html($nd_options_meta_box_post_color); ?>" /></p>
     
     <script type="text/javascript">
       //<![CDATA[
@@ -42,7 +42,11 @@ add_action( 'save_post', 'nd_options_meta_box_post_save' );
 function nd_options_meta_box_post_save( $post_id )
 {
 
-    if( isset( $_POST['nd_options_meta_box_post_color'] ) )
-        update_post_meta( $post_id, 'nd_options_meta_box_post_color', wp_kses( $_POST['nd_options_meta_box_post_color'], $allowed ) );
+
+    //sanitize and validate
+    $nd_options_meta_box_post_color = sanitize_hex_color( $_POST['nd_options_meta_box_post_color'] );
+    if ( isset( $nd_options_meta_box_post_color ) ) {
+    update_post_meta( $post_id, 'nd_options_meta_box_post_color' , $nd_options_meta_box_post_color );
+    }
          
 }

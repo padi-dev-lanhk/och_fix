@@ -3,7 +3,7 @@
 //logo
 $nd_options_customizer_header_2_logo = get_option( 'nd_options_customizer_header_2_logo' );
 if ( $nd_options_customizer_header_2_logo == '' ) { 
-    $nd_options_customizer_header_2_logo = plugins_url().'/nd-shortcodes/addons/customizer/header/img/logo.png';  
+    $nd_options_customizer_header_2_logo = esc_url(plugins_url('img/logo.png', __FILE__ ));
 }else{
     $nd_options_customizer_header_2_logo = wp_get_attachment_url($nd_options_customizer_header_2_logo);
 }
@@ -11,7 +11,7 @@ if ( $nd_options_customizer_header_2_logo == '' ) {
 //logo responsive
 $nd_options_customizer_header_2_logo_responsive = get_option( 'nd_options_customizer_header_2_logo_responsive' );
 if ( $nd_options_customizer_header_2_logo_responsive == '' ) { 
-    $nd_options_customizer_header_2_logo_responsive = plugins_url().'/nd-shortcodes/addons/customizer/header/img/logo.png';  
+    $nd_options_customizer_header_2_logo_responsive = esc_url(plugins_url('img/logo.png', __FILE__ ));
 }else{
     $nd_options_customizer_header_2_logo_responsive = wp_get_attachment_url($nd_options_customizer_header_2_logo_responsive);
 }
@@ -20,7 +20,7 @@ if ( $nd_options_customizer_header_2_logo_responsive == '' ) {
 //icon menu responsive
 $nd_options_customizer_header_2_icon_responsive_menu = get_option( 'nd_options_customizer_header_2_icon_responsive_menu' );
 if ( $nd_options_customizer_header_2_icon_responsive_menu == '' ) { 
-    $nd_options_customizer_header_2_icon_responsive_menu = plugins_url().'/nd-shortcodes/addons/customizer/header/img/icon-menu.svg';  
+    $nd_options_customizer_header_2_icon_responsive_menu = esc_url(plugins_url('img/icon-menu.svg', __FILE__ ));
 }else{
     $nd_options_customizer_header_2_icon_responsive_menu = wp_get_attachment_url($nd_options_customizer_header_2_icon_responsive_menu);
 }
@@ -63,9 +63,11 @@ $nd_options_customizer_top_header_2_text_color = get_option( 'nd_options_customi
 if ( $nd_options_customizer_top_header_2_text_color == '' ) { $nd_options_customizer_top_header_2_text_color = '#a3a3a3';  }
 
 $nd_options_customizer_top_header_2_left_content = get_option( 'nd_options_customizer_top_header_2_left_content' );
+$nd_options_customizer_top_header_2_left_content = str_replace("&#039;","'",$nd_options_customizer_top_header_2_left_content);
 if ( $nd_options_customizer_top_header_2_left_content == '' ) { $nd_options_customizer_top_header_2_left_content = 'ADD SOME TEXT THROUGH CUSTOMIZER';  }
 
 $nd_options_customizer_top_header_2_right_content = get_option( 'nd_options_customizer_top_header_2_right_content' );
+$nd_options_customizer_top_header_2_right_content = str_replace("&#039;","'",$nd_options_customizer_top_header_2_right_content);
 if ( $nd_options_customizer_top_header_2_right_content == '' ) { $nd_options_customizer_top_header_2_right_content = 'ADD SOME TEXT THROUGH CUSTOMIZER';  }
 
 $nd_options_customizer_top_header_2_display = get_option( 'nd_options_customizer_top_header_2_display' );
@@ -130,7 +132,7 @@ jQuery(document).ready(function() {
 <!--START menu responsive-->
 <div style="background-color: <?php echo $nd_options_customizer_header_2_bg_responsive; ?> ;" class="nd_options_navigation_2_sidebar_content nd_options_padding_40 nd_options_box_sizing_border_box nd_options_overflow_hidden nd_options_overflow_y_auto nd_options_transition_all_08_ease nd_options_height_100_percentage nd_options_position_fixed nd_options_width_300 nd_options_right_300_negative nd_options_z_index_999">
 
-    <img alt="" width="25" class="nd_options_close_navigation_2_sidebar_content nd_options_cursor_pointer nd_options_right_20 nd_options_top_20 nd_options_position_absolute" src="<?php echo plugins_url() ; ?>/nd-shortcodes/addons/customizer/header/header-2/img/icon-close-white.svg">
+    <img alt="" width="25" class="nd_options_close_navigation_2_sidebar_content nd_options_cursor_pointer nd_options_right_20 nd_options_top_20 nd_options_position_absolute" src="<?php echo esc_url(plugins_url('img/icon-close-white.svg', __FILE__ )); ?>">
 
     <div class="nd_options_navigation_2_sidebar">
         <?php wp_nav_menu( array( 'theme_location' => 'main-menu' ) ); ?>
