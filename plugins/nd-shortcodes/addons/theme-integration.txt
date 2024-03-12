@@ -1,1 +1,0 @@
-Please follow the documentation for proper integration with your theme

@@ -1,54 +1,57 @@
+
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
  
     <meta charset="<?php bloginfo('charset'); ?>"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=Gilda+Display&display=swap&subset=latin-ext" rel="stylesheet">  	
-	<style>
-		.page-id-2023 .header_none,.page-id-2126 .header_none,
-		.page-id-2186 .header_none,.page-id-2149 .header_none,
-		.page-id-2215 .header_none,.page-id-2212 .header_none,
-		.page-id-2266 .header_none,.page-id-3373 .header_none,
-		.page-id-4032 .header_none,.page-id-4041 .header_none,
-		.page-id-4044 .header_none,.page-id-4046 .header_none,
-		.page-id-4048 .header_none,.page-id-4050 .header_none,
-		.page-id-4052 .header_none,.page-id-4054 .header_none{
-			display:none;
-		}
-		.page-id-2126 .nd_options_section.nd_options_height_50,
-		.page-id-2186 .nd_options_section.nd_options_height_50,
-		.page-id-2149 .nd_options_section.nd_options_height_50,
-		.page-id-2215 .nd_options_section.nd_options_height_50,
-		.page-id-2212 .nd_options_section.nd_options_height_50,
-		.page-id-2023 .nd_options_section.nd_options_height_50,
-		.page-id-2266 .nd_options_section.nd_options_height_50,
-		.page-id-3373 .nd_options_section.nd_options_height_50,
-		.page-id-4032 .nd_options_section.nd_options_height_50,
-		.page-id-4041 .nd_options_section.nd_options_height_50,
-		.page-id-4044 .nd_options_section.nd_options_height_50,
-		.page-id-4046 .nd_options_section.nd_options_height_50,
-		.page-id-4048 .nd_options_section.nd_options_height_50,
-		.page-id-4050 .nd_options_section.nd_options_height_50,
-		.page-id-4052 .nd_options_section.nd_options_height_50,
-		.page-id-4054 .nd_options_section.nd_options_height_50{
-				display: none;
-		}
-		.page-id-2023 #footer-sidebar,.page-id-2126 #footer-sidebar,
-		.page-id-2186 #footer-sidebar,.page-id-2149 #footer-sidebar,
-		.page-id-2215 #footer-sidebar,.page-id-2212 #footer-sidebar,
-		.page-id-2266 #footer-sidebar,.page-id-3373 #footer-sidebar,
-		.page-id-4032 #footer-sidebar,.page-id-4041 #footer-sidebar,
-		.page-id-4044 #footer-sidebar,.page-id-4046 #footer-sidebar,
-		.page-id-4048 #footer-sidebar,.page-id-4050 #footer-sidebar,
-		.page-id-4052 #footer-sidebar,.page-id-4054 #footer-sidebar
-		{
-			display:none;
-		}
-	</style>
-<?php wp_head(); ?>	  
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Gilda+Display&display=swap&subset=latin-ext" rel="stylesheet">    
+	
+  <style>
+    .page-id-2023 .header_none,.page-id-2126 .header_none,
+    .page-id-2186 .header_none,.page-id-2149 .header_none,
+    .page-id-2215 .header_none,.page-id-2212 .header_none,
+    .page-id-2266 .header_none,.page-id-3373 .header_none,
+    .page-id-4032 .header_none,.page-id-4041 .header_none,
+    .page-id-4044 .header_none,.page-id-4046 .header_none,
+    .page-id-4048 .header_none,.page-id-4050 .header_none,
+    .page-id-4052 .header_none,.page-id-4054 .header_none{
+      display:none;
+    }
+    .page-id-2126 .nd_options_section.nd_options_height_50,
+    .page-id-2186 .nd_options_section.nd_options_height_50,
+    .page-id-2149 .nd_options_section.nd_options_height_50,
+    .page-id-2215 .nd_options_section.nd_options_height_50,
+    .page-id-2212 .nd_options_section.nd_options_height_50,
+    .page-id-2023 .nd_options_section.nd_options_height_50,
+    .page-id-2266 .nd_options_section.nd_options_height_50,
+    .page-id-3373 .nd_options_section.nd_options_height_50,
+    .page-id-4032 .nd_options_section.nd_options_height_50,
+    .page-id-4041 .nd_options_section.nd_options_height_50,
+    .page-id-4044 .nd_options_section.nd_options_height_50,
+    .page-id-4046 .nd_options_section.nd_options_height_50,
+    .page-id-4048 .nd_options_section.nd_options_height_50,
+    .page-id-4050 .nd_options_section.nd_options_height_50,
+    .page-id-4052 .nd_options_section.nd_options_height_50,
+    .page-id-4054 .nd_options_section.nd_options_height_50{
+        display: none;
+    }
+    .page-id-2023 #footer-sidebar,.page-id-2126 #footer-sidebar,
+    .page-id-2186 #footer-sidebar,.page-id-2149 #footer-sidebar,
+    .page-id-2215 #footer-sidebar,.page-id-2212 #footer-sidebar,
+    .page-id-2266 #footer-sidebar,.page-id-3373 #footer-sidebar,
+    .page-id-4032 #footer-sidebar,.page-id-4041 #footer-sidebar,
+    .page-id-4044 #footer-sidebar,.page-id-4046 #footer-sidebar,
+    .page-id-4048 #footer-sidebar,.page-id-4050 #footer-sidebar,
+    .page-id-4052 #footer-sidebar,.page-id-4054 #footer-sidebar
+    {
+      display:none;
+    }
+  </style>
+<?php wp_head(); ?>   
 </head>  
-	<?php
+  <?php
 $field = get_field_object( 'color' );
 $value = $field['value'];
 $label = $field['choices'][ $value ];
@@ -56,11 +59,35 @@ $label = $field['choices'][ $value ];
 <body id="start_nicdark_framework" <?php body_class(); ?>>
 
 <!--START theme-->
-<div class="nicdark_site nicdark_bg_white <?php if ( is_front_page() ) { echo esc_html("nicdark_front_page"); } ?> ">	
-	
+<div class="nicdark_site nicdark_bg_white <?php if ( is_front_page() ) { echo esc_html("nicdark_front_page"); } ?> "> 
+  
 <?php if( function_exists('nicdark_headers')){ do_action("nicdark_header_nd"); }else{ ?>
 
 <!--START section-->
+<div class="notify">
+<div class="Icon_bell">
+						<a href="#">
+							<img src="<?php echo get_site_url(); ?>/img/alarm_blue.png" alt="" width="20" alt="Notification">
+							<span class="count-noti"><?php echo $count?></span>
+						</a>
+            <div class="list-new-latest">
+      <div class="cross_icon">
+                <img src="<?php echo get_site_url(); ?>/img/cross1.png" alt="" width="12">
+             </div>
+            <div class="list-new-readmore">
+              <div class="list-new-readmore-data">
+                  <ul class="list-new" id="new-list">
+                  </ul>
+              		<div class="class-readmore">
+                    <a href="tin-tuc-su-kien/"> <img src="http://och.vn/cms/img/icon/favicon.png" width="20px"> Xem t&#7845;t c&#7843; </a>
+                  </div>
+              </div>
+            </div>
+                   </div> 
+ </div>
+
+</div>
+	
 <div class="nicdark_section header_none ">
 
     <!--start container-->
@@ -109,9 +136,10 @@ $label = $field['choices'][ $value ];
             </div>
             <!--open menu responsive icon-->
 
-        	<div class="nicdark_section nicdark_navigation_1">        
-        		<?php wp_nav_menu( array( 'theme_location' => 'main-menu' ) ); ?>       
-        	</div>
+          <div class="nicdark_section nicdark_navigation_1 menu-menu">        
+            <?php wp_nav_menu( array( 'theme_location' => 'main-menu' ) ); ?> 
+                    
+          </div>
 
 
         </div>
@@ -125,9 +153,9 @@ $label = $field['choices'][ $value ];
 
 <!--START menu responsive-->
 <div class="bgr_menu_responsive nicdark_navigation_1_sidebar_content nicdark_padding_40 nicdark_box_sizing_border_box nicdark_overflow_hidden nicdark_overflow_y_auto nicdark_transition_all_08_ease nicdark_height_100_percentage nicdark_position_fixed nicdark_width_300 nicdark_right_300_negative nicdark_z_index_999 menu_mobile">
-	<a class="nicdark_close_navigation_1_sidebar_content nicdark_close_navigation_1_sidebar_content" href="#">
-		<img alt="" width="25" class="nicdark_close_navigation_1_sidebar_content nicdark_cursor_pointer nicdark_right_20 nicdark_top_20 nicdark_position_absolute icon_close" src="<?php echo get_template_directory_uri(); ?>/img/icon-close-white.svg">
-	</a>
+  <a class="nicdark_close_navigation_1_sidebar_content nicdark_close_navigation_1_sidebar_content" href="#">
+    <img alt="" width="25" class="nicdark_close_navigation_1_sidebar_content nicdark_cursor_pointer nicdark_right_20 nicdark_top_20 nicdark_position_absolute icon_close" src="<?php echo get_template_directory_uri(); ?>/img/icon-close-white.svg">
+  </a>
     <div class="nicdark_navigation_1_sidebar">
         <?php wp_nav_menu( array( 'theme_location' => 'main-menu' ) ); ?>
     </div>

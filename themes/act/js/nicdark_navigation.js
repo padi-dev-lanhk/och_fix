@@ -18,6 +18,7 @@ $(document).ready(function() {
                 $(".menu_gioithieu").removeClass("max-width");
               }, 100000);
           }
+		   	$(".list-new-latest").removeClass('active');
         });
 });
 $(document).ready(function() {
@@ -28,18 +29,23 @@ $(document).ready(function() {
         });
 });
 $(document).ready(function() {
-       $(".list_menu_item_child .menu .menu-item-has-children").click(function(event){
-//           if(!$('.list_menu_item_child .menu .menu-item-has-children').hasClass('active')) { 
-//               $(".list_menu_item_child .menu .menu-item-has-children").addClass('active');
-//                setTimeout(function() {
-//                 $(".max-width").removeClass("active");
-//               }, 10000);
-//           }
-//           else{
-//              $(".list_menu_item_child .menu .menu-item-has-children").removeClass('active');
-//           }
-			$(this).parent().find('li.active').removeClass('active');
-			$(this).addClass('active');
+       $(".list_menu_item_child  ul .icon_gioithieu").click(function(event){
+			  if(!$('.list_menu_item_child  ul li.icon_gioithieu ').hasClass('active')) { 
+				$(".list_menu_item_child ul.menu li.icon_gioithieu ").addClass('active');
+			  }
+			  else{
+				 $(".list_menu_item_child ul.menu li.icon_gioithieu ").removeClass('active');
+			  }
+	   });
+});
+$(document).ready(function() {
+       $(".list_menu_item_child .menu .pll-parent-menu-item").click(function(event){
+			  if(!$('.list_menu_item_child .menu li.pll-parent-menu-item').hasClass('active')) { 
+				 $(".list_menu_item_child .menu li.pll-parent-menu-item ").addClass('active');
+			  }
+			  else{
+				   $(".list_menu_item_child .menu li.pll-parent-menu-item ").removeClass('active');
+			  }
 	   });
 });
 $(".icon_next_tab").click(function() {
@@ -47,12 +53,28 @@ $(".icon_next_tab").click(function() {
         scrollTop: $("#Gioithieu_kem").offset().top
     }, 2000);
 });
+$(document).ready(function() {
+   $(".Icon_bell>a").click(function(){
+        if(!$('.list-new-latest').hasClass('active')) { 
+          $(".list-new-latest").addClass('active');
+          setTimeout(function() {
+            $(".list-new-latest").removeClass("active");
+          }, 8000);
+      }
+    });
+});
 
+$(document).ready(function() {
+       $(".Icon_bell .cross_icon").click(function(){
+            $(".list-new-latest").removeClass('active');
+        });
+});
 $(document).ready(function() {
        $(".menu-mobile .nicdark_section .nicdark_open_navigation_1_sidebar_content").click(function(){
           if(!$('.bgr_menu_responsive').hasClass('max-width')) { 
               $(".bgr_menu_responsive").addClass('max-width');
           }
+		   	$(".list-new-latest").removeClass('active');
         });
 });
 $(document).ready(function() {
@@ -62,56 +84,57 @@ $(document).ready(function() {
           }
         });
 });
+	
 $(document).ready(function ($) {
-	if($('html').hasClass('vc_mobile')){
+	if($('.bgr_menu_responsive').hasClass('menu_mobile')){
 		$(".menu-item-1887>a").removeAttr("href");
-		$(".menu-item-3453>a").removeAttr("href");
-		$(".menu-item-1882>a").removeAttr("href");
+		//$(".menu-item-3453>a").removeAttr("href");
+		//$(".menu-item-1882>a").removeAttr("href");
 	};
 });
 	$(document).ready(function() {
-      $(".menu-headnavi-container .menu .menu-item-has-children").click(function(event){
+      $(".bgr_menu_responsive.menu_mobile #menu-headnavi-1.menu .menu-item-has-children").click(function(event){
 		  	$(this).parent().find('li.active').removeClass('active');
 			$(this).addClass('active');
-			$(".menu-headnavi-container .menu .menu-item-has-children.active").click(function(event){
+			$(".bgr_menu_responsive.menu_mobile #menu-headnavi-1.menu .menu-item-has-children.active").click(function(event){
 				$('html').addClass('add_class');
 				if($('html').hasClass('add_class')) {
 					$(".menu-item-3453>a").removeAttr("href");
-					$(".menu-item-3453>a").attr("href", "http://cms.och.vn/quan-he-co-dong/");
+					$(".menu-item-3453>a").attr("href", "http://och.vn/quan-he-co-dong/");
 					$(".menu-item-1882>a").removeAttr("href");
-					$(".menu-item-1882>a").attr("href", "http://cms.och.vn/tin-tuc-su-kien/");
+					$(".menu-item-1882>a").attr("href", "http://och.vn/tin-tuc-su-kien/");
 				}
 			 });
 	   });
 	});
-$(document).ready(function ($) {
-	if($('.meun_trangcon').hasClass('menu_gioithieu')){
-		$(".menu-item-1887>a").removeAttr("href");
-		$(".menu-item-3453>a").removeAttr("href");
-		$(".menu-item-1882>a").removeAttr("href");
-		$(".menu-item-4250>a").removeAttr("href");
-		$(".menu-item-4251>a").removeAttr("href");
-	};
-});
-	$(document).ready(function() {
-      $(".list_menu_item_child .menu .menu-item-has-children").click(function(event){
-		  	$(this).parent().find('li.active').removeClass('active');
-			$(this).addClass('active');
-			$(".list_menu_item_child .menu .menu-item-has-children.active").click(function(event){
-				$('html').addClass('add_class');
-				if($('html').hasClass('add_class')) {
-					$(".menu-item-3453>a").removeAttr("href");
-					$(".menu-item-3453>a").attr("href", "http://cms.och.vn/quan-he-co-dong/");
-					$(".menu-item-1882>a").removeAttr("href");
-					$(".menu-item-1882>a").attr("href", "http://cms.och.vn/tin-tuc-su-kien/");
-					$(".menu-item-4250>a").removeAttr("href");
-					$(".menu-item-4250>a").attr("href", "http://cms.och.vn/en/shareholder-relation/");
-					$(".menu-item-4251>a").removeAttr("href");
-					$(".menu-item-4251>a").attr("href", "http://cms.och.vn/en/shareholder-relation/");
-				}
-			 });
-	   });
-	});
+// $(document).ready(function ($) {
+// 	if($('.meun_trangcon').hasClass('menu_gioithieu')){
+// 		$(".menu-item-1887>a").removeAttr("href");
+// 		$(".menu-item-3453>a").removeAttr("href");
+// 		$(".menu-item-1882>a").removeAttr("href");
+// 		$(".menu-item-4250>a").removeAttr("href");
+// 		$(".menu-item-4251>a").removeAttr("href");
+// 	};
+// });
+// 	$(document).ready(function() {
+//       $(".list_menu_item_child .menu .menu-item-has-children").click(function(event){
+// 		  	$(this).parent().find('li.active').removeClass('active');
+// 			$(this).addClass('active');
+// 			$(".list_menu_item_child .menu .menu-item-has-children.active").click(function(event){
+// 				$('html').addClass('add_class');
+// 				if($('html').hasClass('add_class')) {
+// 					$(".menu-item-3453>a").removeAttr("href");
+// 					$(".menu-item-3453>a").attr("href", "http://och.vn/quan-he-co-dong/");
+// 					$(".menu-item-1882>a").removeAttr("href");
+// 					$(".menu-item-1882>a").attr("href", "http://och.vn/tin-tuc-su-kien/");
+// 					$(".menu-item-4250>a").removeAttr("href");
+// 					$(".menu-item-4250>a").attr("href", "http://och.vn/en/shareholder-relation/");
+// 					$(".menu-item-4251>a").removeAttr("href");
+// 					$(".menu-item-4251>a").attr("href", "http://och.vn/en/shareholder-relation/");
+// 				}
+// 			 });
+// 	   });
+// 	});
 
 $(document).ready(function() {
         var widthb = $(window).width();
